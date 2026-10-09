@@ -1,0 +1,22 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "63fa6217174d",
+ "usage": {
+  "input_tokens": 1481,
+  "output_tokens": 120
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Sessions changed within normal variation compared with recent weeks.",
+  "explanation": [
+   "The change in sessions was within normal variation based on historical patterns.",
+   "There are no relevant tracking issues or candidate causes that explain the movement."
+  ],
+  "next_step": "Continue monitoring traffic and sessions for upcoming weekly cycles."
+ }
+}

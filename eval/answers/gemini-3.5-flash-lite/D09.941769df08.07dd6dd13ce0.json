@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "07dd6dd13ce0",
+ "usage": {
+  "input_tokens": 1469,
+  "output_tokens": 162
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "The change in Add-to-cart rate (of sessions) is within normal variation.",
+  "explanation": [
+   "The add-to-cart rate shifted from {F1} to {F2}, which is a {F3} change.",
+   "This shift is {F5} times the typical weekly change before, remaining well within normal variation.",
+   "Therefore, no specific incident or candidate cause explains the movement."
+  ],
+  "next_step": "Continue monitoring weekly metric trends across traffic sources."
+ }
+}

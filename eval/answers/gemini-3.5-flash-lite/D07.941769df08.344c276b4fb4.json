@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "344c276b4fb4",
+ "usage": {
+  "input_tokens": 1416,
+  "output_tokens": 225
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "basket_change",
+  "segment": [
+   {
+    "dimension": "device",
+    "value": "desktop"
+   }
+  ],
+  "start_date": "2021-01-04",
+  "confidence": "high",
+  "headline": "Average order value fell beyond normal variation due to a basket change on desktop devices.",
+  "explanation": [
+   "Average order value dropped significantly from {F1} to {F2}, a decrease of {F3}.",
+   "This shift was far beyond normal variation as measured by typical weekly changes {F4}.",
+   "The primary driver was the desktop device segment, which accounted for {F21} of the change with an average order value drop of {F23} starting on {F27}."
+  ],
+  "next_step": "Investigate desktop product bundling, pricing displays, or promotion applications introduced around Jan 4."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "b9df4442d95c",
+ "usage": {
+  "input_tokens": 1215,
+  "output_tokens": 165
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Orders changed by +14%, which is well within normal weekly variation compared to previous weeks.",
+  "explanation": [
+   "The change in orders from the previous week to the current week falls entirely within normal variation as indicated by the headline analysis.",
+   "There are no tracking issues, anomalies, or candidate causes identified in the evidence pack.",
+   "Overall metrics fluctuated normally following the holiday period without any distinct segment driving an unusual change."
+  ],
+  "next_step": "Continue monitoring standard weekly performance metrics and upcoming campaign launches."
+ }
+}

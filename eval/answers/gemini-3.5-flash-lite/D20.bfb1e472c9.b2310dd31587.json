@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "b2310dd31587",
+ "usage": {
+  "input_tokens": 1740,
+  "output_tokens": 245
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "tracking_issue",
+  "segment": [
+   {
+    "dimension": "device",
+    "value": "mobile"
+   }
+  ],
+  "start_date": "2021-01-07",
+  "confidence": "high",
+  "headline": "Checkout start after add-to-cart dropped significantly due to a tracking issue on mobile devices starting on 2021-01-07.",
+  "explanation": [
+   "Checkout start after add-to-cart dropped from {F1} to {F2}, a change of {F3} that is well beyond normal weekly variation {F4}.",
+   "Measurement problems were detected with purchases occurring without a checkout start on mobile devices starting from {F50}.",
+   "This tracking failure directly impacts the measurement of the checkout start step following add-to-cart."
+  ],
+  "next_step": "Inspect mobile tracking implementation and event fires for checkout start starting on 2021-01-07."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "c37d88123927",
+ "usage": {
+  "input_tokens": 1388,
+  "output_tokens": 147
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Conversion rate (sessions with a purchase) remained within normal variation compared to recent weeks.",
+  "explanation": [
+   "The change in conversion rate of {F3} is well within typical weekly fluctuation patterns observed on the site.",
+   "There are no tracking issues or strong candidate causes driving the movement.",
+   "The shift follows standard post-holiday demand patterns."
+  ],
+  "next_step": "Continue monitoring overall traffic and weekly conversion trends."
+ }
+}

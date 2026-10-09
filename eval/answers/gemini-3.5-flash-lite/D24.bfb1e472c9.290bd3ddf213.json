@@ -1,0 +1,27 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "290bd3ddf213",
+ "usage": {
+  "input_tokens": 1375,
+  "output_tokens": 205
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "mix_shift",
+  "segment": [
+   {
+    "dimension": "country",
+    "value": "Canada"
+   }
+  ],
+  "start_date": "2021-01-04",
+  "confidence": "medium",
+  "headline": "Conversion rate changes were within normal variation overall, but a traffic mix shift in Canada from {F33} impacted performance.",
+  "explanation": [
+   "Although overall conversion rate movements stayed within typical bounds compared to previous weeks, Canada experienced a distinct surge in sessions starting from {F33}.",
+   "This traffic mix shift contributed slightly to the metric decline as the Canadian segment saw a drop in product-view rates."
+  ],
+  "next_step": "Investigate marketing campaigns or regional landing page experiences targeting Canada that launched around {F33}."
+ }
+}

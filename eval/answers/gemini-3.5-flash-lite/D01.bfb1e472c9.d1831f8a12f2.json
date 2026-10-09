@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "d1831f8a12f2",
+ "usage": {
+  "input_tokens": 1612,
+  "output_tokens": 198
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "tracking_issue",
+  "segment": [
+   {
+    "dimension": "device",
+    "value": "mobile"
+   }
+  ],
+  "start_date": "2020-12-11",
+  "confidence": "high",
+  "headline": "Revenue grew beyond normal variation driven by a tracking issue with duplicate purchase events on mobile devices.",
+  "explanation": [
+   "Revenue increased significantly compared to the previous week, exceeding typical weekly variations {F3}, {F5}.",
+   "Measurement health checks identified duplicate purchase events starting on mobile devices {F47}.",
+   "This tracking anomaly inflated the recorded purchase data for mobile traffic."
+  ],
+  "next_step": "Inspect the checkout and order confirmation tags on mobile devices for duplicate firing starting on the noted date."
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "cacfd29a28e8",
+ "usage": {
+  "input_tokens": 1357,
+  "output_tokens": 138
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Conversion rate moved within normal weekly variation compared with recent weeks.",
+  "explanation": [
+   "Conversion rate changed from [F1] to [F2], representing a change of [F3].",
+   "This shift is [F5] the typical weekly change before and falls well within normal variation."
+  ],
+  "next_step": "Monitor conversion rates next week to see if current trends persist."
+ }
+}

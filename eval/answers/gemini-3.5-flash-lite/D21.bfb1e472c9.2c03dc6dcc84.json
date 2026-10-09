@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "2c03dc6dcc84",
+ "usage": {
+  "input_tokens": 1437,
+  "output_tokens": 214
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "mix_shift",
+  "segment": [
+   {
+    "dimension": "user_type",
+    "value": "new"
+   }
+  ],
+  "start_date": "2020-12-12",
+  "confidence": "medium",
+  "headline": "Revenue grew due to overall session increases, though a shift toward new visitors created a drag on conversion behavior.",
+  "explanation": [
+   "Revenue increased compared to the previous week, driven largely by a surge in overall sessions.",
+   "However, a distinct mix shift occurred as new users grew at a much faster rate than the rest of the site.",
+   "New visitors exhibited lower conversion rates and product-view rates compared to returning visitors, creating a drag on the metric."
+  ],
+  "next_step": "Review recent acquisition campaigns to see if incoming new visitor traffic has lower purchase intent."
+ }
+}

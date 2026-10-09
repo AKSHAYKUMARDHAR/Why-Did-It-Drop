@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "1ce523681ede",
+ "usage": {
+  "input_tokens": 1188,
+  "output_tokens": 151
+ },
+ "answer": {
+  "verdict": "broad",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Conversion rate fell beyond normal variation due to broad seasonal shifts around Christmas.",
+  "explanation": [
+   "The overall conversion rate dropped significantly compared to the previous week.",
+   "No tracking issues were detected and there are no concentrated segment candidate causes explaining the drop.",
+   "The site-wide change occurred around the holiday period, consistent with seasonal demand shifts during Christmas Eve and Christmas Day."
+  ],
+  "next_step": "Review historical holiday shopping trends to confirm expected seasonal patterns."
+ }
+}

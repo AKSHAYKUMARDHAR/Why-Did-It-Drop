@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "bcb48dbfbeb2",
+ "usage": {
+  "input_tokens": 1669,
+  "output_tokens": 246
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "traffic_loss",
+  "segment": [
+   {
+    "dimension": "source",
+    "value": "shop.googlemerchandisestore.com"
+   }
+  ],
+  "start_date": "2020-12-21",
+  "confidence": "high",
+  "headline": "Sessions dropped significantly beyond normal variation due to a sharp decline in traffic from specific referral sources.",
+  "explanation": [
+   "Sessions fell drastically from {F1} to {F2}, a change of {F3} that is well beyond normal variation.",
+   "The decline was heavily driven by specific traffic sources like shop.googlemerchandisestore.com, which accounted for a notable portion of the overall drop with a session decrease of {F23}.",
+   "This divergence began abruptly on {F27}."
+  ],
+  "next_step": "Investigate the referral traffic source shop.googlemerchandisestore.com for broken links, tracking removal, or upstream referral changes."
+ }
+}

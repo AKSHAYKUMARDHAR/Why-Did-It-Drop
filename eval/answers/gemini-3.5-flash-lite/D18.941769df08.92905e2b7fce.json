@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "92905e2b7fce",
+ "usage": {
+  "input_tokens": 1689,
+  "output_tokens": 222
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "basket_change",
+  "segment": [
+   {
+    "dimension": "device",
+    "value": "mobile"
+   }
+  ],
+  "start_date": "2020-12-23",
+  "confidence": "high",
+  "headline": "Revenue fell beyond normal variation with a significant drop in average order value on mobile devices.",
+  "explanation": [
+   "Revenue fell from {F1} to {F2} which is a change of {F3}, well beyond typical weekly variation {F5}.",
+   "Sessions, conversion rate, and average order value all declined across the site.",
+   "The strongest candidate cause is mobile devices, where the average order value dropped by {F26} starting from {F33}."
+  ],
+  "next_step": "Investigate mobile checkout and pricing updates deployed around December 23 for issues causing lower order values."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "0a82b9082dfb",
+ "usage": {
+  "input_tokens": 1357,
+  "output_tokens": 214
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Revenue fell by [F3] -23%, which is within normal weekly variation compared with recent periods.",
+  "explanation": [
+   "Revenue decreased from [F1] to [F2], primarily driven by a drop in conversion rate [F7] while sessions [F6] and average order value [F8] remained within normal limits.",
+   "The headline indicates that the change is within normal variation [F5] based on typical historical shifts [F4].",
+   "Although a candidate cause was tested for Android devices [F24], there are no qualifying tracking issues or distinct anomalies strong enough to classify this as an incident."
+  ],
+  "next_step": "Monitor conversion rates and checkout funnel steps next week to see if trends return to baseline."
+ }
+}

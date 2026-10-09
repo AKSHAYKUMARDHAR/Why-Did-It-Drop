@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "f9557f438c32",
+ "usage": {
+  "input_tokens": 1611,
+  "output_tokens": 178
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Revenue grew by +35% during the week of 07 Dec - 13 Dec 2020, which is within normal variation compared to recent weeks.",
+  "explanation": [
+   "Revenue increased from $43,042 to $58,271, staying within typical weekly fluctuations.",
+   "Sessions rose by +25% while conversion rate and average order value remained stable.",
+   "There are no tracking issues or significant candidate causes driving this movement."
+  ],
+  "next_step": "Continue monitoring traffic and sales trends for any emerging anomalies."
+ }
+}

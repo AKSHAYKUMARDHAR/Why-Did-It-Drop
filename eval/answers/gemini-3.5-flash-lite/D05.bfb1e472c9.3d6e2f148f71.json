@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "3d6e2f148f71",
+ "usage": {
+  "input_tokens": 1343,
+  "output_tokens": 178
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "os",
+    "value": "Windows"
+   }
+  ],
+  "start_date": "2020-12-22",
+  "confidence": "high",
+  "headline": "Conversion rate dropped beyond normal variation due to a checkout failure on Windows.",
+  "explanation": [
+   "Overall conversion fell significantly compared to previous weeks.",
+   "The primary driver was a sharp drop in purchases after checkout starts specifically on Windows devices.",
+   "This issue began diverging from the rest of the site mid-week."
+  ],
+  "next_step": "Investigate payment gateway or checkout script errors affecting Windows users."
+ }
+}

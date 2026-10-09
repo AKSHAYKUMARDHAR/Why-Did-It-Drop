@@ -1,0 +1,22 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "5c6bfb8905ac",
+ "usage": {
+  "input_tokens": 1617,
+  "output_tokens": 134
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Sessions changed within normal variation week-over-week.",
+  "explanation": [
+   "Sessions moved from [F1] to [F2], marking a change of [F3].",
+   "This shift is [F5] times the typical weekly change before, remaining well within normal variation."
+  ],
+  "next_step": "Monitor upcoming traffic trends for any emerging patterns."
+ }
+}

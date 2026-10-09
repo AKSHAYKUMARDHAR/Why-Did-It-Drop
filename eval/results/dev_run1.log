@@ -1,0 +1,34 @@
+
+dev: 30 cases, model gemini-3.5-flash-lite
+
+ all
+  baseline  right 26/30  wrong  2  missed  0  abstained  0  false alarms  2/ 9 | incidents right 90%, wrong rate 7%, false-alarm rate 22%  fail
+  model     right 18/30  wrong  2  missed 10  abstained  0  false alarms  0/ 9 | incidents right 43%, wrong rate 7%, false-alarm rate 0%  fail
+  checked   right 19/30  wrong  1  missed  9  abstained  1  false alarms  0/ 9 | incidents right 48%, wrong rate 3%, false-alarm rate 0%  fail
+
+ planted
+  baseline  right 18/20  wrong  2  missed  0  abstained  0  false alarms  0/ 0 | incidents right 90%, wrong rate 10%, false-alarm rate 0%  fail
+  model     right  9/20  wrong  2  missed  9  abstained  0  false alarms  0/ 0 | incidents right 45%, wrong rate 10%, false-alarm rate 0%  fail
+  checked   right 10/20  wrong  1  missed  8  abstained  1  false alarms  0/ 0 | incidents right 50%, wrong rate 5%, false-alarm rate 0%  fail
+
+ natural+quiet
+  baseline  right  8/10  wrong  0  missed  0  abstained  0  false alarms  2/ 9 | incidents right 100%, wrong rate 0%, false-alarm rate 22%  fail
+  model     right  9/10  wrong  0  missed  1  abstained  0  false alarms  0/ 9 | incidents right 0%, wrong rate 0%, false-alarm rate 0%  fail
+  checked   right  9/10  wrong  0  missed  1  abstained  0  false alarms  0/ 9 | incidents right 0%, wrong rate 0%, false-alarm rate 0%  fail
+
+ model answers with numbers typed outside a fact: 0 of 30 (removed by the checks)
+
+ checked: not right
+  D02 natural clear     add_to_cart_rate       2020-11-16 | expected incident tracking_issue {} 2020-11-16 | got missed: no_change none {}   
+  D03 planted clear     aov                    2021-01-04 | expected incident tracking_issue {'os': 'Web'} 2021-01-08 (tracking_dup)| got missed: no_change none {}   
+  D07 planted clear     aov                    2021-01-04 | expected incident basket_change {'os': 'Web'} 2021-01-05 (basket_change)| got wrong: incident basket_change {'device': 'desktop'} 2021-01-04 {'type': True, 'segment': False, 'start': True} 
+  D08 planted clear     revenue                2020-12-14 | expected incident basket_change {'os': 'Android'} 2020-12-16 (basket_change)| got missed: no_change none {}   
+  D11 planted clear     checkout_start_rate    2020-12-07 | expected incident tracking_issue {'os': 'Macintosh'} 2020-12-11 (tracking_gap)| got missed: no_change none {}   
+  D14 planted clear     sessions               2020-12-14 | expected incident traffic_loss {'source': 'shop.googlemerchandisestore.com'} 2020-12-16 (traffic_loss)| got missed: no_change none {}   
+  D17 planted clear     conversion_rate        2021-01-11 | expected incident mix_shift {'country': 'United States'} 2021-01-15 (mix_shift)| got missed: no_change none {}   
+  D19 planted clear     revenue                2020-12-07 | expected incident product_break {'os': 'Macintosh'} 2020-12-10 (product_break)| got missed: no_change none {}   
+  D23 planted clear     conversion_rate        2020-12-28 | expected incident mix_shift {'country': 'Canada'} 2021-01-01 (mix_shift)| got abstained: cant_tell none {}   notes: tracking issue claimed without a relevant tracking finding for that segment
+  D24 planted clear     conversion_rate        2021-01-04 | expected incident mix_shift {'country': 'Canada'} 2021-01-04 (mix_shift)| got missed: no_change none {}   
+  D26 planted clear     sessions               2020-12-28 | expected incident traffic_loss {'source': 'shop.googlemerchandisestore.com'} 2021-01-01 (traffic_loss)| got missed: no_change none {}   
+
+ tokens: {'input_tokens': 42067, 'output_tokens': 5240}   221s

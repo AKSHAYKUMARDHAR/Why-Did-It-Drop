@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "dafa8159862e",
+ "usage": {
+  "input_tokens": 1405,
+  "output_tokens": 210
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "basket_change",
+  "segment": [
+   {
+    "dimension": "device",
+    "value": "desktop"
+   }
+  ],
+  "start_date": "2021-01-04",
+  "confidence": "high",
+  "headline": "Average order value dropped beyond normal variation due to a sudden decrease in desktop basket size.",
+  "explanation": [
+   "Average order value fell significantly compared to the previous week, well beyond typical fluctuations.",
+   "The primary driver is the desktop device segment, which experienced a sharp decline in average order value and accounts for the majority of the overall metric drop.",
+   "This shift diverged heavily from the rest of the site starting on the specified date."
+  ],
+  "next_step": "Investigate recent desktop cart updates, pricing displays, or bundle configurations deployed around January 4."
+ }
+}

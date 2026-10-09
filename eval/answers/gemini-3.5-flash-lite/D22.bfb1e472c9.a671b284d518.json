@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "a671b284d518",
+ "usage": {
+  "input_tokens": 1177,
+  "output_tokens": 164
+ },
+ "answer": {
+  "verdict": "broad",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Conversion rate dropped significantly beyond normal variation during Christmas week.",
+  "explanation": [
+   "Conversion rate fell from {F1} to {F2}, which is {F5} times the typical weekly variation before.",
+   "The drop was mirrored across the entire site and funnel rather than being driven by a specific segment or tracking issue.",
+   "This shift coincides with the holiday period including Christmas Eve and Christmas Day."
+  ],
+  "next_step": "Review historical holiday performance trends to check if this seasonal dip aligns with expected annual patterns."
+ }
+}

@@ -1,0 +1,1395 @@
+{
+ "split": "dev",
+ "model": "none",
+ "summary": {
+  "all": {
+   "baseline": {
+    "cases": 30,
+    "incident_cases": 21,
+    "quiet_cases": 9,
+    "right": 26,
+    "wrong": 2,
+    "missed": 0,
+    "abstained": 0,
+    "false_alarms": 2,
+    "wrong_rate": 0.06666666666666667,
+    "right_rate_incidents": 0.9047619047619048,
+    "false_alarm_rate": 0.2222222222222222
+   }
+  },
+  "planted": {
+   "baseline": {
+    "cases": 20,
+    "incident_cases": 20,
+    "quiet_cases": 0,
+    "right": 18,
+    "wrong": 2,
+    "missed": 0,
+    "abstained": 0,
+    "false_alarms": 0,
+    "wrong_rate": 0.1,
+    "right_rate_incidents": 0.9,
+    "false_alarm_rate": null
+   }
+  },
+  "natural+quiet": {
+   "baseline": {
+    "cases": 10,
+    "incident_cases": 1,
+    "quiet_cases": 9,
+    "right": 8,
+    "wrong": 0,
+    "missed": 0,
+    "abstained": 0,
+    "false_alarms": 2,
+    "wrong_rate": 0.0,
+    "right_rate_incidents": 1.0,
+    "false_alarm_rate": 0.2222222222222222
+   }
+  }
+ },
+ "cases": [
+  {
+   "id": "D01",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "revenue",
+    "week": "2020-12-07"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "tracking_issue",
+    "segment": {
+     "device": "mobile"
+    },
+    "start": "2020-12-11",
+    "check_start": true
+   },
+   "incident": {
+    "type": "tracking_dup",
+    "seed": 947588,
+    "segment": {
+     "device": "mobile"
+    },
+    "start": "2020-12-11",
+    "end": "2020-12-13"
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "device": "mobile"
+     },
+     "start_date": "2020-12-11",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D02",
+   "kind": "natural",
+   "label": "clear",
+   "question": {
+    "metric": "add_to_cart_rate",
+    "week": "2020-11-16"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "tracking_issue",
+    "segment": {},
+    "start": "2020-11-16",
+    "check_start": true
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {},
+     "start_date": "2020-11-17",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D03",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "aov",
+    "week": "2021-01-04"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "tracking_issue",
+    "segment": {
+     "os": "Web"
+    },
+    "start": "2021-01-08",
+    "check_start": true
+   },
+   "incident": {
+    "type": "tracking_dup",
+    "seed": 117724,
+    "segment": {
+     "os": "Web"
+    },
+    "start": "2021-01-08",
+    "end": "2021-01-10"
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "os": "Web"
+     },
+     "start_date": "2021-01-08",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D04",
+   "kind": "planted",
+   "label": "too_small",
+   "question": {
+    "metric": "aov",
+    "week": "2021-01-11"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "too_small",
+    "type": "basket_change",
+    "segment": {
+     "os": "iOS"
+    },
+    "start": "2021-01-15",
+    "check_start": true,
+    "accept": [
+     "no_change",
+     "cant_tell"
+    ]
+   },
+   "incident": {
+    "type": "basket_change",
+    "seed": 470974,
+    "segment": {
+     "os": "iOS"
+    },
+    "start": "2021-01-15",
+    "end": "2021-01-17",
+    "factor": 0.97
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "D05",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2020-12-21"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "product_break",
+    "segment": {
+     "os": "Windows"
+    },
+    "start": "2020-12-22",
+    "check_start": true
+   },
+   "incident": {
+    "type": "product_break",
+    "seed": 27784,
+    "step": "purchase",
+    "segment": {
+     "os": "Windows"
+    },
+    "start": "2020-12-22",
+    "end": "2020-12-27",
+    "fraction": 0.89
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "os": "Windows"
+     },
+     "start_date": "2020-12-22",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D06",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "aov",
+    "week": "2020-12-14"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "D07",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "aov",
+    "week": "2021-01-04"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "basket_change",
+    "segment": {
+     "os": "Web"
+    },
+    "start": "2021-01-05",
+    "check_start": true
+   },
+   "incident": {
+    "type": "basket_change",
+    "seed": 348073,
+    "segment": {
+     "os": "Web"
+    },
+    "start": "2021-01-05",
+    "end": "2021-01-10",
+    "factor": 0.4
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "basket_change",
+     "segment": {
+      "device": "desktop"
+     },
+     "start_date": "2021-01-04",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D08",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "revenue",
+    "week": "2020-12-14"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "basket_change",
+    "segment": {
+     "os": "Android"
+    },
+    "start": "2020-12-16",
+    "check_start": true
+   },
+   "incident": {
+    "type": "basket_change",
+    "seed": 462559,
+    "segment": {
+     "os": "Android"
+    },
+    "start": "2020-12-16",
+    "end": "2020-12-20",
+    "factor": 0.53
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "basket_change",
+     "segment": {
+      "os": "Android"
+     },
+     "start_date": "2020-12-16",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D09",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "add_to_cart_rate",
+    "week": "2021-01-25"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "source": "google"
+     },
+     "start_date": "2021-01-25",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "false_alarm",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "D10",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "checkout_completion_rate",
+    "week": "2021-01-25"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "D11",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "checkout_start_rate",
+    "week": "2020-12-07"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "tracking_issue",
+    "segment": {
+     "os": "Macintosh"
+    },
+    "start": "2020-12-11",
+    "check_start": true
+   },
+   "incident": {
+    "type": "tracking_gap",
+    "seed": 253756,
+    "segment": {
+     "os": "Macintosh"
+    },
+    "start": "2020-12-11",
+    "end": "2020-12-13",
+    "fraction": 0.94
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "os": "Macintosh"
+     },
+     "start_date": "2020-12-11",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D12",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "revenue",
+    "week": "2020-12-07"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "product_break",
+    "segment": {
+     "country": "United States"
+    },
+    "start": "2020-12-08",
+    "check_start": true
+   },
+   "incident": {
+    "type": "product_break",
+    "seed": 439175,
+    "step": "purchase",
+    "segment": {
+     "country": "United States"
+    },
+    "start": "2020-12-08",
+    "end": "2020-12-13",
+    "fraction": 0.89
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "country": "United States"
+     },
+     "start_date": "2020-12-08",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D13",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "view_item_rate",
+    "week": "2020-12-21"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "D14",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "sessions",
+    "week": "2020-12-14"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "traffic_loss",
+    "segment": {
+     "source": "shop.googlemerchandisestore.com"
+    },
+    "start": "2020-12-16",
+    "check_start": true
+   },
+   "incident": {
+    "type": "traffic_loss",
+    "seed": 676417,
+    "segment": {
+     "source": "shop.googlemerchandisestore.com"
+    },
+    "start": "2020-12-16",
+    "end": "2020-12-20",
+    "fraction": 0.52
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "traffic_loss",
+     "segment": {
+      "source": "shop.googlemerchandisestore.com"
+     },
+     "start_date": "2020-12-16",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D15",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2020-12-14"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "product_break",
+    "segment": {
+     "os": "Android"
+    },
+    "start": "2020-12-14",
+    "check_start": true
+   },
+   "incident": {
+    "type": "product_break",
+    "seed": 361881,
+    "step": "begin_checkout",
+    "segment": {
+     "os": "Android"
+    },
+    "start": "2020-12-14",
+    "end": "2020-12-20",
+    "fraction": 0.88
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "os": "Android"
+     },
+     "start_date": "2020-12-14",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D16",
+   "kind": "planted",
+   "label": "too_small",
+   "question": {
+    "metric": "revenue",
+    "week": "2020-12-14"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "too_small",
+    "type": "product_break",
+    "segment": {
+     "browser": "Chrome"
+    },
+    "start": "2020-12-14",
+    "check_start": true,
+    "accept": [
+     "no_change",
+     "cant_tell"
+    ]
+   },
+   "incident": {
+    "type": "product_break",
+    "seed": 330164,
+    "step": "purchase",
+    "segment": {
+     "browser": "Chrome"
+    },
+    "start": "2020-12-14",
+    "end": "2020-12-20",
+    "fraction": 0.09
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "D17",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2021-01-11"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "mix_shift",
+    "segment": {
+     "country": "United States"
+    },
+    "start": "2021-01-15",
+    "check_start": true
+   },
+   "incident": {
+    "type": "mix_shift",
+    "seed": 700749,
+    "segment": {
+     "country": "United States"
+    },
+    "start": "2021-01-15",
+    "end": "2021-01-17",
+    "fraction": 0.92,
+    "copies": 1
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "mix_shift",
+     "segment": {
+      "country": "United States"
+     },
+     "start_date": "2021-01-15",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D18",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "revenue",
+    "week": "2020-12-21"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "basket_change",
+    "segment": {
+     "device": "mobile"
+    },
+    "start": "2020-12-23",
+    "check_start": true
+   },
+   "incident": {
+    "type": "basket_change",
+    "seed": 716350,
+    "segment": {
+     "device": "mobile"
+    },
+    "start": "2020-12-23",
+    "end": "2020-12-27",
+    "factor": 0.35
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "basket_change",
+     "segment": {
+      "device": "mobile"
+     },
+     "start_date": "2020-12-23",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D19",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "revenue",
+    "week": "2020-12-07"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "product_break",
+    "segment": {
+     "os": "Macintosh"
+    },
+    "start": "2020-12-10",
+    "check_start": true
+   },
+   "incident": {
+    "type": "product_break",
+    "seed": 538094,
+    "step": "begin_checkout",
+    "segment": {
+     "os": "Macintosh"
+    },
+    "start": "2020-12-10",
+    "end": "2020-12-13",
+    "fraction": 0.8
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "os": "Macintosh"
+     },
+     "start_date": "2020-12-10",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D20",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "checkout_start_rate",
+    "week": "2021-01-04"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "tracking_issue",
+    "segment": {
+     "device": "mobile"
+    },
+    "start": "2021-01-07",
+    "check_start": true
+   },
+   "incident": {
+    "type": "tracking_gap",
+    "seed": 734005,
+    "segment": {
+     "device": "mobile"
+    },
+    "start": "2021-01-07",
+    "end": "2021-01-10",
+    "fraction": 0.96
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "device": "mobile"
+     },
+     "start_date": "2021-01-07",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D21",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "revenue",
+    "week": "2020-12-07"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "mix_shift",
+     "segment": {
+      "user_type": "new"
+     },
+     "start_date": "2020-12-12",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "false_alarm",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "D22",
+   "kind": "broad",
+   "label": "broad",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2020-12-21"
+   },
+   "expected": {
+    "verdict": "broad",
+    "label": "broad",
+    "accept": [
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "broad",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "D23",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2020-12-28"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "mix_shift",
+    "segment": {
+     "country": "Canada"
+    },
+    "start": "2021-01-01",
+    "check_start": true
+   },
+   "incident": {
+    "type": "mix_shift",
+    "seed": 809943,
+    "segment": {
+     "country": "Canada"
+    },
+    "start": "2021-01-01",
+    "end": "2021-01-03",
+    "fraction": 0.83,
+    "copies": 1
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "landing": "Home"
+     },
+     "start_date": "2020-12-31",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": false,
+      "segment": false,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D24",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2021-01-04"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "mix_shift",
+    "segment": {
+     "country": "Canada"
+    },
+    "start": "2021-01-04",
+    "check_start": true
+   },
+   "incident": {
+    "type": "mix_shift",
+    "seed": 237045,
+    "segment": {
+     "country": "Canada"
+    },
+    "start": "2021-01-04",
+    "end": "2021-01-10",
+    "fraction": 0.6,
+    "copies": 1
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "mix_shift",
+     "segment": {
+      "country": "Canada"
+     },
+     "start_date": "2021-01-04",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D25",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "checkout_start_rate",
+    "week": "2020-12-14"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "D26",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "sessions",
+    "week": "2020-12-28"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "traffic_loss",
+    "segment": {
+     "source": "shop.googlemerchandisestore.com"
+    },
+    "start": "2021-01-01",
+    "check_start": true
+   },
+   "incident": {
+    "type": "traffic_loss",
+    "seed": 594824,
+    "segment": {
+     "source": "shop.googlemerchandisestore.com"
+    },
+    "start": "2021-01-01",
+    "end": "2021-01-03",
+    "fraction": 0.51
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "traffic_loss",
+     "segment": {
+      "source": "shop.googlemerchandisestore.com"
+     },
+     "start_date": "2021-01-01",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D27",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2020-12-07"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "product_break",
+    "segment": {
+     "browser": "Chrome"
+    },
+    "start": "2020-12-11",
+    "check_start": true
+   },
+   "incident": {
+    "type": "product_break",
+    "seed": 12275,
+    "step": "add_to_cart",
+    "segment": {
+     "browser": "Chrome"
+    },
+    "start": "2020-12-11",
+    "end": "2020-12-13",
+    "fraction": 0.86
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "browser": "Chrome"
+     },
+     "start_date": "2020-12-11",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D28",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "sessions",
+    "week": "2020-12-21"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "traffic_loss",
+    "segment": {
+     "source": "shop.googlemerchandisestore.com"
+    },
+    "start": "2020-12-21",
+    "check_start": true
+   },
+   "incident": {
+    "type": "traffic_loss",
+    "seed": 710702,
+    "segment": {
+     "source": "shop.googlemerchandisestore.com"
+    },
+    "start": "2020-12-21",
+    "end": "2020-12-27",
+    "fraction": 0.88
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "traffic_loss",
+     "segment": {
+      "source": "shop.googlemerchandisestore.com"
+     },
+     "start_date": "2020-12-21",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "D29",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "orders",
+    "week": "2021-01-04"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "D30",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "checkout_start_rate",
+    "week": "2020-12-28"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  }
+ ],
+ "unread": [],
+ "stopped": null
+}

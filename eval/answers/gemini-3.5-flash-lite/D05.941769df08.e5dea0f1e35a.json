@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "e5dea0f1e35a",
+ "usage": {
+  "input_tokens": 1354,
+  "output_tokens": 218
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "os",
+    "value": "Windows"
+   }
+  ],
+  "start_date": "2020-12-22",
+  "confidence": "high",
+  "headline": "Conversion rate dropped beyond normal variation due to a checkout breakdown on Windows devices.",
+  "explanation": [
+   "Conversion rate fell significantly from {F1} to {F2}, a shift {F5} times the typical weekly variation.",
+   "The decline is driven by the Windows operating system segment, which experienced a massive drop in purchase completion after starting checkout.",
+   "Specifically, purchase after checkout start for Windows users plummeted {F23} starting on {F30}, heavily dragging down site-wide conversion."
+  ],
+  "next_step": "Check recent frontend deployments and payment gateway errors affecting Windows users."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "88b9e219f510",
+ "usage": {
+  "input_tokens": 1491,
+  "output_tokens": 205
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "os",
+    "value": "Android"
+   }
+  ],
+  "start_date": "2020-12-14",
+  "confidence": "high",
+  "headline": "Conversion rate dropped beyond normal variation due to a checkout issue affecting Android users.",
+  "explanation": [
+   "Overall conversion rate fell significantly compared to typical weekly changes.",
+   "The primary candidate cause is the Android operating system, which experienced a steep drop in checkout start rates after adding items to the cart.",
+   "This issue began impacting users and diverging from the rest of the site starting on Mon 14 Dec 2020."
+  ],
+  "next_step": "Investigate recent releases or tags affecting the checkout funnel specifically for Android users."
+ }
+}

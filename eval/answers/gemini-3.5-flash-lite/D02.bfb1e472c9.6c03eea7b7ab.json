@@ -1,0 +1,22 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "6c03eea7b7ab",
+ "usage": {
+  "input_tokens": 1260,
+  "output_tokens": 198
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "tracking_issue",
+  "segment": [],
+  "start_date": "2020-11-17",
+  "confidence": "high",
+  "headline": "A tracking issue involving the add_to_cart event affected Add-to-cart rate (of sessions) starting on Tue 17 Nov 2020.",
+  "explanation": [
+   "A tracking issue was detected site-wide where the add_to_cart event started appearing from zero on {F27}.",
+   "This measurement problem directly impacted the Add-to-cart rate (of sessions), causing it to register as {F2} compared to {F1} previously."
+  ],
+  "next_step": "Inspect recent tag deployments and frontend tracking code updates related to the add_to_cart event implementation."
+ }
+}

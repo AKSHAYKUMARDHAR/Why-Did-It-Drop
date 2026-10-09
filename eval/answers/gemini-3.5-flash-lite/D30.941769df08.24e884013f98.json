@@ -1,0 +1,22 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "24e884013f98",
+ "usage": {
+  "input_tokens": 1270,
+  "output_tokens": 134
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Checkout start after add-to-cart remained within normal variation compared to previous weeks.",
+  "explanation": [
+   "The change in checkout start after add-to-cart was well within typical weekly fluctuation limits.",
+   "No relevant tracking issues or candidate causes were identified that drove the metric beyond normal variation."
+  ],
+  "next_step": "Continue monitoring seasonal metrics post-holiday."
+ }
+}

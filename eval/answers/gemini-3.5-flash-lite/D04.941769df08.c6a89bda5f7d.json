@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "c6a89bda5f7d",
+ "usage": {
+  "input_tokens": 1146,
+  "output_tokens": 158
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Average order value changed within normal variation this week.",
+  "explanation": [
+   "Average order value moved from [F1] to [F2], which represents a change of [F3].",
+   "This shift is well within normal weekly variation compared with previous periods [F5].",
+   "There are no tracking issues or distinct candidate causes driving the metric outside expected bounds."
+  ],
+  "next_step": "Continue monitoring order values and funnel metrics across standard segments for any emerging trends."
+ }
+}

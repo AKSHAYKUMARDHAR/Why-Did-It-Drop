@@ -1,0 +1,22 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "f2423a994d43",
+ "usage": {
+  "input_tokens": 1134,
+  "output_tokens": 126
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Average order value remained within normal variation this week.",
+  "explanation": [
+   "Average order value showed negligible movement compared to previous weeks, staying well within normal statistical variation.",
+   "No tracking issues or candidate causes were identified during this period."
+  ],
+  "next_step": "Continue monitoring overall store metrics and checkout performance for any emerging trends."
+ }
+}

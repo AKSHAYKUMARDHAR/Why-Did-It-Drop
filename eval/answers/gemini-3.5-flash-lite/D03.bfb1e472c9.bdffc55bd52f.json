@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "bdffc55bd52f",
+ "usage": {
+  "input_tokens": 1337,
+  "output_tokens": 226
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "tracking_issue",
+  "segment": [
+   {
+    "dimension": "os",
+    "value": "Web"
+   }
+  ],
+  "start_date": "2021-01-08",
+  "confidence": "high",
+  "headline": "Average order value appears stable overall, but tracking health shows duplicate purchase events starting on Fri 08 Jan 2021.",
+  "explanation": [
+   "Although the headline metric changed very little overall, a relevant tracking finding indicates measurement problems.",
+   "Specifically, duplicate purchase events in Operating system = Web increased from [F6] to [F7], beginning on [F31].",
+   "This tracking issue affects average order value calculations and requires investigation into instrumentation."
+  ],
+  "next_step": "Check the web checkout confirmation tags and analytics implementation for duplicate purchase event triggers starting from Fri 08 Jan 2021."
+ }
+}

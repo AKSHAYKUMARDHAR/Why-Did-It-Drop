@@ -1,0 +1,27 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "f220a6c3e35f",
+ "usage": {
+  "input_tokens": 1474,
+  "output_tokens": 219
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "traffic_loss",
+  "segment": [
+   {
+    "dimension": "source",
+    "value": "shop.googlemerchandisestore.com"
+   }
+  ],
+  "start_date": "2021-01-01",
+  "confidence": "high",
+  "headline": "Sessions decreased overall, driven primarily by a specific traffic source drop.",
+  "explanation": [
+   "Overall sessions moved from [F1] down to [F2], representing a change of [F3].",
+   "This shift was notably concentrated in the Traffic source segment shop.googlemerchandisestore.com, which experienced a sharp decline of [F25] starting on [F29]."
+  ],
+  "next_step": "Investigate the campaign or tracking setup for shop.googlemerchandisestore.com to see if referral traffic was disrupted."
+ }
+}

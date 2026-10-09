@@ -1,0 +1,27 @@
+
+dev: 30 cases, model gemini-3.5-flash-lite
+
+ all
+  baseline  right 26/30  wrong  2  missed  0  abstained  0  false alarms  2/ 9 | incidents right 90%, wrong rate 7%, false-alarm rate 22%  fail
+  model     right 26/30  wrong  2  missed  0  abstained  0  false alarms  2/ 9 | incidents right 90%, wrong rate 7%, false-alarm rate 22%  fail
+  checked   right 26/30  wrong  2  missed  0  abstained  0  false alarms  2/ 9 | incidents right 90%, wrong rate 7%, false-alarm rate 22%  fail
+
+ planted
+  baseline  right 18/20  wrong  2  missed  0  abstained  0  false alarms  0/ 0 | incidents right 90%, wrong rate 10%, false-alarm rate 0%  fail
+  model     right 18/20  wrong  2  missed  0  abstained  0  false alarms  0/ 0 | incidents right 90%, wrong rate 10%, false-alarm rate 0%  fail
+  checked   right 18/20  wrong  2  missed  0  abstained  0  false alarms  0/ 0 | incidents right 90%, wrong rate 10%, false-alarm rate 0%  fail
+
+ natural+quiet
+  baseline  right  8/10  wrong  0  missed  0  abstained  0  false alarms  2/ 9 | incidents right 100%, wrong rate 0%, false-alarm rate 22%  fail
+  model     right  8/10  wrong  0  missed  0  abstained  0  false alarms  2/ 9 | incidents right 100%, wrong rate 0%, false-alarm rate 22%  fail
+  checked   right  8/10  wrong  0  missed  0  abstained  0  false alarms  2/ 9 | incidents right 100%, wrong rate 0%, false-alarm rate 22%  fail
+
+ model answers with numbers typed outside a fact: 0 of 30 (removed by the checks)
+
+ checked: not right
+  D07 planted clear     aov                    2021-01-04 | expected incident basket_change {'os': 'Web'} 2021-01-05 (basket_change)| got wrong: incident basket_change {'device': 'desktop'} 2021-01-04 {'type': True, 'segment': False, 'start': True} 
+  D09 quiet   quiet     add_to_cart_rate       2021-01-25 | expected no_change    | got false_alarm: incident product_break {'source': 'google'} 2021-01-25  
+  D21 quiet   quiet     revenue                2020-12-07 | expected no_change    | got false_alarm: incident mix_shift {'user_type': 'new'} 2020-12-12  
+  D23 planted clear     conversion_rate        2020-12-28 | expected incident mix_shift {'country': 'Canada'} 2021-01-01 (mix_shift)| got wrong: incident product_break {'landing': 'Home'} 2020-12-31 {'type': False, 'segment': False, 'start': True} 
+
+ tokens: {'input_tokens': 41779, 'output_tokens': 5980}   221s

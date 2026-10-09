@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "e3d336bc7424",
+ "usage": {
+  "input_tokens": 1502,
+  "output_tokens": 226
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "os",
+    "value": "Android"
+   }
+  ],
+  "start_date": "2020-12-14",
+  "confidence": "high",
+  "headline": "Conversion rate dropped significantly beyond normal variation driven by a sharp drop in checkout starts on Android.",
+  "explanation": [
+   "Conversion rate fell from [F1] to [F2], which is [F5] times the typical weekly change.",
+   "The funnel shows that checkout start after add-to-cart dropped severely site-wide, led by Android users where this rate plummeted by [F23].",
+   "This issue on Android began on [F30] and accounts for a substantial portion of the overall conversion decline."
+  ],
+  "next_step": "Investigate recent releases or JavaScript errors affecting the checkout flow on Android devices."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "259b54ec5e0e",
+ "usage": {
+  "input_tokens": 1147,
+  "output_tokens": 103
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Average order value remained stable within normal variation this week.",
+  "explanation": [
+   "Average order value moved from {F1} to {F2}, showing negligible change {F3}.",
+   "This shift is well within typical weekly fluctuation patterns {F5}.",
+   "No tracking issues or segment-specific candidate causes were identified."
+  ],
+  "next_step": "Continue standard monitoring of order values across product categories."
+ }
+}

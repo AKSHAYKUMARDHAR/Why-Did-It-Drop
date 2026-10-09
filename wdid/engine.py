@@ -274,6 +274,147 @@ class Engine:
         out.sort(key=lambda r: -abs(r["contribution"]))
         return out[:top]
 
+    def scan(self, metric: str, dim: str, cur: Window, weeks: int = 4) -> dict:
+        """versus_rest for every value of a dimension at once, plus each value's usual divergence.
+
+        For each value: the difference-in-differences of this week against last week (segment minus rest, as in
+        versus_rest), and the same statistic for each of the `weeks` previous week pairs. A value counts as distinct
+        when |z| >= 3, it is at least 15% apart from the rest, and its divergence is at least twice its median
+        divergence in the previous weeks: segments that drift from the rest every week (landing pages, new
+        visitors) are not news.
+        """
+        m = METRICS[metric]
+        ks = [k for k in range(weeks + 1, -1, -1) if cur.shift(-7 * k).start >= self.first_date()]
+        wins = [cur.shift(-7 * k) for k in ks]
+        case = " ".join(f"WHEN {w.sql()} THEN {i}" for i, w in enumerate(wins))
+        lo, hi = wins[0].start, wins[-1].end
+        if m.is_rate and m.fmt == "pct":
+            agg = f"{m.num}, {m.den}, NULL"
+        elif metric in ("aov", "revenue"):
+            agg = "sum(revenue), sum(transactions) FILTER (WHERE transactions > 0), stddev_samp(revenue / nullif(transactions, 0))"
+        elif metric == "revenue_per_session":
+            agg = "sum(revenue), count(*), stddev_samp(revenue)"
+        else:
+            agg = f"{m.num}, NULL, NULL"
+        rows = self.con.execute(f"""SELECT CASE {case} END AS wk, {dim} AS v, {agg} FROM {self.t}
+                                    WHERE date BETWEEN DATE '{lo}' AND DATE '{hi}' GROUP BY 1, 2""").fetchall()
+        cells: dict = {}
+        for wk, v, a, b, c in rows:
+            if wk is None:
+                continue
+            cells.setdefault(v, {})[wk] = (float(a or 0), float(b or 0), float(c or 0))
+        totals = {}
+        for v, byw in cells.items():
+            for wk, (a, b, c) in byw.items():
+                t = totals.setdefault(wk, [0.0, 0.0, []])
+                t[0] += a
+                t[1] += b
+                t[2].append((a, b, c))
+
+        def stat(a, b, c):
+            """(log value, variance) for one cell."""
+            if m.is_rate and m.fmt == "pct":
+                x, n = a + 0.5, b + 1.0
+                return math.log(x / (n - x)), 1 / x + 1 / (n - x)
+            if metric == "aov":
+                mean = a / b
+                return math.log(mean), (c / mean) ** 2 / b
+            if metric == "revenue":
+                mean = a / b
+                return math.log(a), (1 + (c / mean) ** 2) / b
+            if metric == "revenue_per_session":
+                mean = a / b
+                return math.log(mean), (c / mean) ** 2 / b
+            x = a + 0.5
+            return math.log(x), 1 / x
+
+        def rest(wk, v):
+            a, b, _ = totals[wk][0] - cells[v].get(wk, (0, 0, 0))[0], totals[wk][1] - cells[v].get(wk, (0, 0, 0))[1], 0
+            # spread of order values for the rest: pooled from the other cells, weighted by orders
+            others = [cc for vv, byw in cells.items() if vv != v for w2, cc in byw.items() if w2 == wk]
+            sd = (sum(cc[2] * cc[1] for cc in others) / max(sum(cc[1] for cc in others), 1)) if others else 0
+            return a, b, sd
+
+        def did(v, w0, w1):
+            try:
+                s0, vs0 = stat(*cells[v][w0])
+                s1, vs1 = stat(*cells[v][w1])
+                r0, vr0 = stat(*rest(w0, v))
+                r1, vr1 = stat(*rest(w1, v))
+            except (KeyError, ValueError, ZeroDivisionError):
+                return None
+            d = (s1 - s0) - (r1 - r0)
+            return d, d / math.sqrt(vs0 + vs1 + vr0 + vr1), s1 - s0, r1 - r0
+        out = {}
+        last = len(wins) - 1
+        for v in cells:
+            now = did(v, last - 1, last)
+            if now is None:
+                continue
+            hist = [did(v, i - 1, i) for i in range(1, last)]
+            hist = [abs(h[0]) for h in hist if h is not None]
+            typical = sorted(hist)[len(hist) // 2] if hist else None
+            d, z, ds, dr = now
+            unusual = typical is None or len(hist) < 2 or abs(d) >= 2 * typical
+            out[v] = {"segment": {dim: v}, "metric": metric, "did": d, "z": z, "relative_to_rest": math.exp(d) - 1,
+                      "seg_rel": math.exp(ds) - 1, "rest_rel": math.exp(dr) - 1, "typical_did": typical,
+                      "unusual": unusual,
+                      "distinct": bool(abs(z) >= 3.0 and abs(math.exp(d) - 1) >= 0.15 and unusual)}
+        return out
+
+    def impact(self, metric: str, segment: dict, cur: Window, base: Window) -> float:
+        """How much of the metric's week-over-week change comes from this segment behaving differently from the
+        rest of the site, as a share of last week's value.
+
+        Counterfactual: had the segment's numerator and denominator grown like the rest's, what would the metric be
+        this week? impact = (actual - counterfactual) / last week's value. A segment that moved like everything
+        else has an impact near zero, however large it is.
+        """
+        m = METRICS[metric]
+        ins, out = seg_sql(segment), f"NOT ({seg_sql(segment)})"
+
+        def parts(cond, w):
+            r = self.con.execute(f"SELECT {m.num}, {m.den or '1'} FROM {self.t} WHERE {w.sql()} AND {cond}").fetchone()
+            return float(r[0] or 0), float(r[1] or 0)
+        (nsb, dsb), (nsc, dsc) = parts(ins, base), parts(ins, cur)
+        (nrb, drb), (nrc, drc) = parts(out, base), parts(out, cur)
+        if not m.den:
+            g = nrc / nrb if nrb else 1.0
+            total = nsb + nrb
+            return (nsc - nsb * g) / total if total else 0.0
+        gn, gd = (nrc / nrb if nrb else 1.0), (drc / drb if drb else 1.0)
+        if not (dsc + drc) or not (dsb + drb) or not (drc + dsb * gd):
+            return 0.0
+        q_cur, q_base = (nsc + nrc) / (dsc + drc), (nsb + nrb) / (dsb + drb)
+        q_cf = (nrc + nsb * gn) / (drc + dsb * gd)
+        return (q_cur - q_cf) / q_base if q_base else 0.0
+
+    def change_point_relative(self, metric: str, segment: dict, w: Window, earliest=None) -> dict | None:
+        """The first day the segment started behaving differently from the rest: the best single split of the
+        daily ratio (segment / rest), so seasonality that hits everyone alike cancels out."""
+        seg_days = {d["date"]: d["value"] for d in self.daily(metric, w, segment)}
+        rest = self.con.execute(f"""SELECT date, {METRICS[metric].num}, {METRICS[metric].den or '1'} FROM {self.t}
+                                    WHERE {w.sql()} AND NOT ({seg_sql(segment)}) GROUP BY date ORDER BY date""").fetchall()
+        rest_days = {d: (float(n or 0) / float(dd) if dd else None) for d, n, dd in rest}
+        days = [(d, seg_days[d] / rest_days[d]) for d in sorted(seg_days)
+                if seg_days.get(d) is not None and rest_days.get(d)]
+        if len(days) < 5:
+            return None
+        vals = [v for _, v in days]
+        best = None
+        for k in range(2, len(vals) - 1):
+            if earliest is not None and days[k][0] < earliest:
+                continue          # a week-over-week question: the change starts in the question week
+            a, b = vals[:k], vals[k:]
+            ma, mb = sum(a) / len(a), sum(b) / len(b)
+            sse = sum((x - ma) ** 2 for x in a) + sum((x - mb) ** 2 for x in b)
+            if best is None or sse < best[0]:
+                best = (sse, k, ma, mb)
+        if best is None:
+            return None
+        _, k, ma, mb = best
+        return {"start": days[k][0], "before": ma, "after": mb, "rel": (mb - ma) / ma if ma else None}
+
     # ---- when did it start? -----------------------------------------------------------------------
     def daily(self, metric: str, w: Window, segment: dict | None = None) -> list[dict]:
         m = METRICS[metric]

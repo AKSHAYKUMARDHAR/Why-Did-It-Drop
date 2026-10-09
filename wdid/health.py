@@ -67,6 +67,38 @@ def _checks(was: dict, now: dict) -> list[dict]:
     return out
 
 
+SIGNATURE = {   # the daily series behind each check: numerator / denominator
+    "duplicate_purchase_events": ("sum(purchase)", "sum(transactions)"),
+    "purchases_without_checkout": ("count(*) FILTER (WHERE purchase > 0 AND begin_checkout = 0)", "count(*) FILTER (WHERE purchase > 0)"),
+    "revenue_per_order_jump": ("sum(revenue)", "sum(transactions)"),
+    "zero_revenue_orders": ("count(*) FILTER (WHERE purchase > 0 AND revenue = 0)", "count(*) FILTER (WHERE purchase > 0)"),
+}
+
+
+def start_of(e: Engine, finding: dict, w: Window):
+    """The first day of a finding's signature: the best single split of its daily series (least squares)."""
+    if finding["check"] in SIGNATURE:
+        num, den = SIGNATURE[finding["check"]]
+    else:
+        num, den = f"sum({finding['event']})", "count(*)"
+    seg = finding["segment"]
+    cond = " AND ".join(f"{k} = '{v}'" for k, v in seg.items()) or "TRUE"
+    rows = e.con.execute(f"""SELECT date, {num}, {den} FROM {e.t} WHERE {w.sql()} AND {cond}
+                             GROUP BY date ORDER BY date""").fetchall()
+    days = [(d, float(n or 0) / float(dd)) for d, n, dd in rows if dd]
+    if len(days) < 4:
+        return None
+    vals = [v for _, v in days]
+    best = None
+    for k in range(2, len(vals) - 1):
+        a, b = vals[:k], vals[k:]
+        ma, mb = sum(a) / len(a), sum(b) / len(b)
+        sse = sum((x - ma) ** 2 for x in a) + sum((x - mb) ** 2 for x in b)
+        if best is None or sse < best[0]:
+            best = (sse, k)
+    return days[best[1]][0]
+
+
 def check(e: Engine, cur: Window, base: Window, min_sessions: int = 300) -> list[dict]:
     findings, site_keys = [], set()
     for dim in [None] + DIMS:

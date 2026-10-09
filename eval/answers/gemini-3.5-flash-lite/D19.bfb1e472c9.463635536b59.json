@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "463635536b59",
+ "usage": {
+  "input_tokens": 1598,
+  "output_tokens": 223
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "os",
+    "value": "Macintosh"
+   }
+  ],
+  "start_date": "2020-12-10",
+  "confidence": "high",
+  "headline": "Revenue grew overall within normal variation, but Macintosh users experienced a significant checkout drop.",
+  "explanation": [
+   "Revenue increased by [F3] despite a negative divergence in the Macintosh operating system segment starting on [F33].",
+   "Macintosh users suffered a severe drop in checkout starts after adding items to the cart, moving by [F26] while the rest of the site improved.",
+   "This product issue weighed down the overall metrics, accounting for [F24] of the revenue change."
+  ],
+  "next_step": "Check recent frontend releases and tag manager updates affecting the checkout flow on Macintosh browsers."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "15f2a4594f4e",
+ "usage": {
+  "input_tokens": 1176,
+  "output_tokens": 153
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Product-view rate is within normal variation compared with recent weeks.",
+  "explanation": [
+   "Product-view rate moved from {F1} to {F2}, which is within normal variation.",
+   "There are no tracking issues or distinct candidate causes driving this movement.",
+   "Calendar events such as Christmas Eve and Christmas Day occurred during this period."
+  ],
+  "next_step": "Continue monitoring the product-view rate for any emerging trends after the holiday period."
+ }
+}

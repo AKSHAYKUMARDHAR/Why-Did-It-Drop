@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "4d036fbdd3d1",
+ "usage": {
+  "input_tokens": 1344,
+  "output_tokens": 226
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "basket_change",
+  "segment": [
+   {
+    "dimension": "os",
+    "value": "Android"
+   }
+  ],
+  "start_date": "2020-12-16",
+  "confidence": "medium",
+  "headline": "Revenue fell due to a basket change incident on Android starting on Wed 16 Dec 2020.",
+  "explanation": [
+   "Revenue fell by [F3] across the site, driven by a drop in conversion rate [F7] and sessions [F6].",
+   "The primary candidate cause is the Android operating system segment, which experienced a severe drop in average order value [F26] starting on [F33].",
+   "This basket change led to a distinct divergence from the rest of the site [F29]."
+  ],
+  "next_step": "Check recent releases or checkout updates affecting Android users."
+ }
+}

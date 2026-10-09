@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "04d6051aa9d0",
+ "usage": {
+  "input_tokens": 1639,
+  "output_tokens": 205
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "country",
+    "value": "United States"
+   }
+  ],
+  "start_date": "2020-12-08",
+  "confidence": "high",
+  "headline": "Revenue declined following a drop in purchase completion for users in the United States.",
+  "explanation": [
+   "Total revenue decreased from [F1] to [F2] during the week.",
+   "The primary driver of the decline was the United States segment, which accounted for [F24] of the change in revenue.",
+   "This segment experienced a severe drop in purchase after checkout start starting from [F36]."
+  ],
+  "next_step": "Investigate checkout errors or payment gateway issues affecting users in the United States."
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "fec1baf2e6b7",
+ "usage": {
+  "input_tokens": 1344,
+  "output_tokens": 169
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Average order value remained within normal variation compared to previous weeks.",
+  "explanation": [
+   "The change in Average order value from [F1] to [F2] represents a percentage change of [F3] that is well within normal variation [F5].",
+   "Although there are some candidate shifts listed such as Device category equal to desktop [F24], the overall metric movement is not significant enough to be considered an incident or broad shift."
+  ],
+  "next_step": "Continue monitoring order value trends and tracking health across device segments."
+ }
+}

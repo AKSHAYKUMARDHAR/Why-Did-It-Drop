@@ -1,0 +1,27 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "06ff288f15bd",
+ "usage": {
+  "input_tokens": 1347,
+  "output_tokens": 188
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "tracking_issue",
+  "segment": [
+   {
+    "dimension": "os",
+    "value": "Macintosh"
+   }
+  ],
+  "start_date": "2020-12-11",
+  "confidence": "high",
+  "headline": "A tracking issue on Macintosh emerged, causing purchases without checkout to spike.",
+  "explanation": [
+   "Measurement health flagged an issue for operating system Macintosh starting on Fri 11 Dec 2020 where purchases without checkout surged to {F7}.",
+   "This tracking anomaly affects our checkout progression metrics and coincides with a sharp drop in checkout starts on this segment."
+  ],
+  "next_step": "Inspect the checkout event tags and scripts deployed on Macintosh devices."
+ }
+}

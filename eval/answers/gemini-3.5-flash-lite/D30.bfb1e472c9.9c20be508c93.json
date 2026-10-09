@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "9c20be508c93",
+ "usage": {
+  "input_tokens": 1263,
+  "output_tokens": 162
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Checkout start after add-to-cart remained within normal weekly variation during the holiday week.",
+  "explanation": [
+   "Checkout start after add-to-cart moved by a fraction of its typical weekly swing compared to the prior period.",
+   "No tracking issues affecting this metric or localized candidate causes were identified in the evidence pack.",
+   "The minor fluctuations observed align with expected post-Christmas and New Year holiday trends."
+  ],
+  "next_step": "Continue routine monitoring of the checkout funnel across upcoming weekly cycles."
+ }
+}

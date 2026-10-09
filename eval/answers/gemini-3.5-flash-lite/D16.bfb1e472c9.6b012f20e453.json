@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "6b012f20e453",
+ "usage": {
+  "input_tokens": 1196,
+  "output_tokens": 193
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Revenue decreased from [F1] to [F2], but this change remains within normal variation compared to previous weeks.",
+  "explanation": [
+   "Overall revenue fell by [F3], driven largely by a drop in conversion rate [F7] while sessions saw smaller fluctuations [F6].",
+   "Funnel metrics show drops primarily in add-to-cart [F14] and checkout start rates [F17].",
+   "No specific tracking issues or localized candidate causes were identified, indicating the overall movement is within expected parameters [F5]."
+  ],
+  "next_step": "Continue monitoring overall traffic and funnel progression to ensure conversion rates stabilize."
+ }
+}

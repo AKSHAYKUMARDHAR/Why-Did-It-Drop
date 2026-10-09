@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "d3cfc11a5090",
+ "usage": {
+  "input_tokens": 1434,
+  "output_tokens": 221
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "tracking_issue",
+  "segment": [
+   {
+    "dimension": "browser",
+    "value": "Safari"
+   }
+  ],
+  "start_date": "2020-12-30",
+  "confidence": "high",
+  "headline": "Conversion rate dropped beyond normal variation due to a tracking issue in Safari.",
+  "explanation": [
+   "Conversion rate fell from [F1] to [F2], marking a significant decrease of [F3] that is [F5] times the typical weekly change.",
+   "Tracking health detected duplicate purchase events in Browser = Safari starting on [F34], which affected measurement consistency.",
+   "The funnel metrics also showed across-the-board declines in product views and subsequent checkout steps."
+  ],
+  "next_step": "Investigate the analytics implementation and tag manager for Safari browsers to check why duplicate purchase events began firing."
+ }
+}

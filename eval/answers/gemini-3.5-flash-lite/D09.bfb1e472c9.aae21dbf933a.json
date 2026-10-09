@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "aae21dbf933a",
+ "usage": {
+  "input_tokens": 1462,
+  "output_tokens": 259
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "source",
+    "value": "google"
+   }
+  ],
+  "start_date": "2021-01-25",
+  "confidence": "high",
+  "headline": "Although the overall add-to-cart rate stayed within normal variation, traffic source google experienced a distinct drop starting {F38}.",
+  "explanation": [
+   "The overall add-to-cart rate fell from {F1} to {F2}, which represents a {F3} decline staying within typical weekly variation {F5}.",
+   "However, sessions from the google source saw a severe divergence in add-to-cart behavior after a product view, dropping by {F32} while the rest of the site improved {F33}.",
+   "This isolated drop accounts for a major portion of the downward pressure on the metric starting on {F38}."
+  ],
+  "next_step": "Investigate recent landing page updates and product interaction tracking specifically for traffic coming from the google source."
+ }
+}

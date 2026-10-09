@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "781bd78d82db",
+ "usage": {
+  "input_tokens": 1209,
+  "output_tokens": 175
+ },
+ "answer": {
+  "verdict": "broad",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Revenue fell because conversion rate dropped, but the change remains within normal variation.",
+  "explanation": [
+   "Revenue fell by [F3] compared to the previous week, driven primarily by a decrease in the conversion rate of [F7].",
+   "Sessions and average order value saw smaller shifts, while funnel steps showed declines in add-to-cart and checkout start rates.",
+   "There are no tracking issues or specific segment candidate causes, indicating the overall movement aligns with normal variation."
+  ],
+  "next_step": "Review recent funnel performance and general traffic trends for any seasonal patterns."
+ }
+}

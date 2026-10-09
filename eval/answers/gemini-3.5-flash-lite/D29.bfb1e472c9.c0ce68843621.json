@@ -1,0 +1,22 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "c0ce68843621",
+ "usage": {
+  "input_tokens": 1202,
+  "output_tokens": 152
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Orders remained within normal variation compared to recent weeks.",
+  "explanation": [
+   "The change in orders from {F1} to {F2} represented a {F3} increase, which is {F5} the typical weekly change before and well within normal variation.",
+   "Both sessions and the conversion rate fluctuated within expected bounds alongside the holiday calendar events listed."
+  ],
+  "next_step": "Continue routine monitoring as no specific issues or anomalies were detected."
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "ce3d6240a69e",
+ "usage": {
+  "input_tokens": 1450,
+  "output_tokens": 145
+ },
+ "answer": {
+  "verdict": "broad",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Revenue grew by thirty-nine percent, which is within normal variation compared to recent weeks.",
+  "explanation": [
+   "Revenue increased from [F1] to [F2], following Cyber Monday [F2] and a rise in sessions [F6].",
+   "All major conversion metrics remained within normal variation, with no tracking issues detected."
+  ],
+  "next_step": "Review seasonal traffic trends and campaign performance for the upcoming weeks."
+ }
+}

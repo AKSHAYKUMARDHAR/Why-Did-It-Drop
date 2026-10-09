@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "50a2aa1a3dba",
+ "usage": {
+  "input_tokens": 1680,
+  "output_tokens": 224
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "traffic_loss",
+  "segment": [
+   {
+    "dimension": "source",
+    "value": "shop.googlemerchandisestore.com"
+   }
+  ],
+  "start_date": "2020-12-21",
+  "confidence": "high",
+  "headline": "Sessions dropped beyond normal variation due to a sharp traffic loss from shop.googlemerchandisestore.com.",
+  "explanation": [
+   "Sessions fell significantly compared with the previous week, exceeding typical variation.",
+   "The drop was largely driven by a severe traffic loss from the source shop.googlemerchandisestore.com.",
+   "This segment diverged sharply from the rest of the site starting on the specified date."
+  ],
+  "next_step": "Check tracking and campaign performance for shop.googlemerchandisestore.com to see if referral or tracking tags were broken."
+ }
+}

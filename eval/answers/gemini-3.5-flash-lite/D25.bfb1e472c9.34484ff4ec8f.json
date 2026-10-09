@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "34484ff4ec8f",
+ "usage": {
+  "input_tokens": 1151,
+  "output_tokens": 160
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "The shift in Checkout start after add-to-cart remained within normal weekly variation.",
+  "explanation": [
+   "The metric moved from [F1] to [F2], marking a relative drop of [F3].",
+   "This fluctuation is well within typical historical variation [F4] and [F5].",
+   "No tracking anomalies or localized candidate causes were identified in the evidence pack."
+  ],
+  "next_step": "Continue standard weekly monitoring of the checkout funnel without immediate intervention."
+ }
+}

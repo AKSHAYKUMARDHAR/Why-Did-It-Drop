@@ -1,0 +1,22 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "7eb3baf35ea5",
+ "usage": {
+  "input_tokens": 1199,
+  "output_tokens": 135
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Purchase after checkout start remained within normal weekly variation compared to the previous week.",
+  "explanation": [
+   "The change in purchase after checkout start was well within typical weekly fluctuation limits.",
+   "No relevant candidate causes or tracking issues were flagged that would explain a significant deviation in this specific metric."
+  ],
+  "next_step": "Continue monitoring funnel progression and conversion rates across upcoming weekly cycles."
+ }
+}

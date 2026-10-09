@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "292b394d19bd",
+ "usage": {
+  "input_tokens": 1652,
+  "output_tokens": 213
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "country",
+    "value": "United States"
+   }
+  ],
+  "start_date": "2020-12-08",
+  "confidence": "high",
+  "headline": "Revenue fell slightly overall due to a sharp drop in conversion for United States traffic.",
+  "explanation": [
+   "Revenue decreased compared to the previous week, remaining within normal variation limits.",
+   "The decline was heavily concentrated in the United States segment, which experienced a severe drop in purchase completion after checkout starts.",
+   "Other segments and overall metrics remained relatively stable or grew, but the U.S. checkout issue dragged down total revenue."
+  ],
+  "next_step": "Investigate checkout errors, payment gateway integrations, and recent releases affecting United States users starting from December 8."
+ }
+}

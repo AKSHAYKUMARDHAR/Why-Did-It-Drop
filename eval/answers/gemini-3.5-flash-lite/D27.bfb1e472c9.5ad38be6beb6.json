@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "5ad38be6beb6",
+ "usage": {
+  "input_tokens": 1580,
+  "output_tokens": 216
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "browser",
+    "value": "Chrome"
+   }
+  ],
+  "start_date": "2020-12-11",
+  "confidence": "medium",
+  "headline": "Conversion rate moved within normal variation overall, but a Chrome-specific drop occurred.",
+  "explanation": [
+   "Overall conversion rate changed by {F3}, staying within normal weekly variation.",
+   "However, Chrome users experienced a distinct drop in add-to-cart after a product view, accounting for {F21} of the change in conversion rate.",
+   "This segment-specific issue started diverging from the rest of the site on {F30}."
+  ],
+  "next_step": "Check recent frontend deployments and browser console errors specifically affecting Chrome users starting from {F30}."
+ }
+}

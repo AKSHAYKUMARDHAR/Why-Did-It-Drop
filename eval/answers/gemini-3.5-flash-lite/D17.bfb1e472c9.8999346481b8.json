@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "8999346481b8",
+ "usage": {
+  "input_tokens": 1344,
+  "output_tokens": 229
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "mix_shift",
+  "segment": [
+   {
+    "dimension": "country",
+    "value": "United States"
+   }
+  ],
+  "start_date": "2021-01-15",
+  "confidence": "high",
+  "headline": "Conversion rate changed within normal variation overall, driven primarily by a shift in United States sessions.",
+  "explanation": [
+   "Overall conversion rate shifted by a magnitude that falls within typical weekly variation before {F4}, even though site-wide metrics improved.",
+   "The primary candidate cause is Country = United States, which accounts for a significant portion of the shift and diverged distinctly beginning on {F33}.",
+   "Specifically, session volume in the United States grew significantly compared to the rest of the site {F24}."
+  ],
+  "next_step": "Investigate marketing campaigns or regional traffic sources targeting the United States around {F33}."
+ }
+}

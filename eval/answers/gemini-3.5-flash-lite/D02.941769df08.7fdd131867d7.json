@@ -1,0 +1,22 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "7fdd131867d7",
+ "usage": {
+  "input_tokens": 1261,
+  "output_tokens": 139
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "The Add-to-cart rate (of sessions) stayed within normal variation this week.",
+  "explanation": [
+   "The headline indicates that the change in Add-to-cart rate (of sessions) is within normal variation compared to recent weeks.",
+   "There are no relevant tracking issues affecting this metric and no candidate causes identified."
+  ],
+  "next_step": "Continue monitoring the metric as usual."
+ }
+}

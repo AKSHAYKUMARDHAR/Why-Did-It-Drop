@@ -1,0 +1,22 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "4a6cc662d00f",
+ "usage": {
+  "input_tokens": 1354,
+  "output_tokens": 144
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Checkout start after add-to-cart remained within normal variation compared to recent weeks.",
+  "explanation": [
+   "The change in checkout start after add-to-cart was typical for the store and did not exceed normal historical fluctuations.",
+   "Tracking health and candidate causes do not indicate any significant disruptions affecting this specific funnel step during the period."
+  ],
+  "next_step": "Continue monitoring funnel progression rates across upcoming weekly cycles."
+ }
+}

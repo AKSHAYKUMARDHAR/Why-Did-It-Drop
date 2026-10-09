@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "b7b8cdd37d0a",
+ "usage": {
+  "input_tokens": 1593,
+  "output_tokens": 216
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "browser",
+    "value": "Chrome"
+   }
+  ],
+  "start_date": "2020-12-11",
+  "confidence": "high",
+  "headline": "Conversion rate dropped within normal variation due to a product break affecting Chrome users.",
+  "explanation": [
+   "Overall conversion fell from {F1} to {F2} after Cyber Monday, staying within normal weekly variation.",
+   "The primary cause was an issue on Chrome, where add-to-cart rates after a product view dropped significantly.",
+   "This browser-specific disruption began around {F30} and drove the majority of the site-wide decline."
+  ],
+  "next_step": "Investigate recent frontend changes or JavaScript errors specific to the Chrome browser starting around December 11."
+ }
+}

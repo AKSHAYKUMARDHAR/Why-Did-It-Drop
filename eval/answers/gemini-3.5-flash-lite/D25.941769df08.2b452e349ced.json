@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "941769df08",
+ "pack_hash": "2b452e349ced",
+ "usage": {
+  "input_tokens": 1164,
+  "output_tokens": 156
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Checkout start after add-to-cart moved within normal weekly variation compared with recent periods.",
+  "explanation": [
+   "The change in checkout start after add-to-cart of [F3] is well within normal weekly variation [F5].",
+   "There are no tracking issues or candidate causes linked to this metric.",
+   "The overall site funnel shows movements consistent with ordinary baseline fluctuations."
+  ],
+  "next_step": "Continue monitoring standard site performance metrics without immediate investigation."
+ }
+}

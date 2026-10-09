@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "a9bed980f17a",
+ "usage": {
+  "input_tokens": 1678,
+  "output_tokens": 224
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "basket_change",
+  "segment": [
+   {
+    "dimension": "device",
+    "value": "mobile"
+   }
+  ],
+  "start_date": "2020-12-23",
+  "confidence": "high",
+  "headline": "Revenue dropped severely beyond normal variation due to a sharp decline in average order value on mobile devices.",
+  "explanation": [
+   "Revenue fell significantly compared to the prior week, driven by drops in sessions, conversion rate, and average order value.",
+   "Mobile devices accounted for a notable part of the decline, experiencing a steep drop in average order value starting mid-week.",
+   "Similar basket size drops appeared in Safari and iOS segments, pointing towards a checkout or cart pricing issue on mobile platforms."
+  ],
+  "next_step": "Investigate mobile checkout and cart pricing updates released around Dec 23 to see why order values collapsed on phones."
+ }
+}
