@@ -1,0 +1,3586 @@
+{
+ "split": "holdout",
+ "model": "gemini-3.5-flash-lite",
+ "summary": {
+  "all": {
+   "baseline": {
+    "cases": 40,
+    "incident_cases": 28,
+    "quiet_cases": 12,
+    "right": 30,
+    "wrong": 7,
+    "missed": 1,
+    "abstained": 0,
+    "false_alarms": 2,
+    "wrong_rate": 0.175,
+    "right_rate_incidents": 0.7142857142857143,
+    "false_alarm_rate": 0.16666666666666666
+   },
+   "model": {
+    "cases": 40,
+    "incident_cases": 28,
+    "quiet_cases": 12,
+    "right": 27,
+    "wrong": 9,
+    "missed": 1,
+    "abstained": 1,
+    "false_alarms": 2,
+    "wrong_rate": 0.225,
+    "right_rate_incidents": 0.6071428571428571,
+    "false_alarm_rate": 0.16666666666666666
+   },
+   "checked": {
+    "cases": 40,
+    "incident_cases": 28,
+    "quiet_cases": 12,
+    "right": 28,
+    "wrong": 8,
+    "missed": 1,
+    "abstained": 1,
+    "false_alarms": 2,
+    "wrong_rate": 0.2,
+    "right_rate_incidents": 0.6428571428571429,
+    "false_alarm_rate": 0.16666666666666666
+   }
+  },
+  "planted": {
+   "baseline": {
+    "cases": 26,
+    "incident_cases": 26,
+    "quiet_cases": 0,
+    "right": 18,
+    "wrong": 7,
+    "missed": 1,
+    "abstained": 0,
+    "false_alarms": 0,
+    "wrong_rate": 0.2692307692307692,
+    "right_rate_incidents": 0.6923076923076923,
+    "false_alarm_rate": null
+   },
+   "model": {
+    "cases": 26,
+    "incident_cases": 26,
+    "quiet_cases": 0,
+    "right": 16,
+    "wrong": 8,
+    "missed": 1,
+    "abstained": 1,
+    "false_alarms": 0,
+    "wrong_rate": 0.3076923076923077,
+    "right_rate_incidents": 0.6153846153846154,
+    "false_alarm_rate": null
+   },
+   "checked": {
+    "cases": 26,
+    "incident_cases": 26,
+    "quiet_cases": 0,
+    "right": 16,
+    "wrong": 8,
+    "missed": 1,
+    "abstained": 1,
+    "false_alarms": 0,
+    "wrong_rate": 0.3076923076923077,
+    "right_rate_incidents": 0.6153846153846154,
+    "false_alarm_rate": null
+   }
+  },
+  "natural+quiet": {
+   "baseline": {
+    "cases": 14,
+    "incident_cases": 2,
+    "quiet_cases": 12,
+    "right": 12,
+    "wrong": 0,
+    "missed": 0,
+    "abstained": 0,
+    "false_alarms": 2,
+    "wrong_rate": 0.0,
+    "right_rate_incidents": 1.0,
+    "false_alarm_rate": 0.16666666666666666
+   },
+   "model": {
+    "cases": 14,
+    "incident_cases": 2,
+    "quiet_cases": 12,
+    "right": 11,
+    "wrong": 1,
+    "missed": 0,
+    "abstained": 0,
+    "false_alarms": 2,
+    "wrong_rate": 0.07142857142857142,
+    "right_rate_incidents": 0.5,
+    "false_alarm_rate": 0.16666666666666666
+   },
+   "checked": {
+    "cases": 14,
+    "incident_cases": 2,
+    "quiet_cases": 12,
+    "right": 12,
+    "wrong": 0,
+    "missed": 0,
+    "abstained": 0,
+    "false_alarms": 2,
+    "wrong_rate": 0.0,
+    "right_rate_incidents": 1.0,
+    "false_alarm_rate": 0.16666666666666666
+   }
+  }
+ },
+ "cases": [
+  {
+   "id": "H01",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "checkout_start_rate",
+    "week": "2020-12-14"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "tracking_issue",
+    "segment": {
+     "os": "Web"
+    },
+    "start": "2020-12-18",
+    "check_start": true
+   },
+   "incident": {
+    "type": "tracking_gap",
+    "seed": 999993,
+    "segment": {
+     "os": "Web"
+    },
+    "start": "2020-12-18",
+    "end": "2020-12-20",
+    "fraction": 0.94
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "os": "Web"
+     },
+     "start_date": "2020-12-18",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "os": "Web"
+     },
+     "start_date": "2020-12-18",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "os": "Web"
+     },
+     "start_date": "2020-12-18",
+     "confidence": "high",
+     "untraced_numbers": 2,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Checkout start after add-to-cart declined due to a tracking issue affecting the Web operating system.",
+      "next_step": "Investigate the analytics tag implementation and event firing logic for checkout starts on the Web platform.",
+      "explanation": [
+       "Checkout start after add-to-cart dropped significantly while purchases without checkout increased for the Web operating system starting from Fri [number removed] Dec [number removed].",
+       "This tracking finding directly affects the metric and explains the observed drop.",
+       "The issue is isolated to the Web operating system segment."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H02",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "revenue",
+    "week": "2020-12-14"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "model": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "checked": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": 6,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Revenue fell within normal weekly variation compared to the previous week.",
+      "next_step": "Review general traffic and seasonal trends to monitor future weekly performance.",
+      "explanation": [
+       "Revenue decreased from [F[number removed]] to [F[number removed]], which is within normal historical weekly variation [F[number removed]].",
+       "Both sessions [F[number removed]] and average order value [F[number removed]] remained stable, while conversion rate declined [F[number removed]].",
+       "No tracking issues or candidate causes were found to explain the shift."
+      ]
+     },
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "H03",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2021-01-04"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "product_break",
+    "segment": {
+     "landing": "Shop by Brand"
+    },
+    "start": "2021-01-05",
+    "check_start": true
+   },
+   "incident": {
+    "type": "landing_break",
+    "seed": 540513,
+    "step": "view_item",
+    "segment": {
+     "landing": "Shop by Brand"
+    },
+    "start": "2021-01-05",
+    "end": "2021-01-10",
+    "fraction": 0.8
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "landing": "Shop by Brand"
+     },
+     "start_date": "2021-01-05",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "landing": "Shop by Brand"
+     },
+     "start_date": "2021-01-05",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "landing": "Shop by Brand"
+     },
+     "start_date": "2021-01-05",
+     "confidence": "high",
+     "untraced_numbers": 0,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Conversion rate changes were driven by a sharp product-view rate drop on the Shop by Brand landing page.",
+      "next_step": "Check recent deployments or content updates affecting the Shop by Brand landing page starting from Tuesday.",
+      "explanation": [
+       "Although overall conversion variation remained within normal bounds, visitors landing on the Shop by Brand section experienced a dramatic product-view rate decline.",
+       "This issue began on Tuesday and heavily impacted the funnel performance for that specific segment.",
+       "Since this segment accounts for a portion of traffic, the localized breakdown dragged down overall metrics."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H04",
+   "kind": "natural",
+   "label": "clear",
+   "question": {
+    "metric": "revenue",
+    "week": "2021-01-25"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "tracking_issue",
+    "segment": {},
+    "start": "2021-01-26",
+    "check_start": true
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {},
+     "start_date": "2021-01-26",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {},
+     "start_date": "2021-01-26",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {},
+     "start_date": "2021-01-26",
+     "confidence": "high",
+     "untraced_numbers": 2,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Revenue dropped severely due to a tracking issue involving a sharp increase in zero-revenue orders.",
+      "next_step": "Investigate the checkout and payment confirmation tags or backend order processing to determine why orders are failing to record revenue.",
+      "explanation": [
+       "Revenue fell significantly beyond normal variation as the proportion of zero-revenue orders spiked across the entire site starting from Tue [number removed] Jan [number removed].",
+       "While standard traffic metrics and conversion rates remained relatively stable, average order value plummeted due to orders recording zero revenue.",
+       "This measurement issue fully accounts for the dramatic drop in total earnings."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H05",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2020-12-07"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "product_break",
+    "segment": {
+     "browser": "Chrome"
+    },
+    "start": "2020-12-07",
+    "check_start": true
+   },
+   "incident": {
+    "type": "product_break",
+    "seed": 649890,
+    "step": "begin_checkout",
+    "segment": {
+     "browser": "Chrome"
+    },
+    "start": "2020-12-07",
+    "end": "2020-12-13",
+    "fraction": 0.6
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "browser": "Chrome"
+     },
+     "start_date": "2020-12-07",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "browser": "Chrome"
+     },
+     "start_date": "2020-12-07",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "browser": "Chrome"
+     },
+     "start_date": "2020-12-07",
+     "confidence": "high",
+     "untraced_numbers": 2,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Conversion rate dropped because of a significant drop in checkout starts for Chrome users starting on Mon [number removed] Dec [number removed].",
+      "next_step": "Investigate recent frontend releases and tag manager updates affecting checkout initiation specifically on Chrome browsers.",
+      "explanation": [
+       "Conversion rate fell from 1.90% to 1.17% following Cyber Monday, marking a sharp decline of -38%.",
+       "The primary candidate cause is Chrome users, accounting for -41% of the change with a dramatic reduction in checkout starts after add-to-cart of -74%.",
+       "This behavior is classified as a product break because the friction occurred specifically at the checkout start step on browser = Chrome starting from Mon 07 Dec 2020."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H06",
+   "kind": "planted",
+   "label": "too_small",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2020-12-28"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "too_small",
+    "type": "product_break",
+    "segment": {
+     "os": "Windows"
+    },
+    "start": "2021-01-01",
+    "check_start": true,
+    "accept": [
+     "no_change",
+     "cant_tell"
+    ]
+   },
+   "incident": {
+    "type": "product_break",
+    "seed": 816566,
+    "step": "purchase",
+    "segment": {
+     "os": "Windows"
+    },
+    "start": "2021-01-01",
+    "end": "2021-01-03",
+    "fraction": 0.13
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "landing": "Home"
+     },
+     "start_date": "2020-12-31",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "landing": "Home"
+     },
+     "start_date": "2020-12-31",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "landing": "Home"
+     },
+     "start_date": "2020-12-31",
+     "confidence": "high",
+     "untraced_numbers": 4,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Conversion rate dropped beyond normal variation due to a product-view drop on the Home landing page.",
+      "next_step": "Investigate frontend releases or tracking tags deployed on the Home page around December [number removed], [number removed].",
+      "explanation": [
+       "Conversion rate fell significantly beyond typical weekly variation.",
+       "The Home landing page experienced a sharp decline in its product-view rate starting on Thursday, December [number removed], [number removed].",
+       "This specific drop accounts for a major share of the overall conversion decline on the site."
+      ]
+     },
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H07",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "checkout_start_rate",
+    "week": "2020-12-14"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "tracking_issue",
+    "segment": {
+     "os": "Android"
+    },
+    "start": "2020-12-16",
+    "check_start": true
+   },
+   "incident": {
+    "type": "tracking_gap",
+    "seed": 980038,
+    "segment": {
+     "os": "Android"
+    },
+    "start": "2020-12-16",
+    "end": "2020-12-20",
+    "fraction": 0.92
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "os": "Android"
+     },
+     "start_date": "2020-12-16",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "os": "Android"
+     },
+     "start_date": "2020-12-16",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "os": "Android"
+     },
+     "start_date": "2020-12-16",
+     "confidence": "high",
+     "untraced_numbers": 2,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "A tracking issue on Android caused purchases to happen without a recorded checkout start.",
+      "next_step": "Inspect the tracking implementation and analytics tags on the Android platform to ensure checkout start events are firing correctly.",
+      "explanation": [
+       "The tracking health report found that purchases without a checkout start spiked in the Android operating system segment.",
+       "This measurement issue directly impacts the recorded checkout start rate for Android users, making it appear as though the metric worsened significantly.",
+       "The anomaly began on Wednesday, December [number removed], [number removed]."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H08",
+   "kind": "natural",
+   "label": "clear",
+   "question": {
+    "metric": "revenue",
+    "week": "2020-11-16"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "tracking_issue",
+    "segment": {},
+    "start": "2020-11-19",
+    "check_start": true
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {},
+     "start_date": "2020-11-19",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "country": "the whole site"
+     },
+     "start_date": "2020-11-19",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {},
+     "start_date": "2020-11-19",
+     "confidence": "high",
+     "untraced_numbers": 0,
+     "unknown_facts": 0,
+     "check_notes": [
+      "the tracking finding is site-wide: segment set to the whole site"
+     ],
+     "rendered": {
+      "headline": "Revenue grew significantly this week due to a tracking issue involving duplicate purchase events.",
+      "next_step": "Inspect the purchase confirmation page and analytics tag implementation to identify what is triggering duplicate purchase events.",
+      "explanation": [
+       "Revenue increased by +61% to $38,086 starting from Thu 19 Nov 2020.",
+       "Tracking health detected duplicate purchase events in the whole site, with the metric rising from 1.03 to 1.40.",
+       "This measurement problem directly affects revenue reporting by counting single purchases multiple times."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H09",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2021-01-04"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "product_break",
+    "segment": {
+     "landing": "Apparel"
+    },
+    "start": "2021-01-04",
+    "check_start": true
+   },
+   "incident": {
+    "type": "landing_break",
+    "seed": 386273,
+    "step": "view_item",
+    "segment": {
+     "landing": "Apparel"
+    },
+    "start": "2021-01-04",
+    "end": "2021-01-10",
+    "fraction": 0.83
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "landing": "Apparel"
+     },
+     "start_date": "2021-01-04",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "landing": "Apparel"
+     },
+     "start_date": "2021-01-04",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "landing": "Apparel"
+     },
+     "start_date": "2021-01-04",
+     "confidence": "high",
+     "untraced_numbers": 4,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Conversion rate dropped within normal variation overall, but a severe product breakage hit the apparel landing page.",
+      "next_step": "Investigate recent deployments and tag configurations affecting the apparel landing page and product catalog.",
+      "explanation": [
+       "Although the overall weekly change stayed within normal historical variation, site-wide conversion fell from [F[number removed]] to [F[number removed]] due to weakness across several funnel steps.",
+       "A major candidate cause appeared on the apparel landing page section, where the product-view rate crashed by [F[number removed]] starting on [F[number removed]].",
+       "This localized drop disproportionately hurt conversion for visitors arriving on that section compared to the rest of the site."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H10",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "revenue",
+    "week": "2021-01-11"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "traffic_loss",
+    "segment": {
+     "source": "shop.googlemerchandisestore.com"
+    },
+    "start": "2021-01-13",
+    "check_start": true
+   },
+   "incident": {
+    "type": "traffic_loss",
+    "seed": 464011,
+    "segment": {
+     "source": "shop.googlemerchandisestore.com"
+    },
+    "start": "2021-01-13",
+    "end": "2021-01-17",
+    "fraction": 0.78
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "traffic_loss",
+     "segment": {
+      "medium": "referral"
+     },
+     "start_date": "2021-01-13",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "traffic_loss",
+     "segment": {
+      "medium": "referral"
+     },
+     "start_date": "2021-01-13",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "traffic_loss",
+     "segment": {
+      "medium": "referral"
+     },
+     "start_date": "2021-01-13",
+     "confidence": "medium",
+     "untraced_numbers": 7,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Revenue grew within normal variation despite a drop in referral traffic.",
+      "next_step": "Investigate external referral sources and partner sites to see if incoming links or referral channels broke.",
+      "explanation": [
+       "Overall revenue increased from [F[number removed]] to [F[number removed]], which falls within normal weekly variation [F[number removed]].",
+       "However, referral traffic experienced a distinct drop in sessions [F[number removed]] starting mid-week [F[number removed]], accounting for a significant negative pull on revenue [F[number removed]].",
+       "This was offset by strong growth across the rest of the site, keeping the overall metric within expected bounds [F[number removed]]."
+      ]
+     },
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H11",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2021-01-11"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "mix_shift",
+    "segment": {
+     "source": "(direct)"
+    },
+    "start": "2021-01-11",
+    "check_start": true
+   },
+   "incident": {
+    "type": "mix_shift",
+    "seed": 516989,
+    "segment": {
+     "source": "(direct)"
+    },
+    "start": "2021-01-11",
+    "end": "2021-01-17",
+    "fraction": 0.99,
+    "copies": 2
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "mix_shift",
+     "segment": {
+      "medium": "(none)"
+     },
+     "start_date": "2021-01-11",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "mix_shift",
+     "segment": {
+      "medium": "(none)"
+     },
+     "start_date": "2021-01-11",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "mix_shift",
+     "segment": {
+      "medium": "(none)"
+     },
+     "start_date": "2021-01-11",
+     "confidence": "medium",
+     "untraced_numbers": 0,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Conversion rate remained within normal variation overall, but a surge in direct traffic shifted the visitor mix.",
+      "next_step": "Investigate tracking tags for direct and unassigned traffic campaigns starting from Mon 11 Jan 2021.",
+      "explanation": [
+       "Conversion rate changed by +11% to reach 0.62%, which is within normal week-to-week variation 0.3.",
+       "However, traffic medium none experienced a distinct surge in sessions +153% starting on Mon 11 Jan 2021, accounting for -34% of the change in conversion rate.",
+       "This influx of unassigned traffic brought in visitors with a lower product-view rate -61%, diluting the overall site conversion metric."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H12",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2020-12-21"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "product_break",
+    "segment": {
+     "browser": "Safari"
+    },
+    "start": "2020-12-21",
+    "check_start": true
+   },
+   "incident": {
+    "type": "product_break",
+    "seed": 890748,
+    "step": "begin_checkout",
+    "segment": {
+     "browser": "Safari"
+    },
+    "start": "2020-12-21",
+    "end": "2020-12-27",
+    "fraction": 0.84
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "browser": "Safari"
+     },
+     "start_date": "2020-12-21",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "browser": "Safari"
+     },
+     "start_date": "2020-12-21",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "browser": "Safari"
+     },
+     "start_date": "2020-12-21",
+     "confidence": "high",
+     "untraced_numbers": 4,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Conversion rate dropped significantly beyond normal variation due to a checkout flow breakage primarily affecting Safari users.",
+      "next_step": "Investigate the checkout start implementation and JavaScript errors specifically targeting Safari browsers following the December [number removed] release.",
+      "explanation": [
+       "Overall conversion rate dropped sharply from [F[number removed]] to [F[number removed]], moving far beyond typical weekly variation.",
+       "The primary driver was a steep decline in checkout start rates after adding items to the cart, specifically concentrated among Safari users starting from [F[number removed]].",
+       "While mobile and iOS segments also exhibited drops, the Safari segment showed the most severe and immediate divergence."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H13",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "checkout_completion_rate",
+    "week": "2021-01-11"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "model": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "checked": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": 4,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "The change in Purchase after checkout start this week is within normal variation compared with previous weeks.",
+      "next_step": "Continue monitoring standard weekly performance metrics.",
+      "explanation": [
+       "The metric moved from [F[number removed]] to [F[number removed]], representing a relative change of [F[number removed]].",
+       "This fluctuation is well within the typical weekly variability observed on the site [F[number removed]].",
+       "No tracking issues or candidate causes were identified during this period."
+      ]
+     },
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "H14",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2020-12-28"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "product_break",
+    "segment": {
+     "os": "Android"
+    },
+    "start": "2020-12-28",
+    "check_start": true
+   },
+   "incident": {
+    "type": "product_break",
+    "seed": 519836,
+    "step": "begin_checkout",
+    "segment": {
+     "os": "Android"
+    },
+    "start": "2020-12-28",
+    "end": "2021-01-03",
+    "fraction": 0.52
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "landing": "Home"
+     },
+     "start_date": "2020-12-31",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": false
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "landing": "Home"
+     },
+     "start_date": "2020-12-31",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": false
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "landing": "Home"
+     },
+     "start_date": "2020-12-31",
+     "confidence": "high",
+     "untraced_numbers": 6,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Conversion rate dropped beyond normal variation due to a product break on the home landing page.",
+      "next_step": "Investigate the home landing page for any broken elements or tracking changes affecting product views.",
+      "explanation": [
+       "Conversion rate fell from [F[number removed]] to [F[number removed]], marking a decrease of [F[number removed]] that is [F[number removed]] times the typical weekly change [F[number removed]].",
+       "The strongest candidate cause is the Home landing page section, accounting for a large portion of the decline and showing a distinct drop in its product-view rate starting from [F[number removed]]."
+      ]
+     },
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": false
+     }
+    }
+   }
+  },
+  {
+   "id": "H15",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "sessions",
+    "week": "2021-01-11"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "model": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "checked": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": 0,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Sessions changed from 29,029 to 27,707 (-5%), which is well within normal variation compared to past weeks (34%, 0.1).",
+      "next_step": "No immediate investigation is required since the metric remains within normal bounds.",
+      "explanation": [
+       "There are no tracking issues or specific candidate causes identified for this metric.",
+       "The overall movement falls entirely within typical weekly fluctuation ranges for the site."
+      ]
+     },
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "H16",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "sessions",
+    "week": "2021-01-04"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "traffic_loss",
+    "segment": {
+     "medium": "referral"
+    },
+    "start": "2021-01-04",
+    "check_start": true
+   },
+   "incident": {
+    "type": "traffic_loss",
+    "seed": 847140,
+    "segment": {
+     "medium": "referral"
+    },
+    "start": "2021-01-04",
+    "end": "2021-01-10",
+    "fraction": 0.66
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "traffic_loss",
+     "segment": {
+      "medium": "referral"
+     },
+     "start_date": "2021-01-04",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "traffic_loss",
+     "segment": {
+      "medium": "referral"
+     },
+     "start_date": "2021-01-04",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "traffic_loss",
+     "segment": {
+      "medium": "referral"
+     },
+     "start_date": "2021-01-04",
+     "confidence": "high",
+     "untraced_numbers": 2,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Although overall sessions remained within normal variation, referral traffic dropped sharply.",
+      "next_step": "Investigate referral traffic sources and partner sites to identify any broken links or lost referral channels.",
+      "explanation": [
+       "Referral traffic experienced a significant decline starting on Mon [number removed] Jan [number removed], accounting for a notable drop in sessions.",
+       "This decline in the referral segment stands out because the rest of the site's traffic increased over the same period."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H17",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "cart_rate",
+    "week": "2020-12-07"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "model": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "checked": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": 3,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "The shift in add-to-cart rate after a product view this week is well within normal variation compared to previous weeks.",
+      "next_step": "No action is needed as the metric is behaving normally.",
+      "explanation": [
+       "The metric moved slightly from [F[number removed]] to [F[number removed]], representing a negligible change of [F[number removed]].",
+       "There were no tracking issues found and zero candidate causes identified that negatively affected this specific funnel step.",
+       "Overall, site-wide metrics remain stable after the Cyber Monday period without any distinct segment anomalies."
+      ]
+     },
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "H18",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "aov",
+    "week": "2020-12-07"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "model": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "checked": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": 0,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Average order value remained within normal weekly variation.",
+      "next_step": "Continue monitoring weekly performance metrics for any emerging trends.",
+      "explanation": [
+       "The observed shift in average order value is well within typical historical bounds and does not represent an anomaly.",
+       "There are no tracking issues or significant segment-level candidate causes driving the metric.",
+       "Overall conversion and funnel metrics show stability relative to previous weeks."
+      ]
+     },
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "H19",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "checkout_completion_rate",
+    "week": "2020-12-07"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "model": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "checked": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": 0,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Purchase after checkout start remained within normal historical variation this week.",
+      "next_step": "Continue monitoring funnel progression and weekly metric trends.",
+      "explanation": [
+       "The metric moved by a factor well within typical weekly fluctuations.",
+       "No tracking issues were detected, and no specific segment candidates met the criteria for an incident.",
+       "Overall funnel behavior and site-wide metrics reflect standard week-over-week variance."
+      ]
+     },
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "H20",
+   "kind": "planted",
+   "label": "too_small",
+   "question": {
+    "metric": "sessions",
+    "week": "2020-12-14"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "too_small",
+    "type": "traffic_loss",
+    "segment": {
+     "medium": "(none)"
+    },
+    "start": "2020-12-16",
+    "check_start": true,
+    "accept": [
+     "no_change",
+     "cant_tell"
+    ]
+   },
+   "incident": {
+    "type": "traffic_loss",
+    "seed": 192511,
+    "segment": {
+     "medium": "(none)"
+    },
+    "start": "2020-12-16",
+    "end": "2020-12-20",
+    "fraction": 0.06
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "traffic_loss",
+     "segment": {
+      "landing": "Home"
+     },
+     "start_date": "2020-12-14",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": false
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "traffic_loss",
+     "segment": {
+      "landing": "Home"
+     },
+     "start_date": "2020-12-14",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": false
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "traffic_loss",
+     "segment": {
+      "landing": "Home"
+     },
+     "start_date": "2020-12-14",
+     "confidence": "high",
+     "untraced_numbers": 2,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Sessions changed within normal variation overall, but traffic to the Home landing page dropped significantly.",
+      "next_step": "Check recent changes to the homepage and verify its search visibility or ad campaigns.",
+      "explanation": [
+       "Overall sessions moved within normal weekly variation compared with recent periods.",
+       "However, sessions arriving via the Home landing page experienced a major drop starting on Monday, December [number removed], [number removed].",
+       "This specific segment accounts for a substantial portion of the total downward movement in sessions."
+      ]
+     },
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": false
+     }
+    }
+   }
+  },
+  {
+   "id": "H21",
+   "kind": "broad",
+   "label": "broad",
+   "question": {
+    "metric": "revenue",
+    "week": "2020-12-21"
+   },
+   "expected": {
+    "verdict": "broad",
+    "label": "broad",
+    "accept": [
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "broad",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "model": {
+     "verdict": "broad",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "checked": {
+     "verdict": "broad",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": 0,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Revenue fell beyond normal variation during the week of Christmas due to broad holiday demand shifts.",
+      "next_step": "Monitor post-holiday traffic recovery and seasonal shopping patterns to assess return to baseline.",
+      "explanation": [
+       "Revenue dropped significantly compared to the previous week, driven by simultaneous declines in both traffic and conversion rates.",
+       "The change occurred site-wide rather than being isolated to any specific segment or tracking failure, coinciding with Christmas Eve and Christmas Day.",
+       "All major funnel stages experienced decreases in performance, aligning with typical seasonal slowdowns during the holiday period."
+      ]
+     },
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "H22",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "cart_rate",
+    "week": "2021-01-04"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "model": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "checked": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": 0,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "The add-to-cart rate after a product view remained within normal variation this week compared to the prior week.",
+      "next_step": "Continue monitoring funnel progression across upcoming releases as holiday traffic patterns normalize.",
+      "explanation": [
+       "The add-to-cart rate shifted slightly from 21.05% to 21.64%, representing a minor change of +3%.",
+       "This movement is well within normal weekly variation compared to typical fluctuations 12%.",
+       "Additionally, there are no tracking issues or localized candidate causes explaining any significant disruption."
+      ]
+     },
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "H23",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "revenue",
+    "week": "2020-12-07"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "tracking_issue",
+    "segment": {
+     "country": "India"
+    },
+    "start": "2020-12-11",
+    "check_start": true
+   },
+   "incident": {
+    "type": "units_bug",
+    "seed": 714899,
+    "segment": {
+     "country": "India"
+    },
+    "start": "2020-12-11",
+    "end": "2020-12-13"
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "country": "India"
+     },
+     "start_date": "2020-12-11",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "browser": "Android Webview"
+     },
+     "start_date": "2020-12-11",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "browser": "Android Webview"
+     },
+     "start_date": "2020-12-11",
+     "confidence": "high",
+     "untraced_numbers": 2,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Revenue surged beyond normal variation due to a tracking issue causing an abnormal jump in average order value.",
+      "next_step": "Investigate the checkout and payment logging for Android Webview to locate the source of the inflated order values.",
+      "explanation": [
+       "Revenue increased drastically, driven by a massive spike in average order value rather than normal traffic growth.",
+       "Tracking health analysis identified a revenue per order jump starting on Fri [number removed] Dec [number removed].",
+       "This data corruption affects overall revenue measurements and requires immediate technical review."
+      ]
+     },
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H24",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2021-01-11"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "product_break",
+    "segment": {
+     "browser": "Safari"
+    },
+    "start": "2021-01-12",
+    "check_start": true
+   },
+   "incident": {
+    "type": "product_break",
+    "seed": 49982,
+    "step": "purchase",
+    "segment": {
+     "browser": "Safari"
+    },
+    "start": "2021-01-12",
+    "end": "2021-01-17",
+    "fraction": 0.52
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "browser": "Safari"
+     },
+     "start_date": "2021-01-12",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "browser": "Safari"
+     },
+     "start_date": "2021-01-12",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "browser": "Safari"
+     },
+     "start_date": "2021-01-12",
+     "confidence": "medium",
+     "untraced_numbers": 2,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Although overall conversion was within normal variation, Safari users experienced a product break affecting purchases after checkout starts.",
+      "next_step": "Investigate checkout flow errors and JavaScript console exceptions occurring specifically on Safari starting on [number removed] Jan [number removed].",
+      "explanation": [
+       "While the site-wide conversion rate rose from 0.56% to 0.71%, the Safari browser segment diverged and saw its conversion rate drop by -7%.",
+       "The root of this drop lies deeper in the funnel, where purchases after checkout start plummeted by -64% starting on Tue 12 Jan 2021.",
+       "This localized issue accounted for -9% of the change in conversion rate and specifically impacted Safari users."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H25",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "revenue",
+    "week": "2020-12-14"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "basket_change",
+    "segment": {
+     "os": "iOS"
+    },
+    "start": "2020-12-14",
+    "check_start": true
+   },
+   "incident": {
+    "type": "basket_change",
+    "seed": 268291,
+    "segment": {
+     "os": "iOS"
+    },
+    "start": "2020-12-14",
+    "end": "2020-12-20",
+    "factor": 0.64
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "basket_change",
+     "segment": {
+      "os": "iOS"
+     },
+     "start_date": "2020-12-14",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "basket_change",
+     "segment": {
+      "os": "iOS"
+     },
+     "start_date": "2020-12-14",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "basket_change",
+     "segment": {
+      "os": "iOS"
+     },
+     "start_date": "2020-12-14",
+     "confidence": "high",
+     "untraced_numbers": 2,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Revenue decreased due to a significant drop in the average order value from iOS users.",
+      "next_step": "Investigate the checkout experience, pricing logic, or bundle offers specifically for iOS users starting from [number removed] Dec [number removed].",
+      "explanation": [
+       "Overall revenue fell between the two weeks, driven primarily by a drop in the conversion rate while sessions remained relatively steady.",
+       "The primary candidate cause is the iOS operating system segment, which experienced a severe decline in average order value compared to the rest of the site.",
+       "This divergence in the iOS segment began and drove a significant portion of the total revenue drop."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H26",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "add_to_cart_rate",
+    "week": "2021-01-11"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "model": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "checked": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": 3,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "The week-over-week shift in Add-to-cart rate (of sessions) remained within normal variation.",
+      "next_step": "Continue monitoring the funnel metrics for any emerging anomalies.",
+      "explanation": [
+       "Add-to-cart rate (of sessions) moved from [F[number removed]] to [F[number removed]], representing a change of [F[number removed]].",
+       "This movement is typical compared to historical weekly variations and there are no tracking issues or distinct candidate causes explaining a specific incident."
+      ]
+     },
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "H27",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "revenue",
+    "week": "2021-01-11"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "tracking_issue",
+    "segment": {
+     "country": "Canada"
+    },
+    "start": "2021-01-15",
+    "check_start": true
+   },
+   "incident": {
+    "type": "tracking_dup",
+    "seed": 925213,
+    "segment": {
+     "country": "Canada"
+    },
+    "start": "2021-01-15",
+    "end": "2021-01-17"
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "country": "Canada"
+     },
+     "start_date": "2021-01-15",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "country": "Canada"
+     },
+     "start_date": "2021-01-15",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "country": "Canada"
+     },
+     "start_date": "2021-01-15",
+     "confidence": "high",
+     "untraced_numbers": 0,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Revenue grew significantly this week due to a tracking issue involving duplicate purchase events in Canada.",
+      "next_step": "Inspect the checkout and thank-you page implementation for Canada traffic to resolve the duplicate purchase logging.",
+      "explanation": [
+       "A tracking finding indicates duplicate purchase events started occurring for users in Canada beginning on Fri 15 Jan 2021.",
+       "This measurement error inflated the revenue and conversion metrics during the week.",
+       "Site-wide metrics showed an increase in revenue from $9,402 to $13,552, driven primarily by this tracking anomaly."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H28",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "aov",
+    "week": "2020-12-07"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "basket_change",
+    "segment": {
+     "device": "mobile"
+    },
+    "start": "2020-12-07",
+    "check_start": true
+   },
+   "incident": {
+    "type": "basket_change",
+    "seed": 89056,
+    "segment": {
+     "device": "mobile"
+    },
+    "start": "2020-12-07",
+    "end": "2020-12-13",
+    "factor": 0.64
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "basket_change",
+     "segment": {
+      "device": "mobile"
+     },
+     "start_date": "2020-12-07",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "basket_change",
+     "segment": {
+      "device": "mobile"
+     },
+     "start_date": "2020-12-07",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "basket_change",
+     "segment": {
+      "device": "mobile"
+     },
+     "start_date": "2020-12-07",
+     "confidence": "high",
+     "untraced_numbers": 0,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Average order value fell because mobile users had a notable basket change.",
+      "next_step": "Investigate mobile checkout and cart additions for pricing display errors or product bundle changes.",
+      "explanation": [
+       "Average order value dropped from $67.57 to $60.11, a shift of -11%.",
+       "The decline is driven by the mobile device segment, which diverged significantly from the rest of the site starting on Mon 07 Dec 2020.",
+       "Mobile average order value shifted by -35%, accounting for a major portion of the overall drop."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H29",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "revenue",
+    "week": "2020-12-14"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "tracking_issue",
+    "segment": {
+     "os": "Windows"
+    },
+    "start": "2020-12-15",
+    "check_start": true
+   },
+   "incident": {
+    "type": "tracking_dup",
+    "seed": 474426,
+    "segment": {
+     "os": "Windows"
+    },
+    "start": "2020-12-15",
+    "end": "2020-12-20"
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "os": "Windows"
+     },
+     "start_date": "2020-12-15",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "os": "Windows"
+     },
+     "start_date": "2020-12-15",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "os": "Windows"
+     },
+     "start_date": "2020-12-15",
+     "confidence": "high",
+     "untraced_numbers": 4,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Revenue fell because of a tracking issue affecting Windows operating system users starting Tuesday, December [number removed], [number removed].",
+      "next_step": "Investigate recent tracking implementations or tag manager updates on the checkout confirmation page for Windows users.",
+      "explanation": [
+       "Revenue decreased compared to the previous week, driven by a drop in the session conversion rate while average order value remained stable.",
+       "Tracking health detected an anomaly with duplicate purchase events in the Windows operating system starting on Tuesday, December [number removed], [number removed].",
+       "This measurement problem distorts purchase metrics and funnel performance for Windows users, creating an artificial drop in observed conversion."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H30",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2021-01-11"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "mix_shift",
+    "segment": {
+     "source": "shop.googlemerchandisestore.com"
+    },
+    "start": "2021-01-13",
+    "check_start": true
+   },
+   "incident": {
+    "type": "mix_shift",
+    "seed": 325649,
+    "segment": {
+     "source": "shop.googlemerchandisestore.com"
+    },
+    "start": "2021-01-13",
+    "end": "2021-01-17",
+    "fraction": 0.61,
+    "copies": 1
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "missed",
+     "checks": {}
+    },
+    "model": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "missed",
+     "checks": {}
+    },
+    "checked": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": 5,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Conversion rate moved within normal historical variation compared to recent weeks.",
+      "next_step": "Continue monitoring standard weekly traffic patterns and funnel progression.",
+      "explanation": [
+       "The change in conversion rate from [F[number removed]] to [F[number removed]] represents a weekly shift of [F[number removed]] (+[F[number removed]]), which aligns with typical fluctuations.",
+       "Although a single traffic source showed distinct behavior in product-view rates, it accounts for [F[number removed]] of the site-wide conversion change.",
+       "There are no tracking issues or significant candidate causes driving an adverse metric movement."
+      ]
+     },
+     "outcome": "missed",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "H31",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2020-12-28"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "mix_shift",
+    "segment": {
+     "source": "shop.googlemerchandisestore.com"
+    },
+    "start": "2020-12-28",
+    "check_start": true
+   },
+   "incident": {
+    "type": "mix_shift",
+    "seed": 621625,
+    "segment": {
+     "source": "shop.googlemerchandisestore.com"
+    },
+    "start": "2020-12-28",
+    "end": "2021-01-03",
+    "fraction": 0.86,
+    "copies": 3
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "mix_shift",
+     "segment": {
+      "medium": "referral"
+     },
+     "start_date": "2020-12-28",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "mix_shift",
+     "segment": {
+      "medium": "referral"
+     },
+     "start_date": "2020-12-28",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "mix_shift",
+     "segment": {
+      "medium": "referral"
+     },
+     "start_date": "2020-12-28",
+     "confidence": "high",
+     "untraced_numbers": 0,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Conversion rate dropped significantly beyond normal variation due to a sudden influx of low-converting referral traffic.",
+      "next_step": "Investigate recent referral traffic sources or partner campaigns that launched around Mon 28 Dec 2020.",
+      "explanation": [
+       "Conversion rate fell from 1.06% to 0.54%, a decrease of -49% that is well beyond normal weekly variation 2.8.",
+       "The primary driver was a surge in referral traffic accounting for a large portion of the decline, with sessions rising +78% while conversion plummeted -73%.",
+       "This traffic shift heavily diluted overall site conversion because incoming referral users had substantially lower product-view rates -69%."
+      ]
+     },
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H32",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "aov",
+    "week": "2020-12-14"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "basket_change",
+    "segment": {
+     "user_type": "new"
+    },
+    "start": "2020-12-15",
+    "check_start": true
+   },
+   "incident": {
+    "type": "basket_change",
+    "seed": 30557,
+    "segment": {
+     "user_type": "new"
+    },
+    "start": "2020-12-15",
+    "end": "2020-12-20",
+    "factor": 0.51
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "basket_change",
+     "segment": {
+      "user_type": "new"
+     },
+     "start_date": "2020-12-15",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "basket_change",
+     "segment": {
+      "user_type": "new"
+     },
+     "start_date": "2020-12-15",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "basket_change",
+     "segment": {
+      "user_type": "new"
+     },
+     "start_date": "2020-12-15",
+     "confidence": "high",
+     "untraced_numbers": 2,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Average order value dropped due to a shift in basket composition among new users.",
+      "next_step": "Investigate merchandising and promotional paths targeting new visitors to see why cart composition changed.",
+      "explanation": [
+       "Average order value saw a shift compared to the prior week as new visitors bought lower-priced items or smaller quantities.",
+       "The new user segment diverged from the rest of the site starting from Tue [number removed] Dec [number removed], accounting for a large portion of the decline.",
+       "While overall week-over-week variation remained within typical ranges, this specific segment's basket value dropped significantly."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H33",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "checkout_completion_rate",
+    "week": "2020-12-28"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "model": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {}
+    },
+    "checked": {
+     "verdict": "no_change",
+     "type": "none",
+     "segment": {},
+     "start_date": "",
+     "confidence": "high",
+     "untraced_numbers": 0,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Purchase after checkout start stayed within normal weekly variation compared to previous weeks.",
+      "next_step": "Monitor conversion funnel metrics through the upcoming post-holiday period.",
+      "explanation": [
+       "The metric moved from 56.01% to 52.87%, which is well within typical fluctuations observed previously 11%.",
+       "There are no tracking issues affecting this specific metric and no segment candidate causes identified."
+      ]
+     },
+     "outcome": "right",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "H34",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2021-01-11"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "product_break",
+    "segment": {
+     "os": "Macintosh"
+    },
+    "start": "2021-01-13",
+    "check_start": true
+   },
+   "incident": {
+    "type": "product_break",
+    "seed": 71930,
+    "step": "add_to_cart",
+    "segment": {
+     "os": "Macintosh"
+    },
+    "start": "2021-01-13",
+    "end": "2021-01-17",
+    "fraction": 0.94
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "os": "Macintosh"
+     },
+     "start_date": "2021-01-13",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "os": "Macintosh"
+     },
+     "start_date": "2021-01-13",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "os": "Macintosh"
+     },
+     "start_date": "2021-01-13",
+     "confidence": "high",
+     "untraced_numbers": 4,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Conversion rate changed within normal overall variation, but Macintosh users experienced a significant product break.",
+      "next_step": "Investigate the product page experience and recent frontend deployments for Macintosh users starting from [number removed] Jan [number removed].",
+      "explanation": [
+       "While the site-wide conversion rate change remained within normal weekly variation, Macintosh users suffered a sharp drop in add-to-cart behavior after viewing products starting on Wed [number removed] Jan [number removed].",
+       "Specifically, the add-to-cart after a product view for Macintosh dropped drastically compared to the rest of the site.",
+       "This localized drop negatively impacted the segment's overall performance despite the broader site trend remaining positive."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H35",
+   "kind": "quiet",
+   "label": "quiet",
+   "question": {
+    "metric": "orders",
+    "week": "2020-12-07"
+   },
+   "expected": {
+    "verdict": "no_change",
+    "label": "quiet",
+    "accept": [
+     "no_change",
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "mix_shift",
+     "segment": {
+      "user_type": "new"
+     },
+     "start_date": "2020-12-12",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "false_alarm",
+     "checks": {}
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "mix_shift",
+     "segment": {
+      "user_type": "new"
+     },
+     "start_date": "2020-12-12",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "false_alarm",
+     "checks": {}
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "mix_shift",
+     "segment": {
+      "user_type": "new"
+     },
+     "start_date": "2020-12-12",
+     "confidence": "medium",
+     "untraced_numbers": 0,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Orders remained within normal variation overall, but a shift toward new visitors affected the metric negatively starting mid-week.",
+      "next_step": "Investigate acquisition campaigns and landing page experiences tailored to new visitors to improve their conversion rate.",
+      "explanation": [
+       "Overall orders increased while staying within normal weekly variation limits 0.9 and following the post-Cyber Monday period 857.",
+       "The primary candidate cause is a mix shift toward new users -11%, which grew much faster than returning visitors +30%.",
+       "New users experienced a lower conversion rate compared to the rest of the site -11%, pulling down overall performance."
+      ]
+     },
+     "outcome": "false_alarm",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "H36",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "revenue",
+    "week": "2020-12-21"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "tracking_issue",
+    "segment": {
+     "country": "Canada"
+    },
+    "start": "2020-12-25",
+    "check_start": true
+   },
+   "incident": {
+    "type": "units_bug",
+    "seed": 788165,
+    "segment": {
+     "country": "Canada"
+    },
+    "start": "2020-12-25",
+    "end": "2020-12-27"
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "os": "Windows"
+     },
+     "start_date": "2020-12-25",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "os": "Windows"
+     },
+     "start_date": "2020-12-25",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "tracking_issue",
+     "segment": {
+      "os": "Windows"
+     },
+     "start_date": "2020-12-25",
+     "confidence": "high",
+     "untraced_numbers": 0,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Revenue stayed within normal variation overall, but a tracking issue emerged causing order values to jump.",
+      "next_step": "Inspect the checkout and purchase tracking implementation on Windows browsers for duplicate or inflated transaction payloads.",
+      "explanation": [
+       "Although overall revenue moved within typical bounds, a tracking anomaly began affecting orders from Windows users starting on Fri 25 Dec 2020.",
+       "This manifested as a severe jump in average order value for the affected segment, pointing to potential duplicate purchase events or incorrect values being logged.",
+       "A secondary tracking finding also appeared for Canadian traffic starting on Sat 26 Dec 2020."
+      ]
+     },
+     "outcome": "wrong",
+     "checks": {
+      "type": true,
+      "segment": false,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H37",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "sessions",
+    "week": "2020-12-21"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "traffic_loss",
+    "segment": {
+     "source": "(direct)"
+    },
+    "start": "2020-12-21",
+    "check_start": true
+   },
+   "incident": {
+    "type": "traffic_loss",
+    "seed": 797767,
+    "segment": {
+     "source": "(direct)"
+    },
+    "start": "2020-12-21",
+    "end": "2020-12-27",
+    "fraction": 0.89
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "traffic_loss",
+     "segment": {
+      "medium": "(none)"
+     },
+     "start_date": "2020-12-21",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "cant_tell",
+     "type": "none",
+     "segment": {},
+     "start_date": "2020-12-21",
+     "confidence": "low",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "abstained",
+     "checks": {}
+    },
+    "checked": {
+     "verdict": "cant_tell",
+     "type": "none",
+     "segment": {},
+     "start_date": "2020-12-21",
+     "confidence": "low",
+     "untraced_numbers": 2,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Sessions dropped beyond normal variation due to overlapping traffic loss signals in direct and unset traffic.",
+      "next_step": "Investigate direct traffic tracking and default channel grouping rules to see why unassigned and direct sessions dropped sharply.",
+      "explanation": [
+       "Sessions fell significantly compared with the prior week, moving well beyond normal variation.",
+       "Two top candidate causes, traffic medium (none) and traffic source (direct), both account for identical portions of the decline and show the exact same drop beginning on Mon [number removed] Dec [number removed].",
+       "Because these candidate causes overlap completely and tell the same story, the evidence is too ambiguous to isolate a single root cause."
+      ]
+     },
+     "outcome": "abstained",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "H38",
+   "kind": "broad",
+   "label": "broad",
+   "question": {
+    "metric": "conversion_rate",
+    "week": "2020-12-28"
+   },
+   "expected": {
+    "verdict": "broad",
+    "label": "broad",
+    "accept": [
+     "broad"
+    ]
+   },
+   "incident": null,
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "landing": "Home"
+     },
+     "start_date": "2020-12-31",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "false_alarm",
+     "checks": {}
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "landing": "Home"
+     },
+     "start_date": "2020-12-31",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "false_alarm",
+     "checks": {}
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "landing": "Home"
+     },
+     "start_date": "2020-12-31",
+     "confidence": "high",
+     "untraced_numbers": 5,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Conversion rate dropped significantly beyond normal variation due to a drop in engagement from the home landing page.",
+      "next_step": "Investigate the home page release or banner update deployed around December thirty-first.",
+      "explanation": [
+       "Conversion rate fell from [F[number removed]] to [F[number removed]], which is a decline of [F[number removed]] and exceeds typical weekly fluctuations.",
+       "The primary driver was visitors arriving at the home landing page, whose product-view rate dropped by [F[number removed]] compared to the rest of the site.",
+       "This behavior diverged significantly starting from [F[number removed]], directly impacting overall checkout performance."
+      ]
+     },
+     "outcome": "false_alarm",
+     "checks": {}
+    }
+   }
+  },
+  {
+   "id": "H39",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "revenue",
+    "week": "2020-12-14"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "product_break",
+    "segment": {
+     "os": "Windows"
+    },
+    "start": "2020-12-17",
+    "check_start": true
+   },
+   "incident": {
+    "type": "product_break",
+    "seed": 902681,
+    "step": "purchase",
+    "segment": {
+     "os": "Windows"
+    },
+    "start": "2020-12-17",
+    "end": "2020-12-20",
+    "fraction": 0.93
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "os": "Windows"
+     },
+     "start_date": "2020-12-17",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "os": "Windows"
+     },
+     "start_date": "2020-12-17",
+     "confidence": "high",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "product_break",
+     "segment": {
+      "os": "Windows"
+     },
+     "start_date": "2020-12-17",
+     "confidence": "high",
+     "untraced_numbers": 0,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Revenue fell due to a product breakdown affecting Windows users starting Thu 17 Dec 2020.",
+      "next_step": "Investigate recent frontend releases, JavaScript errors, or payment gateway integrations impacting Windows users starting Thu 17 Dec 2020.",
+      "explanation": [
+       "Revenue decreased significantly during the week, primarily driven by a drop in conversion rate -22% rather than traffic loss -14%.",
+       "The funnel metrics reveal a major issue at the checkout stage, specifically for users on Windows.",
+       "The purchase rate after checkout start dropped sharply for this segment -55%, accounting for a notable portion of the total revenue decline -5%."
+      ]
+     },
+     "outcome": "right",
+     "checks": {
+      "type": true,
+      "segment": true,
+      "start": true
+     }
+    }
+   }
+  },
+  {
+   "id": "H40",
+   "kind": "planted",
+   "label": "clear",
+   "question": {
+    "metric": "revenue",
+    "week": "2020-12-07"
+   },
+   "expected": {
+    "verdict": "incident",
+    "label": "clear",
+    "type": "traffic_loss",
+    "segment": {
+     "country": "India"
+    },
+    "start": "2020-12-10",
+    "check_start": true
+   },
+   "incident": {
+    "type": "traffic_loss",
+    "seed": 476907,
+    "segment": {
+     "country": "India"
+    },
+    "start": "2020-12-10",
+    "end": "2020-12-13",
+    "fraction": 0.69
+   },
+   "answers": {
+    "baseline": {
+     "verdict": "incident",
+     "type": "mix_shift",
+     "segment": {
+      "user_type": "new"
+     },
+     "start_date": "2020-12-12",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": false,
+      "segment": false,
+      "start": false
+     }
+    },
+    "model": {
+     "verdict": "incident",
+     "type": "mix_shift",
+     "segment": {
+      "user_type": "new"
+     },
+     "start_date": "2020-12-12",
+     "confidence": "medium",
+     "untraced_numbers": null,
+     "unknown_facts": null,
+     "check_notes": null,
+     "rendered": null,
+     "outcome": "wrong",
+     "checks": {
+      "type": false,
+      "segment": false,
+      "start": false
+     }
+    },
+    "checked": {
+     "verdict": "incident",
+     "type": "mix_shift",
+     "segment": {
+      "user_type": "new"
+     },
+     "start_date": "2020-12-12",
+     "confidence": "medium",
+     "untraced_numbers": 5,
+     "unknown_facts": 0,
+     "check_notes": [],
+     "rendered": {
+      "headline": "Revenue grew within normal variation this week, though new users showed a distinct shift.",
+      "next_step": "Investigate landing page experiences and acquisition campaigns driving the surge in new visitor traffic.",
+      "explanation": [
+       "Overall revenue increased by [F[number removed]] compared to the previous week, staying within normal weekly variation [F[number removed]].",
+       "However, new visitors grew disproportionately faster than the rest of the site [F[number removed]], accounting for [F[number removed]] of the change in revenue.",
+       "This influx was accompanied by a lower product-view rate among new users starting from [F[number removed]]."
+      ]
+     },
+     "outcome": "wrong",
+     "checks": {
+      "type": false,
+      "segment": false,
+      "start": false
+     }
+    }
+   }
+  }
+ ],
+ "unread": [],
+ "stopped": null
+}

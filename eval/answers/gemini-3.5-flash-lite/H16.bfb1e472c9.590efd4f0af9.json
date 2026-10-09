@@ -1,0 +1,27 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "590efd4f0af9",
+ "usage": {
+  "input_tokens": 1394,
+  "output_tokens": 192
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "traffic_loss",
+  "segment": [
+   {
+    "dimension": "medium",
+    "value": "referral"
+   }
+  ],
+  "start_date": "2021-01-04",
+  "confidence": "high",
+  "headline": "Although overall sessions remained within normal variation, referral traffic dropped sharply.",
+  "explanation": [
+   "Referral traffic experienced a significant decline starting on Mon 04 Jan 2021, accounting for a notable drop in sessions.",
+   "This decline in the referral segment stands out because the rest of the site's traffic increased over the same period."
+  ],
+  "next_step": "Investigate referral traffic sources and partner sites to identify any broken links or lost referral channels."
+ }
+}

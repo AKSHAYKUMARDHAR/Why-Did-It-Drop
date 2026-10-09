@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "65b727e67a83",
+ "usage": {
+  "input_tokens": 1260,
+  "output_tokens": 210
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "basket_change",
+  "segment": [
+   {
+    "dimension": "device",
+    "value": "mobile"
+   }
+  ],
+  "start_date": "2020-12-07",
+  "confidence": "high",
+  "headline": "Average order value fell because mobile users had a notable basket change.",
+  "explanation": [
+   "Average order value dropped from {F1} to {F2}, a shift of {F3}.",
+   "The decline is driven by the mobile device segment, which diverged significantly from the rest of the site starting on {F27}.",
+   "Mobile average order value shifted by {F23}, accounting for a major portion of the overall drop."
+  ],
+  "next_step": "Investigate mobile checkout and cart additions for pricing display errors or product bundle changes."
+ }
+}

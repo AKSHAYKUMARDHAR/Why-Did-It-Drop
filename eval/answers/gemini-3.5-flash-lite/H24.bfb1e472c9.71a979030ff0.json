@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "71a979030ff0",
+ "usage": {
+  "input_tokens": 1307,
+  "output_tokens": 245
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "browser",
+    "value": "Safari"
+   }
+  ],
+  "start_date": "2021-01-12",
+  "confidence": "medium",
+  "headline": "Although overall conversion was within normal variation, Safari users experienced a product break affecting purchases after checkout starts.",
+  "explanation": [
+   "While the site-wide conversion rate rose from {F1} to {F2}, the Safari browser segment diverged and saw its conversion rate drop by {F24}.",
+   "The root of this drop lies deeper in the funnel, where purchases after checkout start plummeted by {F27} starting on {F30}.",
+   "This localized issue accounted for {F21} of the change in conversion rate and specifically impacted Safari users."
+  ],
+  "next_step": "Investigate checkout flow errors and JavaScript console exceptions occurring specifically on Safari starting on 12 Jan 2021."
+ }
+}

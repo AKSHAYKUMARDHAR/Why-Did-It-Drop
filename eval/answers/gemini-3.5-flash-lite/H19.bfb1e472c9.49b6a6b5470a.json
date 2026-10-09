@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "49b6a6b5470a",
+ "usage": {
+  "input_tokens": 1148,
+  "output_tokens": 144
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Purchase after checkout start remained within normal historical variation this week.",
+  "explanation": [
+   "The metric moved by a factor well within typical weekly fluctuations.",
+   "No tracking issues were detected, and no specific segment candidates met the criteria for an incident.",
+   "Overall funnel behavior and site-wide metrics reflect standard week-over-week variance."
+  ],
+  "next_step": "Continue monitoring funnel progression and weekly metric trends."
+ }
+}

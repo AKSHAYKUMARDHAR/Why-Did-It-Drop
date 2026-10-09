@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "7c777e03b1fd",
+ "usage": {
+  "input_tokens": 1383,
+  "output_tokens": 207
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "tracking_issue",
+  "segment": [
+   {
+    "dimension": "os",
+    "value": "Web"
+   }
+  ],
+  "start_date": "2020-12-18",
+  "confidence": "high",
+  "headline": "Checkout start after add-to-cart declined due to a tracking issue affecting the Web operating system.",
+  "explanation": [
+   "Checkout start after add-to-cart dropped significantly while purchases without checkout increased for the Web operating system starting from Fri 18 Dec 2020.",
+   "This tracking finding directly affects the metric and explains the observed drop.",
+   "The issue is isolated to the Web operating system segment."
+  ],
+  "next_step": "Investigate the analytics tag implementation and event firing logic for checkout starts on the Web platform."
+ }
+}

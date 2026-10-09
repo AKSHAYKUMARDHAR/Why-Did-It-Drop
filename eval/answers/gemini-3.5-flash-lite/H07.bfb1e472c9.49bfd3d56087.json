@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "49bfd3d56087",
+ "usage": {
+  "input_tokens": 1339,
+  "output_tokens": 207
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "tracking_issue",
+  "segment": [
+   {
+    "dimension": "os",
+    "value": "Android"
+   }
+  ],
+  "start_date": "2020-12-16",
+  "confidence": "high",
+  "headline": "A tracking issue on Android caused purchases to happen without a recorded checkout start.",
+  "explanation": [
+   "The tracking health report found that purchases without a checkout start spiked in the Android operating system segment.",
+   "This measurement issue directly impacts the recorded checkout start rate for Android users, making it appear as though the metric worsened significantly.",
+   "The anomaly began on Wednesday, December 16, 2020."
+  ],
+  "next_step": "Inspect the tracking implementation and analytics tags on the Android platform to ensure checkout start events are firing correctly."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "bd47109f1286",
+ "usage": {
+  "input_tokens": 1163,
+  "output_tokens": 174
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "The shift in add-to-cart rate after a product view this week is well within normal variation compared to previous weeks.",
+  "explanation": [
+   "The metric moved slightly from [F1] to [F2], representing a negligible change of [F3].",
+   "There were no tracking issues found and zero candidate causes identified that negatively affected this specific funnel step.",
+   "Overall, site-wide metrics remain stable after the Cyber Monday period without any distinct segment anomalies."
+  ],
+  "next_step": "No action is needed as the metric is behaving normally."
+ }
+}

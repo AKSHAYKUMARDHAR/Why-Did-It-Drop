@@ -1,0 +1,22 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "e7a83f903351",
+ "usage": {
+  "input_tokens": 1129,
+  "output_tokens": 149
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Sessions changed from {F1} to {F2} ({F3}), which is well within normal variation compared to past weeks ({F4}, {F5}).",
+  "explanation": [
+   "There are no tracking issues or specific candidate causes identified for this metric.",
+   "The overall movement falls entirely within typical weekly fluctuation ranges for the site."
+  ],
+  "next_step": "No immediate investigation is required since the metric remains within normal bounds."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "d6973d13874c",
+ "usage": {
+  "input_tokens": 1413,
+  "output_tokens": 200
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "traffic_loss",
+  "segment": [
+   {
+    "dimension": "landing",
+    "value": "Home"
+   }
+  ],
+  "start_date": "2020-12-14",
+  "confidence": "high",
+  "headline": "Sessions changed within normal variation overall, but traffic to the Home landing page dropped significantly.",
+  "explanation": [
+   "Overall sessions moved within normal weekly variation compared with recent periods.",
+   "However, sessions arriving via the Home landing page experienced a major drop starting on Monday, December 14, 2020.",
+   "This specific segment accounts for a substantial portion of the total downward movement in sessions."
+  ],
+  "next_step": "Check recent changes to the homepage and verify its search visibility or ad campaigns."
+ }
+}

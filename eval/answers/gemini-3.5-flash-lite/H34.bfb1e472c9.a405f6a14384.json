@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "a405f6a14384",
+ "usage": {
+  "input_tokens": 1318,
+  "output_tokens": 241
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "os",
+    "value": "Macintosh"
+   }
+  ],
+  "start_date": "2021-01-13",
+  "confidence": "high",
+  "headline": "Conversion rate changed within normal overall variation, but Macintosh users experienced a significant product break.",
+  "explanation": [
+   "While the site-wide conversion rate change remained within normal weekly variation, Macintosh users suffered a sharp drop in add-to-cart behavior after viewing products starting on Wed 13 Jan 2021.",
+   "Specifically, the add-to-cart after a product view for Macintosh dropped drastically compared to the rest of the site.",
+   "This localized drop negatively impacted the segment's overall performance despite the broader site trend remaining positive."
+  ],
+  "next_step": "Investigate the product page experience and recent frontend deployments for Macintosh users starting from 13 Jan 2021."
+ }
+}

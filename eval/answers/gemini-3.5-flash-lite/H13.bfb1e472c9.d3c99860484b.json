@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "d3c99860484b",
+ "usage": {
+  "input_tokens": 1137,
+  "output_tokens": 154
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "The change in Purchase after checkout start this week is within normal variation compared with previous weeks.",
+  "explanation": [
+   "The metric moved from [F1] to [F2], representing a relative change of [F3].",
+   "This fluctuation is well within the typical weekly variability observed on the site [F5].",
+   "No tracking issues or candidate causes were identified during this period."
+  ],
+  "next_step": "Continue monitoring standard weekly performance metrics."
+ }
+}

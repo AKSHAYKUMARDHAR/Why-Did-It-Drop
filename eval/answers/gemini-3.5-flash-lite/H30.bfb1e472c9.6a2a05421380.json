@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "6a2a05421380",
+ "usage": {
+  "input_tokens": 1319,
+  "output_tokens": 178
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Conversion rate moved within normal historical variation compared to recent weeks.",
+  "explanation": [
+   "The change in conversion rate from [F1] to [F2] represents a weekly shift of [F3] (+[F4]), which aligns with typical fluctuations.",
+   "Although a single traffic source showed distinct behavior in product-view rates, it accounts for [F21] of the site-wide conversion change.",
+   "There are no tracking issues or significant candidate causes driving an adverse metric movement."
+  ],
+  "next_step": "Continue monitoring standard weekly traffic patterns and funnel progression."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "c0a0624aa565",
+ "usage": {
+  "input_tokens": 2117,
+  "output_tokens": 240
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "mix_shift",
+  "segment": [
+   {
+    "dimension": "medium",
+    "value": "referral"
+   }
+  ],
+  "start_date": "2020-12-28",
+  "confidence": "high",
+  "headline": "Conversion rate dropped significantly beyond normal variation due to a sudden influx of low-converting referral traffic.",
+  "explanation": [
+   "Conversion rate fell from {F1} to {F2}, a decrease of {F3} that is well beyond normal weekly variation {F5}.",
+   "The primary driver was a surge in referral traffic accounting for a large portion of the decline, with sessions rising {F27} while conversion plummeted {F31}.",
+   "This traffic shift heavily diluted overall site conversion because incoming referral users had substantially lower product-view rates {F34}."
+  ],
+  "next_step": "Investigate recent referral traffic sources or partner campaigns that launched around {F37}."
+ }
+}

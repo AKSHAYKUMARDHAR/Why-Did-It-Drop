@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "475390d34e15",
+ "usage": {
+  "input_tokens": 1333,
+  "output_tokens": 208
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "tracking_issue",
+  "segment": [
+   {
+    "dimension": "browser",
+    "value": "Android Webview"
+   }
+  ],
+  "start_date": "2020-12-11",
+  "confidence": "high",
+  "headline": "Revenue surged beyond normal variation due to a tracking issue causing an abnormal jump in average order value.",
+  "explanation": [
+   "Revenue increased drastically, driven by a massive spike in average order value rather than normal traffic growth.",
+   "Tracking health analysis identified a revenue per order jump starting on Fri 11 Dec 2020.",
+   "This data corruption affects overall revenue measurements and requires immediate technical review."
+  ],
+  "next_step": "Investigate the checkout and payment logging for Android Webview to locate the source of the inflated order values."
+ }
+}

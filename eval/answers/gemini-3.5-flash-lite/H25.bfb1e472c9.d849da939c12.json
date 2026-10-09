@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "d849da939c12",
+ "usage": {
+  "input_tokens": 1345,
+  "output_tokens": 225
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "basket_change",
+  "segment": [
+   {
+    "dimension": "os",
+    "value": "iOS"
+   }
+  ],
+  "start_date": "2020-12-14",
+  "confidence": "high",
+  "headline": "Revenue decreased due to a significant drop in the average order value from iOS users.",
+  "explanation": [
+   "Overall revenue fell between the two weeks, driven primarily by a drop in the conversion rate while sessions remained relatively steady.",
+   "The primary candidate cause is the iOS operating system segment, which experienced a severe decline in average order value compared to the rest of the site.",
+   "This divergence in the iOS segment began and drove a significant portion of the total revenue drop."
+  ],
+  "next_step": "Investigate the checkout experience, pricing logic, or bundle offers specifically for iOS users starting from 14 Dec 2020."
+ }
+}

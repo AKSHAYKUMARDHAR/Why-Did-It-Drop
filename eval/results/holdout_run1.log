@@ -1,0 +1,35 @@
+
+holdout: 40 cases, model gemini-3.5-flash-lite
+
+ all
+  baseline  right 30/40  wrong  7  missed  1  abstained  0  false alarms  2/12 | incidents right 71%, wrong rate 18%, false-alarm rate 17%  fail
+  model     right 27/40  wrong  9  missed  1  abstained  1  false alarms  2/12 | incidents right 61%, wrong rate 22%, false-alarm rate 17%  fail
+  checked   right 28/40  wrong  8  missed  1  abstained  1  false alarms  2/12 | incidents right 64%, wrong rate 20%, false-alarm rate 17%  fail
+
+ planted
+  baseline  right 18/26  wrong  7  missed  1  abstained  0  false alarms  0/ 0 | incidents right 69%, wrong rate 27%, false-alarm rate 0%  fail
+  model     right 16/26  wrong  8  missed  1  abstained  1  false alarms  0/ 0 | incidents right 62%, wrong rate 31%, false-alarm rate 0%  fail
+  checked   right 16/26  wrong  8  missed  1  abstained  1  false alarms  0/ 0 | incidents right 62%, wrong rate 31%, false-alarm rate 0%  fail
+
+ natural+quiet
+  baseline  right 12/14  wrong  0  missed  0  abstained  0  false alarms  2/12 | incidents right 100%, wrong rate 0%, false-alarm rate 17%  fail
+  model     right 11/14  wrong  1  missed  0  abstained  0  false alarms  2/12 | incidents right 50%, wrong rate 7%, false-alarm rate 17%  fail
+  checked   right 12/14  wrong  0  missed  0  abstained  0  false alarms  2/12 | incidents right 100%, wrong rate 0%, false-alarm rate 17%  fail
+
+ model answers with numbers typed outside a fact: 0 of 40 (removed by the checks)
+
+ checked: not right
+  H06 planted too_small conversion_rate        2020-12-28 | expected incident product_break {'os': 'Windows'} 2021-01-01 (product_break)| got wrong: incident product_break {'landing': 'Home'} 2020-12-31 {'type': True, 'segment': False, 'start': True} 
+  H10 planted clear     revenue                2021-01-11 | expected incident traffic_loss {'source': 'shop.googlemerchandisestore.com'} 2021-01-13 (traffic_loss)| got wrong: incident traffic_loss {'medium': 'referral'} 2021-01-13 {'type': True, 'segment': False, 'start': True} 
+  H14 planted clear     conversion_rate        2020-12-28 | expected incident product_break {'os': 'Android'} 2020-12-28 (product_break)| got wrong: incident product_break {'landing': 'Home'} 2020-12-31 {'type': True, 'segment': False, 'start': False} 
+  H20 planted too_small sessions               2020-12-14 | expected incident traffic_loss {'medium': '(none)'} 2020-12-16 (traffic_loss)| got wrong: incident traffic_loss {'landing': 'Home'} 2020-12-14 {'type': True, 'segment': False, 'start': False} 
+  H23 planted clear     revenue                2020-12-07 | expected incident tracking_issue {'country': 'India'} 2020-12-11 (units_bug)| got wrong: incident tracking_issue {'browser': 'Android Webview'} 2020-12-11 {'type': True, 'segment': False, 'start': True} 
+  H30 planted clear     conversion_rate        2021-01-11 | expected incident mix_shift {'source': 'shop.googlemerchandisestore.com'} 2021-01-13 (mix_shift)| got missed: no_change none {}   
+  H31 planted clear     conversion_rate        2020-12-28 | expected incident mix_shift {'source': 'shop.googlemerchandisestore.com'} 2020-12-28 (mix_shift)| got wrong: incident mix_shift {'medium': 'referral'} 2020-12-28 {'type': True, 'segment': False, 'start': True} 
+  H35 quiet   quiet     orders                 2020-12-07 | expected no_change    | got false_alarm: incident mix_shift {'user_type': 'new'} 2020-12-12  
+  H36 planted clear     revenue                2020-12-21 | expected incident tracking_issue {'country': 'Canada'} 2020-12-25 (units_bug)| got wrong: incident tracking_issue {'os': 'Windows'} 2020-12-25 {'type': True, 'segment': False, 'start': True} 
+  H37 planted clear     sessions               2020-12-21 | expected incident traffic_loss {'source': '(direct)'} 2020-12-21 (traffic_loss)| got abstained: cant_tell none {} 2020-12-21  
+  H38 broad   broad     conversion_rate        2020-12-28 | expected broad    | got false_alarm: incident product_break {'landing': 'Home'} 2020-12-31  
+  H40 planted clear     revenue                2020-12-07 | expected incident traffic_loss {'country': 'India'} 2020-12-10 (traffic_loss)| got wrong: incident mix_shift {'user_type': 'new'} 2020-12-12 {'type': False, 'segment': False, 'start': False} 
+
+ tokens: {'input_tokens': 55418, 'output_tokens': 8169}   296s

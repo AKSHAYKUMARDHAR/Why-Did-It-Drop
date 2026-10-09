@@ -1,0 +1,27 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "c1c5fcafa809",
+ "usage": {
+  "input_tokens": 1601,
+  "output_tokens": 217
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "landing",
+    "value": "Home"
+   }
+  ],
+  "start_date": "2020-12-31",
+  "confidence": "high",
+  "headline": "Conversion rate dropped beyond normal variation due to a product break on the home landing page.",
+  "explanation": [
+   "Conversion rate fell from [F1] to [F2], marking a decrease of [F3] that is [F5] times the typical weekly change [F4].",
+   "The strongest candidate cause is the Home landing page section, accounting for a large portion of the decline and showing a distinct drop in its product-view rate starting from [F32]."
+  ],
+  "next_step": "Investigate the home landing page for any broken elements or tracking changes affecting product views."
+ }
+}

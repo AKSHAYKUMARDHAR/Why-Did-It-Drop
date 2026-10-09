@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "ec17b5710928",
+ "usage": {
+  "input_tokens": 1294,
+  "output_tokens": 225
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "basket_change",
+  "segment": [
+   {
+    "dimension": "user_type",
+    "value": "new"
+   }
+  ],
+  "start_date": "2020-12-15",
+  "confidence": "high",
+  "headline": "Average order value dropped due to a shift in basket composition among new users.",
+  "explanation": [
+   "Average order value saw a shift compared to the prior week as new visitors bought lower-priced items or smaller quantities.",
+   "The new user segment diverged from the rest of the site starting from Tue 15 Dec 2020, accounting for a large portion of the decline.",
+   "While overall week-over-week variation remained within typical ranges, this specific segment's basket value dropped significantly."
+  ],
+  "next_step": "Investigate merchandising and promotional paths targeting new visitors to see why cart composition changed."
+ }
+}

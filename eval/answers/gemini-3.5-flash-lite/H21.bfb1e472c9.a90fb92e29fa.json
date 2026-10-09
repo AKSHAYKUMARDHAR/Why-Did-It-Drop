@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "a90fb92e29fa",
+ "usage": {
+  "input_tokens": 1227,
+  "output_tokens": 173
+ },
+ "answer": {
+  "verdict": "broad",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Revenue fell beyond normal variation during the week of Christmas due to broad holiday demand shifts.",
+  "explanation": [
+   "Revenue dropped significantly compared to the previous week, driven by simultaneous declines in both traffic and conversion rates.",
+   "The change occurred site-wide rather than being isolated to any specific segment or tracking failure, coinciding with Christmas Eve and Christmas Day.",
+   "All major funnel stages experienced decreases in performance, aligning with typical seasonal slowdowns during the holiday period."
+  ],
+  "next_step": "Monitor post-holiday traffic recovery and seasonal shopping patterns to assess return to baseline."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "34b5f923c897",
+ "usage": {
+  "input_tokens": 1253,
+  "output_tokens": 231
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "tracking_issue",
+  "segment": [
+   {
+    "dimension": "os",
+    "value": "Windows"
+   }
+  ],
+  "start_date": "2020-12-15",
+  "confidence": "high",
+  "headline": "Revenue fell because of a tracking issue affecting Windows operating system users starting Tuesday, December 15, 2020.",
+  "explanation": [
+   "Revenue decreased compared to the previous week, driven by a drop in the session conversion rate while average order value remained stable.",
+   "Tracking health detected an anomaly with duplicate purchase events in the Windows operating system starting on Tuesday, December 15, 2020.",
+   "This measurement problem distorts purchase metrics and funnel performance for Windows users, creating an artificial drop in observed conversion."
+  ],
+  "next_step": "Investigate recent tracking implementations or tag manager updates on the checkout confirmation page for Windows users."
+ }
+}

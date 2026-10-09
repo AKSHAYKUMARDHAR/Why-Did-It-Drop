@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "0a300b3079cb",
+ "usage": {
+  "input_tokens": 1249,
+  "output_tokens": 207
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "tracking_issue",
+  "segment": [
+   {
+    "dimension": "country",
+    "value": "Canada"
+   }
+  ],
+  "start_date": "2021-01-15",
+  "confidence": "high",
+  "headline": "Revenue grew significantly this week due to a tracking issue involving duplicate purchase events in Canada.",
+  "explanation": [
+   "A tracking finding indicates duplicate purchase events started occurring for users in Canada beginning on {F27}.",
+   "This measurement error inflated the revenue and conversion metrics during the week.",
+   "Site-wide metrics showed an increase in revenue from {F1} to {F2}, driven primarily by this tracking anomaly."
+  ],
+  "next_step": "Inspect the checkout and thank-you page implementation for Canada traffic to resolve the duplicate purchase logging."
+ }
+}

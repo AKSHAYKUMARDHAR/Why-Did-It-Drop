@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "d71ee528ee66",
+ "usage": {
+  "input_tokens": 1389,
+  "output_tokens": 234
+ },
+ "answer": {
+  "verdict": "cant_tell",
+  "type": "traffic_loss",
+  "segment": [
+   {
+    "dimension": "medium",
+    "value": "(none)"
+   }
+  ],
+  "start_date": "2020-12-21",
+  "confidence": "low",
+  "headline": "Sessions dropped beyond normal variation due to overlapping traffic loss signals in direct and unset traffic.",
+  "explanation": [
+   "Sessions fell significantly compared with the prior week, moving well beyond normal variation.",
+   "Two top candidate causes, traffic medium (none) and traffic source (direct), both account for identical portions of the decline and show the exact same drop beginning on Mon 21 Dec 2020.",
+   "Because these candidate causes overlap completely and tell the same story, the evidence is too ambiguous to isolate a single root cause."
+  ],
+  "next_step": "Investigate direct traffic tracking and default channel grouping rules to see why unassigned and direct sessions dropped sharply."
+ }
+}

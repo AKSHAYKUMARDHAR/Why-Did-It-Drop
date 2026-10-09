@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "8d757af5af36",
+ "usage": {
+  "input_tokens": 1197,
+  "output_tokens": 163
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Revenue fell within normal weekly variation compared to the previous week.",
+  "explanation": [
+   "Revenue decreased from [F1] to [F2], which is within normal historical weekly variation [F5].",
+   "Both sessions [F6] and average order value [F8] remained stable, while conversion rate declined [F7].",
+   "No tracking issues or candidate causes were found to explain the shift."
+  ],
+  "next_step": "Review general traffic and seasonal trends to monitor future weekly performance."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "cc1066753d68",
+ "usage": {
+  "input_tokens": 1726,
+  "output_tokens": 244
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "mix_shift",
+  "segment": [
+   {
+    "dimension": "medium",
+    "value": "(none)"
+   }
+  ],
+  "start_date": "2021-01-11",
+  "confidence": "medium",
+  "headline": "Conversion rate remained within normal variation overall, but a surge in direct traffic shifted the visitor mix.",
+  "explanation": [
+   "Conversion rate changed by {F3} to reach {F2}, which is within normal week-to-week variation {F5}.",
+   "However, traffic medium none experienced a distinct surge in sessions {F23} starting on {F33}, accounting for {F21} of the change in conversion rate.",
+   "This influx of unassigned traffic brought in visitors with a lower product-view rate {F30}, diluting the overall site conversion metric."
+  ],
+  "next_step": "Investigate tracking tags for direct and unassigned traffic campaigns starting from {F33}."
+ }
+}

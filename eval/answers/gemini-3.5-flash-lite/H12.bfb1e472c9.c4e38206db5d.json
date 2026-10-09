@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "c4e38206db5d",
+ "usage": {
+  "input_tokens": 1702,
+  "output_tokens": 224
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "browser",
+    "value": "Safari"
+   }
+  ],
+  "start_date": "2020-12-21",
+  "confidence": "high",
+  "headline": "Conversion rate dropped significantly beyond normal variation due to a checkout flow breakage primarily affecting Safari users.",
+  "explanation": [
+   "Overall conversion rate dropped sharply from [F1] to [F2], moving far beyond typical weekly variation.",
+   "The primary driver was a steep decline in checkout start rates after adding items to the cart, specifically concentrated among Safari users starting from [F30].",
+   "While mobile and iOS segments also exhibited drops, the Safari segment showed the most severe and immediate divergence."
+  ],
+  "next_step": "Investigate the checkout start implementation and JavaScript errors specifically targeting Safari browsers following the December 21 release."
+ }
+}

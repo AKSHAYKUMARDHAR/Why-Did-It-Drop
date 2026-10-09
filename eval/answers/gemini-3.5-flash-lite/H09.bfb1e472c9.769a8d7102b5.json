@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "769a8d7102b5",
+ "usage": {
+  "input_tokens": 1342,
+  "output_tokens": 238
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "landing",
+    "value": "Apparel"
+   }
+  ],
+  "start_date": "2021-01-04",
+  "confidence": "high",
+  "headline": "Conversion rate dropped within normal variation overall, but a severe product breakage hit the apparel landing page.",
+  "explanation": [
+   "Although the overall weekly change stayed within normal historical variation, site-wide conversion fell from [F18] to [F19] due to weakness across several funnel steps.",
+   "A major candidate cause appeared on the apparel landing page section, where the product-view rate crashed by [F23] starting on [F30].",
+   "This localized drop disproportionately hurt conversion for visitors arriving on that section compared to the rest of the site."
+  ],
+  "next_step": "Investigate recent deployments and tag configurations affecting the apparel landing page and product catalog."
+ }
+}

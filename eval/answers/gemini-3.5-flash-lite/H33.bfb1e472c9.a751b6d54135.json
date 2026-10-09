@@ -1,0 +1,22 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "a751b6d54135",
+ "usage": {
+  "input_tokens": 1251,
+  "output_tokens": 140
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "Purchase after checkout start stayed within normal weekly variation compared to previous weeks.",
+  "explanation": [
+   "The metric moved from {F1} to {F2}, which is well within typical fluctuations observed previously {F4}.",
+   "There are no tracking issues affecting this specific metric and no segment candidate causes identified."
+  ],
+  "next_step": "Monitor conversion funnel metrics through the upcoming post-holiday period."
+ }
+}

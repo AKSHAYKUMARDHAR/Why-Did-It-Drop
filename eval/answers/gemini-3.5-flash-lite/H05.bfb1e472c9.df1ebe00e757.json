@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "df1ebe00e757",
+ "usage": {
+  "input_tokens": 1714,
+  "output_tokens": 249
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "browser",
+    "value": "Chrome"
+   }
+  ],
+  "start_date": "2020-12-07",
+  "confidence": "high",
+  "headline": "Conversion rate dropped because of a significant drop in checkout starts for Chrome users starting on Mon 07 Dec 2020.",
+  "explanation": [
+   "Conversion rate fell from {F1} to {F2} following Cyber Monday, marking a sharp decline of {F3}.",
+   "The primary candidate cause is Chrome users, accounting for {F21} of the change with a dramatic reduction in checkout starts after add-to-cart of {F23}.",
+   "This behavior is classified as a product break because the friction occurred specifically at the checkout start step on browser = Chrome starting from {F30}."
+  ],
+  "next_step": "Investigate recent frontend releases and tag manager updates affecting checkout initiation specifically on Chrome browsers."
+ }
+}

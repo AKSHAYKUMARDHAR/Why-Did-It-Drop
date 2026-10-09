@@ -1,0 +1,22 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "23c33ed8e633",
+ "usage": {
+  "input_tokens": 1153,
+  "output_tokens": 160
+ },
+ "answer": {
+  "verdict": "no_change",
+  "type": "none",
+  "segment": [],
+  "start_date": "",
+  "confidence": "high",
+  "headline": "The week-over-week shift in Add-to-cart rate (of sessions) remained within normal variation.",
+  "explanation": [
+   "Add-to-cart rate (of sessions) moved from [F1] to [F2], representing a change of [F3].",
+   "This movement is typical compared to historical weekly variations and there are no tracking issues or distinct candidate causes explaining a specific incident."
+  ],
+  "next_step": "Continue monitoring the funnel metrics for any emerging anomalies."
+ }
+}

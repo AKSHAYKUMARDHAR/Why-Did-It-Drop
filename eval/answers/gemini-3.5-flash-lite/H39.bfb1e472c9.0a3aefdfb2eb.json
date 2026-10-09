@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "0a3aefdfb2eb",
+ "usage": {
+  "input_tokens": 1347,
+  "output_tokens": 228
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "os",
+    "value": "Windows"
+   }
+  ],
+  "start_date": "2020-12-17",
+  "confidence": "high",
+  "headline": "Revenue fell due to a product breakdown affecting Windows users starting {F33}.",
+  "explanation": [
+   "Revenue decreased significantly during the week, primarily driven by a drop in conversion rate {F7} rather than traffic loss {F6}.",
+   "The funnel metrics reveal a major issue at the checkout stage, specifically for users on Windows.",
+   "The purchase rate after checkout start dropped sharply for this segment {F27}, accounting for a notable portion of the total revenue decline {F24}."
+  ],
+  "next_step": "Investigate recent frontend releases, JavaScript errors, or payment gateway integrations impacting Windows users starting {F33}."
+ }
+}

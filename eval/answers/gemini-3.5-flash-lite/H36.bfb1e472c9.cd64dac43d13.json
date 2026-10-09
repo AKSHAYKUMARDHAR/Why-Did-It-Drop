@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "cd64dac43d13",
+ "usage": {
+  "input_tokens": 1807,
+  "output_tokens": 215
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "tracking_issue",
+  "segment": [
+   {
+    "dimension": "os",
+    "value": "Windows"
+   }
+  ],
+  "start_date": "2020-12-25",
+  "confidence": "high",
+  "headline": "Revenue stayed within normal variation overall, but a tracking issue emerged causing order values to jump.",
+  "explanation": [
+   "Although overall revenue moved within typical bounds, a tracking anomaly began affecting orders from Windows users starting on {F59}.",
+   "This manifested as a severe jump in average order value for the affected segment, pointing to potential duplicate purchase events or incorrect values being logged.",
+   "A secondary tracking finding also appeared for Canadian traffic starting on {F60}."
+  ],
+  "next_step": "Inspect the checkout and purchase tracking implementation on Windows browsers for duplicate or inflated transaction payloads."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "dc4603e3a7c1",
+ "usage": {
+  "input_tokens": 1426,
+  "output_tokens": 213
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "landing",
+    "value": "Shop by Brand"
+   }
+  ],
+  "start_date": "2021-01-05",
+  "confidence": "high",
+  "headline": "Conversion rate changes were driven by a sharp product-view rate drop on the Shop by Brand landing page.",
+  "explanation": [
+   "Although overall conversion variation remained within normal bounds, visitors landing on the Shop by Brand section experienced a dramatic product-view rate decline.",
+   "This issue began on Tuesday and heavily impacted the funnel performance for that specific segment.",
+   "Since this segment accounts for a portion of traffic, the localized breakdown dragged down overall metrics."
+  ],
+  "next_step": "Check recent deployments or content updates affecting the Shop by Brand landing page starting from Tuesday."
+ }
+}

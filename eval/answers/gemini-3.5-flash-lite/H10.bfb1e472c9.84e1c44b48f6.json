@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "84e1c44b48f6",
+ "usage": {
+  "input_tokens": 1498,
+  "output_tokens": 229
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "traffic_loss",
+  "segment": [
+   {
+    "dimension": "medium",
+    "value": "referral"
+   }
+  ],
+  "start_date": "2021-01-13",
+  "confidence": "medium",
+  "headline": "Revenue grew within normal variation despite a drop in referral traffic.",
+  "explanation": [
+   "Overall revenue increased from [F1] to [F2], which falls within normal weekly variation [F5].",
+   "However, referral traffic experienced a distinct drop in sessions [F27] starting mid-week [F33], accounting for a significant negative pull on revenue [F24].",
+   "This was offset by strong growth across the rest of the site, keeping the overall metric within expected bounds [F5]."
+  ],
+  "next_step": "Investigate external referral sources and partner sites to see if incoming links or referral channels broke."
+ }
+}

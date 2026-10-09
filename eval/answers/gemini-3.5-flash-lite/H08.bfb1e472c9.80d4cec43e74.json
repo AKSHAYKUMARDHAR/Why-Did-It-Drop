@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "80d4cec43e74",
+ "usage": {
+  "input_tokens": 1304,
+  "output_tokens": 205
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "tracking_issue",
+  "segment": [
+   {
+    "dimension": "country",
+    "value": "the whole site"
+   }
+  ],
+  "start_date": "2020-11-19",
+  "confidence": "high",
+  "headline": "Revenue grew significantly this week due to a tracking issue involving duplicate purchase events.",
+  "explanation": [
+   "Revenue increased by {F3} to {F2} starting from {F29}.",
+   "Tracking health detected duplicate purchase events in the whole site, with the metric rising from {F6} to {F7}.",
+   "This measurement problem directly affects revenue reporting by counting single purchases multiple times."
+  ],
+  "next_step": "Inspect the purchase confirmation page and analytics tag implementation to identify what is triggering duplicate purchase events."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "21403827ce1e",
+ "usage": {
+  "input_tokens": 1802,
+  "output_tokens": 195
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "tracking_issue",
+  "segment": [],
+  "start_date": "2021-01-26",
+  "confidence": "high",
+  "headline": "Revenue dropped severely due to a tracking issue involving a sharp increase in zero-revenue orders.",
+  "explanation": [
+   "Revenue fell significantly beyond normal variation as the proportion of zero-revenue orders spiked across the entire site starting from Tue 26 Jan 2021.",
+   "While standard traffic metrics and conversion rates remained relatively stable, average order value plummeted due to orders recording zero revenue.",
+   "This measurement issue fully accounts for the dramatic drop in total earnings."
+  ],
+  "next_step": "Investigate the checkout and payment confirmation tags or backend order processing to determine why orders are failing to record revenue."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "a535b5250342",
+ "usage": {
+  "input_tokens": 1412,
+  "output_tokens": 232
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "mix_shift",
+  "segment": [
+   {
+    "dimension": "user_type",
+    "value": "new"
+   }
+  ],
+  "start_date": "2020-12-12",
+  "confidence": "medium",
+  "headline": "Orders remained within normal variation overall, but a shift toward new visitors affected the metric negatively starting mid-week.",
+  "explanation": [
+   "Overall orders increased while staying within normal weekly variation limits {F5} and following the post-Cyber Monday period {F2}.",
+   "The primary candidate cause is a mix shift toward new users {F23}, which grew much faster than returning visitors {F26}.",
+   "New users experienced a lower conversion rate compared to the rest of the site {F29}, pulling down overall performance."
+  ],
+  "next_step": "Investigate acquisition campaigns and landing page experiences tailored to new visitors to improve their conversion rate."
+ }
+}

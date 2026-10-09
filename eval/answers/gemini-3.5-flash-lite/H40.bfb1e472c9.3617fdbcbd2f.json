@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "3617fdbcbd2f",
+ "usage": {
+  "input_tokens": 1435,
+  "output_tokens": 223
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "mix_shift",
+  "segment": [
+   {
+    "dimension": "user_type",
+    "value": "new"
+   }
+  ],
+  "start_date": "2020-12-12",
+  "confidence": "medium",
+  "headline": "Revenue grew within normal variation this week, though new users showed a distinct shift.",
+  "explanation": [
+   "Overall revenue increased by [F3] compared to the previous week, staying within normal weekly variation [F5].",
+   "However, new visitors grew disproportionately faster than the rest of the site [F27], accounting for [F24] of the change in revenue.",
+   "This influx was accompanied by a lower product-view rate among new users starting from [F39]."
+  ],
+  "next_step": "Investigate landing page experiences and acquisition campaigns driving the surge in new visitor traffic."
+ }
+}

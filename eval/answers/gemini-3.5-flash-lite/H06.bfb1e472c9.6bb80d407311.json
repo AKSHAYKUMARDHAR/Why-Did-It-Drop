@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "bfb1e472c9",
+ "pack_hash": "6bb80d407311",
+ "usage": {
+  "input_tokens": 1429,
+  "output_tokens": 210
+ },
+ "answer": {
+  "verdict": "incident",
+  "type": "product_break",
+  "segment": [
+   {
+    "dimension": "landing",
+    "value": "Home"
+   }
+  ],
+  "start_date": "2020-12-31",
+  "confidence": "high",
+  "headline": "Conversion rate dropped beyond normal variation due to a product-view drop on the Home landing page.",
+  "explanation": [
+   "Conversion rate fell significantly beyond typical weekly variation.",
+   "The Home landing page experienced a sharp decline in its product-view rate starting on Thursday, December 31, 2020.",
+   "This specific drop accounts for a major share of the overall conversion decline on the site."
+  ],
+  "next_step": "Investigate frontend releases or tracking tags deployed on the Home page around December 31, 2020."
+ }
+}
