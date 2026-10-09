@@ -1,0 +1,11 @@
+# Python 3.12
+google-genai>=2.26          # Gemini: the investigator model (free tier)
+google-cloud-bigquery       # one-time extract of the public GA4 demo-store dataset
+db-dtypes                   # BigQuery -> pandas types
+duckdb                      # local analytics engine: every number is computed here
+pandas
+pyarrow
+numpy
+python-dotenv
+pytest
+markdown                    # renders docs/PRD.md to docs/PRD.html

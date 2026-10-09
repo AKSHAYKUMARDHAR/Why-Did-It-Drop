@@ -1,0 +1,390 @@
+<title>Why Did It Drop? PRD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Public+Sans:wght@400;600;700&display=swap">
+<style>
+/* Layout: one reading column, styled like the insurer's own summary sheet: a schedule header, ruled tables, clause-style labels. */
+:root {
+  --paper: #f5f7f6; --sheet: #ffffff; --ink: #14212b; --muted: #56646e; --rule: #d6dde0;
+  --accent: #0d6b66; --accent-soft: #e3efed; --warn: #9a520c; --warn-soft: #f8ecdf;
+  --display: "Newsreader", Georgia, "Times New Roman", serif;
+  --body: "Public Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #0e1417; --sheet: #131b1f; --ink: #e4eaed; --muted: #9babb4; --rule: #27343b;
+  --accent: #5cbcb3; --accent-soft: #15292a; --warn: #e0a05e; --warn-soft: #2a2016; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --paper: #0e1417; --sheet: #131b1f; --ink: #e4eaed; --muted: #9babb4; --rule: #27343b;
+  --accent: #5cbcb3; --accent-soft: #15292a; --warn: #e0a05e; --warn-soft: #2a2016; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font: 16px/1.65 var(--body); padding-inline: 16px; padding-block: 28px 64px; }
+.sheet { max-width: 860px; margin: 0 auto; background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px; padding-inline: clamp(18px, 5vw, 56px); padding-block: 36px 48px; }
+.schedule { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; border: 1px solid var(--rule); border-radius: 4px; margin-bottom: 28px; font: 12px/1.4 var(--mono); }
+.schedule div { padding: 8px 12px; border-right: 1px solid var(--rule); min-width: 0; }
+.schedule div:last-child { border-right: 0; }
+.schedule span { display: block; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; font-size: 10.5px; }
+h1 { font: 600 clamp(30px, 5.2vw, 44px)/1.12 var(--display); letter-spacing: -.01em; margin: 0 0 6px; text-wrap: balance; }
+.sub { font: 400 clamp(17px, 2.4vw, 20px)/1.4 var(--display); color: var(--muted); margin: 0 0 4px; }
+h2 { font: 600 26px/1.25 var(--display); margin: 44px 0 12px; padding-top: 18px; border-top: 1px solid var(--rule); text-wrap: balance; }
+h3 { font: 600 17px/1.35 var(--body); margin: 26px 0 8px; }
+p, li { max-width: 68ch; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+strong { font-weight: 650; }
+ul, ol { padding-left: 1.3em; }
+li { margin: 4px 0; }
+.table-wrap { overflow-x: auto; margin: 14px 0 18px; border: 1px solid var(--rule); border-radius: 4px; }
+table { border-collapse: collapse; width: 100%; font-size: 14.5px; line-height: 1.45; }
+th { text-align: left; font: 600 12px/1.3 var(--body); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); background: var(--accent-soft); padding: 10px 12px; border-bottom: 1px solid var(--rule); }
+td { padding: 9px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+td { font-variant-numeric: tabular-nums; }
+table.bill td:nth-child(n+2), table.bill th:nth-child(n+2) { text-align: right; white-space: nowrap; }
+table.bill td:nth-child(3) { color: var(--accent); }
+table.bill td:nth-child(4) { color: var(--warn); }
+table.bill tr:last-child td { background: var(--warn-soft); }
+ul.gate { list-style: none; padding-left: 0; }
+ul.gate li { padding-left: 30px; position: relative; }
+ul.gate li::before { content: ""; position: absolute; left: 0; top: .32em; width: 16px; height: 16px; border: 1.5px solid var(--muted); border-radius: 3px; }
+.foot { margin-top: 40px; font-size: 13px; color: var(--muted); }
+@media (max-width: 520px) { body { font-size: 15.5px; } .schedule div { border-right: 0; border-bottom: 1px solid var(--rule); } .schedule div:last-child { border-bottom: 0; } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+</style>
+<main class="sheet">
+  <div class="schedule" aria-label="Document details">
+    <div><span>Document</span>Product requirements</div>
+    <div><span>Author</span>Akshay Dhar</div>
+    <div><span>Date</span>9 October 2026</div>
+    <div><span>Status</span>draft v1</div>
+  </div>
+  <h1>Why Did It Drop?</h1>
+  <p class="sub">an analytics agent that explains metric changes, and says when it can't</p>
+  <h2>TL;DR</h2>
+<p>When a product metric moves (checkout conversion down 8% this week), a PM asks "why?" and an analyst
+loses hours slicing dashboards. In 2026 Amplitude and Mixpanel shipped AI agents that answer that
+question. I found no independent measurement of how often they're right, and Mixpanel's own guide warns
+that its agent "will confidently explain the wrong thing" when tracking is broken.</p>
+<p><strong>Why Did It Drop?</strong> is an investigator for e-commerce product metrics that is tested before it's trusted:</p>
+<ul>
+<li><strong>Code does the arithmetic.</strong> Every number comes from a query on the data.</li>
+<li><strong>Checks come first.</strong> It tests whether the change is real at all, and whether tracking broke, before it
+  looks for a cause.</li>
+<li><strong>The model's job is narrow.</strong> It reads the evidence, picks follow-up checks and writes the diagnosis.</li>
+<li><strong>Every claim is verified.</strong> Every number in its answer must match a query result. Where the evidence is
+  thin, it says "can't tell".</li>
+</ul>
+<p>It runs on real event data: the GA4 export of Google's Merchandise Store, November 2020 to January 2021.
+It is scored on a frozen benchmark: incidents planted in that real data with known causes, plus quiet
+weeks where the right answer is "nothing unusual". Its scores are published, failures included.</p>
+<p>The costly error is a <strong>confident wrong cause</strong>. It sends engineers after the wrong release, or tells a
+CEO that marketing broke something it didn't. The release gate:</p>
+<ul>
+<li>wrong causes ≤ 5% of cases;</li>
+<li>right diagnoses ≥ 75%;</li>
+<li>false alarms ≤ 10% on quiet weeks;</li>
+<li>100% of numbers traced to a query.</li>
+</ul>
+<h2>Problem and evidence</h2>
+<p><strong>"Why did it move?" is a weekly tax on every product team.</strong> Dashboards show that a metric moved, not
+why. A data-team survey reported by Basedash puts ad hoc requests at about a third of data teams' time
+(Atlan, State of Data Teams 2024, as reported), and in a Fivetran survey analysts said they spend more
+than half their time on work other than analysis. I found no survey that isolates metric-change
+investigations. The figures above are about ad hoc requests in general, and I treat them as directional.</p>
+<p><strong>The big analytics vendors shipped agents for exactly this in 2026:</strong></p>
+<ul>
+<li><strong>Amplitude</strong> launched a Global Agent in February 2026 that "investigates root causes, and explains what's
+  driving changes across funnels". It also launched a Dashboard Monitoring Agent that "detects meaningful
+  metric changes within hours".</li>
+<li><strong>Mixpanel's RCA Agent</strong> "returns which dimensions explain the shift, ranked by significance, plus a
+  plain-language read and a confidence level".</li>
+</ul>
+<p>The pressure to automate the job is real.</p>
+<p><strong>Nobody publishes how often these agents are right, and the vendors' own material shows how they fail:</strong></p>
+<ul>
+<li><strong>Rates versus counts.</strong> In the winning story of Amplitude's 2026 AI Impact Awards, the agent first
+  "linked the spike to a recent mobile platform release". When the user challenged it, it "recalculated by
+  error rate rather than raw counts", which "changed the picture entirely". The cause was a different
+  release.</li>
+<li><strong>Broken tracking.</strong> Mixpanel's guide: "RCA explains what's in your data, not what's true. If the
+  underlying events weren't tracked correctly, RCA will confidently explain the wrong thing."</li>
+<li><strong>Mix shift.</strong> Conversion can fall with no segment getting worse, because more low-intent traffic arrived
+  (Simpson's paradox). An agent that only ranks segments by their contribution to the drop will blame
+  whichever segment grew.</li>
+<li><strong>Calendar effects.</strong> A drop on the day after a promotion ends is expected, not an incident. Mixpanel asks
+  teams to enter this "business context" for exactly that reason.</li>
+</ul>
+<p><strong>The algorithms are well studied; the trust layer isn't.</strong> Microsoft's Adtributor (NSDI 2014) ranks the
+dimensions that explain a revenue change by "explanatory power" and "surprise", and reported over 95%
+accuracy in its own ad system. Critics note that it assumes a single-dimension cause. Deterministic
+methods like this are a strong baseline, and the open question is what a language model adds on top of
+them, and at what risk. This project measures that.</p>
+<h2>Users and jobs to be done</h2>
+<ul>
+<li><strong>Product manager at a consumer app or e-commerce company.</strong> <em>"Conversion dropped this morning. Before
+  standup, tell me if it's real, where it's concentrated, and what most likely caused it, with numbers I
+  can show my lead."</em></li>
+<li><strong>Analyst on call.</strong> <em>"Do the first hour of slicing for me, show me every query you ran, and don't hide
+  it when the data can't explain the change."</em></li>
+<li><strong>Growth or category lead.</strong> <em>"Tell me whether the revenue drop is traffic, conversion or basket size,
+  and which channel or category it sits in."</em></li>
+</ul>
+<h2>Competitive landscape and positioning</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Product</th>
+<th>What it does</th>
+<th>Gap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amplitude Global Agent, Dashboard Monitoring Agent (2026)</td>
+<td>Autonomous investigation inside Amplitude</td>
+<td>Inside one vendor; no published accuracy</td>
+</tr>
+<tr>
+<td>Mixpanel RCA Agent</td>
+<td>Ranks dimensions behind a shift, with a confidence level</td>
+<td>Vendor warns it explains broken tracking confidently</td>
+</tr>
+<tr>
+<td>Tellius, Anamap Cartos</td>
+<td>Agentic root-cause tools for BI and dashboards</td>
+<td>Vendor claims only</td>
+</tr>
+<tr>
+<td>Adtributor and successors</td>
+<td>Deterministic dimension ranking</td>
+<td>Single-dimension assumption; no narrative, no tracking check</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Positioning:</strong></p>
+<ul>
+<li><strong>Tested, not trusted.</strong> A public benchmark of known incidents, with scores that include its failures.</li>
+<li><strong>Tracking first.</strong> It checks whether the data can be trusted before it explains it.</li>
+<li><strong>Rates, mix and noise first.</strong> It never blames a segment without separating rate changes from mix
+  changes, and real changes from noise.</li>
+<li><strong>Every number traced.</strong> Each figure in an answer links to the query that produced it.</li>
+</ul>
+<h2>Goals and non-goals</h2>
+<p>Goals:</p>
+<ol>
+<li>Name the right cause (type, segment and start date) for a planted incident in real data.</li>
+<li>Never state a wrong cause with confidence; say "can't tell" instead.</li>
+<li>Stay quiet when nothing unusual happened, and say "expected" for calendar effects.</li>
+<li>Make every claim checkable in one click.</li>
+</ol>
+<p>Non-goals (v1):</p>
+<ul>
+<li><strong>Proving causation.</strong> It localises and classifies a change. It doesn't replace an experiment, and it
+  says "likely cause".</li>
+<li><strong>Any warehouse, any schema.</strong> v1 runs on a fixed semantic layer over GA4-style e-commerce events.
+  Connecting other schemas is a later step.</li>
+<li><strong>Real-time alerting.</strong> v1 answers a question about a period. It doesn't watch a stream.</li>
+</ul>
+<h2>MVP scope</h2>
+<ol>
+<li><strong>Data.</strong> The GA4 demo-store export (<code>bigquery-public-data.ga4_obfuscated_sample_ecommerce</code>),
+   extracted once into session-level and event-level tables and frozen in the repo, so everything runs
+   locally in DuckDB.</li>
+<li><strong>Semantic layer.</strong> Metric and dimension definitions are written once, in code.
+   - <strong>Metrics:</strong> sessions, users, conversion rate, add-to-cart rate, checkout-start rate,
+     checkout-completion rate, orders, revenue, average order value, revenue per session.
+   - <strong>Dimensions:</strong> device category, operating system, browser, country, traffic medium and source,
+     new or returning user, landing-page group, and item category for basket metrics.</li>
+<li><strong>Business calendar.</strong> Known dates (Black Friday, Cyber Monday, Christmas, New Year) are given as
+   context, as Mixpanel's "business context" does.</li>
+<li><strong>Investigation.</strong> In order:
+   - <strong>Is it real?</strong> Compare against the same weekdays in prior weeks, with a noise band.
+   - <strong>Can the data be trusted?</strong> Tracking health checks: an event that vanishes or doubles, impossible
+     sequences such as a purchase with no checkout, or one browser going silent.
+   - <strong>Where does it sit?</strong> Split the change into funnel steps; separate rate change from mix change; rank
+     dimensions and pairs of dimensions by contribution.
+   - <strong>What does it mean?</strong> The model reads this evidence pack, may ask for up to three follow-up checks,
+     and writes the diagnosis:<ul>
+<li>type: product or funnel break, traffic loss, traffic-mix shift, tracking issue, price or basket
+   change, expected calendar effect, no real change, or can't tell;</li>
+<li>the segment, the start date, the size, a confidence level and the next step to take.</li>
+</ul>
+</li>
+<li><strong>Checks on the answer.</strong> Every number in the narrative must match a query result. The segment named
+   must be one the evidence supports. The start date must show in the daily series. Anything that fails
+   is removed or downgraded to "can't tell".</li>
+<li><strong>Interface.</strong>
+   - A web page: pick a metric and period, or a case from the gallery.
+   - It shows the verdict card, the charts and tables behind it, and the trace of every query.
+   - The gallery shows every benchmark case pre-run, so it works without a live model. Live
+     questions run on a small service with a daily cap, if free hosting allows.</li>
+</ol>
+<h2>How answers stay trustworthy</h2>
+<ul>
+<li><strong>The model never does arithmetic.</strong> It only cites numbers the tools returned, and code verifies each
+  one.</li>
+<li><strong>The order is fixed.</strong> The "real?" and "tracking?" checks run before attribution, so the model can't
+  skip them.</li>
+<li><strong>Rates before counts, and mix before blame.</strong> These are built into the evidence pack, not left to the
+  prompt.</li>
+<li><strong>Abstention is a valid answer</strong> and isn't scored as an error. A confident wrong cause is the error the
+  gate is built around.</li>
+</ul>
+<h2>Safety, privacy and compliance</h2>
+<ul>
+<li>The data is a public, obfuscated Google demo dataset (CC BY 4.0 page; BigQuery public datasets program).
+  It contains no personal data, and user IDs are pseudonymous.</li>
+<li>It is not a production monitoring system. It says "likely cause", and links every number to its query.</li>
+<li>API keys and the BigQuery service-account key live only in gitignored files and hosting secrets.</li>
+</ul>
+<h2>Success metrics</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target</th>
+<th>How measured</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wrong cause stated with confidence</td>
+<td>≤ 5% of benchmark cases</td>
+<td>Held-out benchmark</td>
+</tr>
+<tr>
+<td>Right diagnosis (type + segment + start date)</td>
+<td>≥ 75% of incident cases</td>
+<td>Held-out benchmark</td>
+</tr>
+<tr>
+<td>False alarms on quiet weeks</td>
+<td>≤ 10%</td>
+<td>Held-out null cases</td>
+</tr>
+<tr>
+<td>Numbers in answers traced to a query</td>
+<td>100%</td>
+<td>Code check, every answer</td>
+</tr>
+<tr>
+<td>Time to a first answer</td>
+<td>&lt; 2 minutes</td>
+<td>Logged runs</td>
+</tr>
+<tr>
+<td>Value of the model over the deterministic baseline</td>
+<td>Measured, not assumed</td>
+<td>Same cases, both versions</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Evaluation plan</h2>
+<p><strong>Data, frozen first.</strong> The GA4 extract is stored with its hashes before any prompt exists.</p>
+<p><strong>The benchmark: planted incidents in real data.</strong> I write an incident catalogue before any prompt. Each
+type is modelled on failures documented by the vendors and in incident write-ups:</p>
+<ul>
+<li><strong>Funnel break:</strong> checkout completion falls for one OS or browser from a date, like Mixpanel's iOS
+  payment-SDK example.</li>
+<li><strong>Traffic loss:</strong> one source or medium loses sessions (a campaign ended, or an SEO drop).</li>
+<li><strong>Traffic-mix shift:</strong> a burst of low-intent or bot sessions from one country lowers the conversion rate
+  while every segment's own rate is unchanged.</li>
+<li><strong>Tracking issues:</strong></li>
+<li>a purchase event stops firing for one browser while checkouts continue;</li>
+<li>duplicate purchase events inflate revenue.</li>
+<li><strong>Price or basket change:</strong> average order value falls in one item category.</li>
+<li><strong>Calendar effects:</strong> real movements around Black Friday, Christmas and the New Year, with no planting.
+  The right answer is "expected".</li>
+<li><strong>Quiet weeks:</strong> windows with no planted incident, checked by hand for real anomalies. The right answer
+  is "no real change".</li>
+<li><strong>Too small to tell:</strong> incidents below the noise band. "Can't tell" is the right answer.</li>
+</ul>
+<p>A seeded generator draws each case's segment (with enough volume), start date, size and duration. It
+writes the case, the question asked and the expected answer before any prompt exists. Planted data is
+created by changing a copy of the real sessions, such as dropping purchases or adding sessions, so the
+rest of the data stays real.</p>
+<p><strong>Splits.</strong>
+- 30 development cases.
+- 40 held-out cases, run once. The held-out set includes <strong>two incident types that don't appear in
+  development</strong> (planned: a currency or units bug, and a broken landing page), reported separately to show
+  whether the agent generalises.</p>
+<p><strong>Scoring.</strong> Each case is scored as:
+- <strong>right:</strong> the type matches, the segment matches (or is an accepted parent or child), and the start date
+  is within one day;
+- <strong>wrong:</strong> a confident answer naming the wrong type or segment;
+- <strong>abstained:</strong> "can't tell".</p>
+<p>On quiet and calendar cases, any incident claim is a <strong>false alarm</strong>.</p>
+<p><strong>Versions compared on the same cases:</strong>
+- a deterministic baseline (Adtributor-style ranking plus fixed rules);
+- the model with tools and no evidence pack;
+- the evidence pack plus the model;
+- the evidence pack plus the model plus the checks, which is what ships.</p>
+<p><strong>Models.</strong> gemini-3.5-flash-lite first, because the free tier allows many requests a day.
+gemini-3.5-flash is compared on development within its 20 requests a day. The cheaper model ships if it
+passes.</p>
+<p><strong>Release gate (held-out, run once):</strong> all four targets above. Held-out cases are never edited after a
+run. If the gate fails, I fix the system on development cases and draw a fresh held-out set.</p>
+<h2>Launch and distribution plan</h2>
+<ul>
+<li><strong>Live demo:</strong> a gallery of every benchmark case with its full investigation trace, plus live questions
+  if hosting allows.</li>
+<li><strong>The benchmark itself is published:</strong> cases, generator and expected answers, so anyone can test their
+  own agent on it.</li>
+<li><strong>Portfolio:</strong> a case study and this PRD, with the held-out results, pass or fail.</li>
+</ul>
+<h2>Timeline and risks</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Work</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Data extract and freeze; semantic layer; incident catalogue and generator; benchmark cases written</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Evidence pack, deterministic baseline, scoring harness</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Model investigator, checks, development runs</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Held-out run, web demo, case study</td>
+</tr>
+</tbody>
+</table></div>
+<p>Risks:
+- <strong>Data access needs a Google Cloud project with BigQuery.</strong> A one-time setup by me, the owner.
+- <strong>Planted incidents may be easier than real ones.</strong> Mitigations: realistic sizes, real background
+  noise, two unseen incident types in held-out, and calendar cases where nothing is planted.
+- <strong>The obfuscated data has placeholders and limited internal consistency.</strong> Mitigations: document it,
+  and choose segments with clean values.
+- <strong>Free-tier quota.</strong> Mitigations: cache every model answer, and use 1 to 3 model calls per case.</p>
+<h2>Open questions</h2>
+<ul>
+<li>Does the model add anything over a strong deterministic baseline? The benchmark answers this either
+  way.</li>
+<li>Which metrics matter most to PMs at Indian consumer companies? Test with three PMs after launch.</li>
+</ul>
+<h2>Sources</h2>
+<ul>
+<li>Amplitude, "Amplitude Introduces Agentic AI Analytics for the Next Era of Product Experiences" (Feb 2026):
+  https://amplitude.com/press/amplitude-introduces-agentic-ai-analytics-for-the-next-era-of-product-experiences</li>
+<li>Amplitude, 2026 AI Impact Awards winners: https://amplitude.com/blog/ai-impact-awards-2026-winners</li>
+<li>Mixpanel Agent use cases (RCA): https://docs.mixpanel.com/guides/mixpanel-agent/use-cases</li>
+<li>Mixpanel, anomaly detection and root cause analysis (2023): https://mixpanel.com/blog/anomaly-detection-custom-alerts-root-cause-analysis/</li>
+<li>Tellius, AI data analysis agents compared (vendor): https://www.tellius.com/resources/blog/best-ai-data-analysis-agents-in-2026-12-platforms-compared-for-nl-to-sql-autonomous-investigation-and-governance</li>
+<li>Anamap Cartos launch: https://www.producthunt.com/p/anamap</li>
+<li>Bhagwan et al., "Adtributor: Revenue Debugging in Advertising Systems", NSDI 2014:
+  https://www.usenix.org/conference/nsdi14/technical-sessions/presentation/bhagwan</li>
+<li>Basedash, on ad hoc reporting (reports Atlan 2024 and Mode 2024 figures): https://www.basedash.com/blog/what-is-ad-hoc-reporting-how-on-demand-data-analysis-works</li>
+<li>Fivetran, analyst survey: https://www.fivetran.com/blog/youre-not-getting-the-most-out-of-your-data-analysts</li>
+<li>Google, GA4 e-commerce demo dataset: https://developers.google.com/analytics/bigquery/web-ecommerce-demo-dataset</li>
+</ul>
+  <p class="foot">Copy in the repository: docs/PRD.md. Figures are from the sources listed above, as of October 2026.</p>
+</main>

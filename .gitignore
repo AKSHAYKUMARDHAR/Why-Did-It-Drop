@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.pytest_cache/
+.DS_Store
+# Google Cloud service-account key for the one-time BigQuery extract. Never commit it.
+bq-key.json
+*-key.json
+# Raw BigQuery extract (re-created by scripts/extract_ga4.py); the frozen tables are committed
+data/raw/
