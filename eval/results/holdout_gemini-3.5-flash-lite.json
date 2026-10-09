@@ -273,15 +273,15 @@
      "segment": {},
      "start_date": "",
      "confidence": "high",
-     "untraced_numbers": 6,
+     "untraced_numbers": 0,
      "unknown_facts": 0,
      "check_notes": [],
      "rendered": {
       "headline": "Revenue fell within normal weekly variation compared to the previous week.",
       "next_step": "Review general traffic and seasonal trends to monitor future weekly performance.",
       "explanation": [
-       "Revenue decreased from [F[number removed]] to [F[number removed]], which is within normal historical weekly variation [F[number removed]].",
-       "Both sessions [F[number removed]] and average order value [F[number removed]] remained stable, while conversion rate declined [F[number removed]].",
+       "Revenue decreased from $59,721 to $47,276, which is within normal historical weekly variation 0.5.",
+       "Both sessions -14% and average order value +0% remained stable, while conversion rate declined -18%.",
        "No tracking issues or candidate causes were found to explain the shift."
       ]
      },
@@ -919,15 +919,15 @@
      },
      "start_date": "2021-01-04",
      "confidence": "high",
-     "untraced_numbers": 4,
+     "untraced_numbers": 0,
      "unknown_facts": 0,
      "check_notes": [],
      "rendered": {
       "headline": "Conversion rate dropped within normal variation overall, but a severe product breakage hit the apparel landing page.",
       "next_step": "Investigate recent deployments and tag configurations affecting the apparel landing page and product catalog.",
       "explanation": [
-       "Although the overall weekly change stayed within normal historical variation, site-wide conversion fell from [F[number removed]] to [F[number removed]] due to weakness across several funnel steps.",
-       "A major candidate cause appeared on the apparel landing page section, where the product-view rate crashed by [F[number removed]] starting on [F[number removed]].",
+       "Although the overall weekly change stayed within normal historical variation, site-wide conversion fell from 0.68% to 0.51% due to weakness across several funnel steps.",
+       "A major candidate cause appeared on the apparel landing page section, where the product-view rate crashed by -83% starting on Mon 04 Jan 2021.",
        "This localized drop disproportionately hurt conversion for visitors arriving on that section compared to the rest of the site."
       ]
      },
@@ -1015,16 +1015,16 @@
      },
      "start_date": "2021-01-13",
      "confidence": "medium",
-     "untraced_numbers": 7,
+     "untraced_numbers": 0,
      "unknown_facts": 0,
      "check_notes": [],
      "rendered": {
       "headline": "Revenue grew within normal variation despite a drop in referral traffic.",
       "next_step": "Investigate external referral sources and partner sites to see if incoming links or referral channels broke.",
       "explanation": [
-       "Overall revenue increased from [F[number removed]] to [F[number removed]], which falls within normal weekly variation [F[number removed]].",
-       "However, referral traffic experienced a distinct drop in sessions [F[number removed]] starting mid-week [F[number removed]], accounting for a significant negative pull on revenue [F[number removed]].",
-       "This was offset by strong growth across the rest of the site, keeping the overall metric within expected bounds [F[number removed]]."
+       "Overall revenue increased from $9,402 to $11,658, which falls within normal weekly variation 0.8.",
+       "However, referral traffic experienced a distinct drop in sessions -32% starting mid-week Wed 13 Jan 2021, accounting for a significant negative pull on revenue -37%.",
+       "This was offset by strong growth across the rest of the site, keeping the overall metric within expected bounds 0.8."
       ]
      },
      "outcome": "wrong",
@@ -1209,15 +1209,15 @@
      },
      "start_date": "2020-12-21",
      "confidence": "high",
-     "untraced_numbers": 4,
+     "untraced_numbers": 1,
      "unknown_facts": 0,
      "check_notes": [],
      "rendered": {
       "headline": "Conversion rate dropped significantly beyond normal variation due to a checkout flow breakage primarily affecting Safari users.",
       "next_step": "Investigate the checkout start implementation and JavaScript errors specifically targeting Safari browsers following the December [number removed] release.",
       "explanation": [
-       "Overall conversion rate dropped sharply from [F[number removed]] to [F[number removed]], moving far beyond typical weekly variation.",
-       "The primary driver was a steep decline in checkout start rates after adding items to the cart, specifically concentrated among Safari users starting from [F[number removed]].",
+       "Overall conversion rate dropped sharply from 1.64% to 0.82%, moving far beyond typical weekly variation.",
+       "The primary driver was a steep decline in checkout start rates after adding items to the cart, specifically concentrated among Safari users starting from Mon 21 Dec 2020.",
        "While mobile and iOS segments also exhibited drops, the Safari segment showed the most severe and immediate divergence."
       ]
      },
@@ -1280,15 +1280,15 @@
      "segment": {},
      "start_date": "",
      "confidence": "high",
-     "untraced_numbers": 4,
+     "untraced_numbers": 0,
      "unknown_facts": 0,
      "check_notes": [],
      "rendered": {
       "headline": "The change in Purchase after checkout start this week is within normal variation compared with previous weeks.",
       "next_step": "Continue monitoring standard weekly performance metrics.",
       "explanation": [
-       "The metric moved from [F[number removed]] to [F[number removed]], representing a relative change of [F[number removed]].",
-       "This fluctuation is well within the typical weekly variability observed on the site [F[number removed]].",
+       "The metric moved from 46.96% to 49.46%, representing a relative change of +5%.",
+       "This fluctuation is well within the typical weekly variability observed on the site 0.5.",
        "No tracking issues or candidate causes were identified during this period."
       ]
      },
@@ -1373,15 +1373,15 @@
      },
      "start_date": "2020-12-31",
      "confidence": "high",
-     "untraced_numbers": 6,
+     "untraced_numbers": 0,
      "unknown_facts": 0,
      "check_notes": [],
      "rendered": {
       "headline": "Conversion rate dropped beyond normal variation due to a product break on the home landing page.",
       "next_step": "Investigate the home landing page for any broken elements or tracking changes affecting product views.",
       "explanation": [
-       "Conversion rate fell from [F[number removed]] to [F[number removed]], marking a decrease of [F[number removed]] that is [F[number removed]] times the typical weekly change [F[number removed]].",
-       "The strongest candidate cause is the Home landing page section, accounting for a large portion of the decline and showing a distinct drop in its product-view rate starting from [F[number removed]]."
+       "Conversion rate fell from 1.06% to 0.66%, marking a decrease of -38% that is 2.2 times the typical weekly change 18%.",
+       "The strongest candidate cause is the Home landing page section, accounting for a large portion of the decline and showing a distinct drop in its product-view rate starting from Thu 31 Dec 2020."
       ]
      },
      "outcome": "wrong",
@@ -1604,14 +1604,14 @@
      "segment": {},
      "start_date": "",
      "confidence": "high",
-     "untraced_numbers": 3,
+     "untraced_numbers": 0,
      "unknown_facts": 0,
      "check_notes": [],
      "rendered": {
       "headline": "The shift in add-to-cart rate after a product view this week is well within normal variation compared to previous weeks.",
       "next_step": "No action is needed as the metric is behaving normally.",
       "explanation": [
-       "The metric moved slightly from [F[number removed]] to [F[number removed]], representing a negligible change of [F[number removed]].",
+       "The metric moved slightly from 33.65% to 33.04%, representing a negligible change of -2%.",
        "There were no tracking issues found and zero candidate causes identified that negatively affected this specific funnel step.",
        "Overall, site-wide metrics remain stable after the Cyber Monday period without any distinct segment anomalies."
       ]
@@ -2326,14 +2326,14 @@
      "segment": {},
      "start_date": "",
      "confidence": "high",
-     "untraced_numbers": 3,
+     "untraced_numbers": 0,
      "unknown_facts": 0,
      "check_notes": [],
      "rendered": {
       "headline": "The week-over-week shift in Add-to-cart rate (of sessions) remained within normal variation.",
       "next_step": "Continue monitoring the funnel metrics for any emerging anomalies.",
       "explanation": [
-       "Add-to-cart rate (of sessions) moved from [F[number removed]] to [F[number removed]], representing a change of [F[number removed]].",
+       "Add-to-cart rate (of sessions) moved from 3.31% to 3.93%, representing a change of +19%.",
        "This movement is typical compared to historical weekly variations and there are no tracking issues or distinct candidate causes explaining a specific incident."
       ]
      },
@@ -2690,15 +2690,15 @@
      "segment": {},
      "start_date": "",
      "confidence": "high",
-     "untraced_numbers": 5,
+     "untraced_numbers": 0,
      "unknown_facts": 0,
      "check_notes": [],
      "rendered": {
       "headline": "Conversion rate moved within normal historical variation compared to recent weeks.",
       "next_step": "Continue monitoring standard weekly traffic patterns and funnel progression.",
       "explanation": [
-       "The change in conversion rate from [F[number removed]] to [F[number removed]] represents a weekly shift of [F[number removed]] (+[F[number removed]]), which aligns with typical fluctuations.",
-       "Although a single traffic source showed distinct behavior in product-view rates, it accounts for [F[number removed]] of the site-wide conversion change.",
+       "The change in conversion rate from 0.56% to 0.79% represents a weekly shift of +41% (+36%), which aligns with typical fluctuations.",
+       "Although a single traffic source showed distinct behavior in product-view rates, it accounts for -0% of the site-wide conversion change.",
        "There are no tracking issues or significant candidate causes driving an adverse metric movement."
       ]
      },
@@ -3370,16 +3370,16 @@
      },
      "start_date": "2020-12-31",
      "confidence": "high",
-     "untraced_numbers": 5,
+     "untraced_numbers": 0,
      "unknown_facts": 0,
      "check_notes": [],
      "rendered": {
       "headline": "Conversion rate dropped significantly beyond normal variation due to a drop in engagement from the home landing page.",
       "next_step": "Investigate the home page release or banner update deployed around December thirty-first.",
       "explanation": [
-       "Conversion rate fell from [F[number removed]] to [F[number removed]], which is a decline of [F[number removed]] and exceeds typical weekly fluctuations.",
-       "The primary driver was visitors arriving at the home landing page, whose product-view rate dropped by [F[number removed]] compared to the rest of the site.",
-       "This behavior diverged significantly starting from [F[number removed]], directly impacting overall checkout performance."
+       "Conversion rate fell from 1.06% to 0.68%, which is a decline of -36% and exceeds typical weekly fluctuations.",
+       "The primary driver was visitors arriving at the home landing page, whose product-view rate dropped by -41% compared to the rest of the site.",
+       "This behavior diverged significantly starting from Thu 31 Dec 2020, directly impacting overall checkout performance."
       ]
      },
      "outcome": "false_alarm",
@@ -3559,16 +3559,16 @@
      },
      "start_date": "2020-12-12",
      "confidence": "medium",
-     "untraced_numbers": 5,
+     "untraced_numbers": 0,
      "unknown_facts": 0,
      "check_notes": [],
      "rendered": {
       "headline": "Revenue grew within normal variation this week, though new users showed a distinct shift.",
       "next_step": "Investigate landing page experiences and acquisition campaigns driving the surge in new visitor traffic.",
       "explanation": [
-       "Overall revenue increased by [F[number removed]] compared to the previous week, staying within normal weekly variation [F[number removed]].",
-       "However, new visitors grew disproportionately faster than the rest of the site [F[number removed]], accounting for [F[number removed]] of the change in revenue.",
-       "This influx was accompanied by a lower product-view rate among new users starting from [F[number removed]]."
+       "Overall revenue increased by +33% compared to the previous week, staying within normal weekly variation 1.3.",
+       "However, new visitors grew disproportionately faster than the rest of the site +26%, accounting for -9% of the change in revenue.",
+       "This influx was accompanied by a lower product-view rate among new users starting from Sat 12 Dec 2020."
       ]
      },
      "outcome": "wrong",

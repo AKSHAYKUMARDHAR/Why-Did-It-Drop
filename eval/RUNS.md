@@ -115,3 +115,17 @@ decision value.
 
 The held-out cases are unchanged. A release claim would need the fixes above tested on development and a fresh
 held-out set.
+
+## Corrections after the release run
+
+- **"Numbers typed by the model: 0" was wrong.** The run logs' line read the model's raw answer, where the count
+  is never computed, so it always printed zero. Recounted from the checked answers by replaying the cached answers
+  (no requests): the model typed numbers itself in 9 development answers (21 numbers) and 15 of 40 held-out answers
+  (35 numbers). Almost all were dates written out ("Fri 18 Dec"). The checks removed every one, so no untraced
+  number reached a reader, but the claim "the model never typed a number" was false. The model also sometimes cited
+  facts as [F12] instead of {F12}; those now render as the facts they point to. Neither change touches a verdict, and
+  both replays reproduce the scores above exactly.
+- **Replay is not fully deterministic.** When two candidates tie, DuckDB doesn't guarantee their order, so one
+  development case (D01) rebuilt slightly different evidence text, and its cached answer no longer matched. Fixing
+  the ordering would invalidate the cached held-out answers, so the logged runs stay the record. Next: break ties by
+  name before the next run.

@@ -57,7 +57,7 @@ def baseline(pack: dict, e: Engine, cur: Window) -> dict:
             "start_date": "", "confidence": "medium", "source": "headline"}
 
 
-FACT = re.compile(r"\{(F\d+)\}")
+FACT = re.compile(r"[{\[](F\d+)[}\]]")   # {F12}, or [F12] copied from the pack's own notation
 
 
 def normalise(raw: dict) -> dict:

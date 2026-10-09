@@ -1,0 +1,66 @@
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --ink: #181b20; --muted: #5b6370; --line: #e1e4ea; --accent: #2457c5;
+  --ok-bg: #e5f3ea; --ok-ink: #1c5b32; --bad-bg: #fbe7e6; --bad-ink: #8f1f1a; --warn-bg: #fff3d6; --warn-ink: #6f4e00;
+  --mute-bg: #eceef2; --mute-ink: #3f4652; --code: #f2f4f7; --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121418; --surface: #1a1d23; --ink: #e8eaee; --muted: #a2a9b4; --line: #2c3139; --accent: #7aa2ff;
+    --ok-bg: #163222; --ok-ink: #9fdcb4; --bad-bg: #3a1a19; --bad-ink: #f4a7a2; --warn-bg: #3a2f10; --warn-ink: #f0cf78;
+    --mute-bg: #262a31; --mute-ink: #c3c8d0; --code: #14171c;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121418; --surface: #1a1d23; --ink: #e8eaee; --muted: #a2a9b4; --line: #2c3139; --accent: #7aa2ff;
+  --ok-bg: #163222; --ok-ink: #9fdcb4; --bad-bg: #3a1a19; --bad-ink: #f4a7a2; --warn-bg: #3a2f10; --warn-ink: #f0cf78;
+  --mute-bg: #262a31; --mute-ink: #c3c8d0; --code: #14171c;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+a { color: var(--accent); }
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+.top { background: var(--surface); border-bottom: 1px solid var(--line); padding: 28px 0 20px; }
+h1 { margin: 0 0 6px; font-size: 1.8rem; letter-spacing: -0.01em; }
+.lede { margin: 0 0 14px; max-width: 70ch; }
+.scores { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+.score { border: 1px solid var(--line); border-radius: var(--radius); padding: 10px 12px; background: var(--bg); }
+.score b { display: block; font-size: 1.35rem; }
+.score span { color: var(--muted); font-size: 0.82rem; }
+.score.fail b { color: var(--bad-ink); }
+h2 { font-size: 1.05rem; margin: 0 0 8px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; margin: 18px 0; }
+.how ol { margin: 0; padding-left: 20px; }
+.how li { margin: 4px 0; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin: 6px 0; }
+.controls label { font-size: 0.9rem; display: inline-flex; gap: 6px; align-items: center; }
+select { font: inherit; padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); }
+.count { color: var(--muted); font-size: 0.9rem; margin: 10px 0; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; margin: 0 0 12px; }
+.card-top { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 0.85rem; }
+.cid { font-weight: 600; color: var(--muted); margin-right: 4px; }
+.badge { border-radius: 999px; padding: 1px 9px; font-size: 0.78rem; background: var(--mute-bg); color: var(--mute-ink); }
+.badge.right { background: var(--ok-bg); color: var(--ok-ink); font-weight: 600; }
+.badge.wrong, .badge.false_alarm { background: var(--bad-bg); color: var(--bad-ink); font-weight: 600; }
+.badge.missed, .badge.abstained { background: var(--warn-bg); color: var(--warn-ink); font-weight: 600; }
+.card h3 { font-size: 1.02rem; margin: 8px 0 2px; }
+.headline-change { margin: 0 0 8px; color: var(--muted); font-size: 0.9rem; }
+.cols { display: grid; grid-template-columns: 3fr 2fr; gap: 14px; }
+.col { min-width: 0; }
+.col-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0 0 4px; }
+.verdict { font-weight: 600; margin: 0 0 4px; }
+.ahead { margin: 0 0 4px; }
+.expl { margin: 0 0 6px; padding-left: 18px; font-size: 0.93rem; }
+.next { margin: 0; font-size: 0.9rem; color: var(--muted); }
+.notes { margin: 4px 0 0; font-size: 0.82rem; color: var(--warn-ink); }
+.truth p { margin: 0 0 6px; font-size: 0.92rem; }
+.truth .base { color: var(--muted); font-size: 0.85rem; }
+details.evidence { margin-top: 10px; }
+details.evidence summary { cursor: pointer; color: var(--accent); font-size: 0.88rem; }
+details.evidence pre { white-space: pre-wrap; overflow-wrap: anywhere; background: var(--code); border: 1px solid var(--line);
+  border-radius: 8px; padding: 10px; font: 0.78rem/1.45 ui-monospace, "Cascadia Mono", Consolas, monospace; max-height: 420px; overflow: auto; }
+.small { color: var(--muted); font-size: 0.85rem; }
+@media (max-width: 700px) {
+  .cols { grid-template-columns: 1fr; }
+  h1 { font-size: 1.5rem; }
+}

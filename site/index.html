@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Did It Drop?</title>
+<meta name="description" content="An analytics agent that explains why a product metric moved, tested on 70 cases planted in real GA4 data, with every success and failure open to inspect.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>Why Did It Drop?</h1>
+    <p class="lede">An analytics agent that explains why a product metric moved, and says when it can't. Every case
+      below is a real week of Google's demo-store data. Most have an incident planted in them, with the answer known.
+      You can see what the agent concluded, what was really there, and the evidence it saw.</p>
+    <div class="scores" id="scores"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="panel how">
+    <h2>How it decides</h2>
+    <ol>
+      <li><strong>Is the change real?</strong> This week against the usual week-to-week swing.</li>
+      <li><strong>Can the data be trusted?</strong> Tracking checks look for signatures no shopper produces:
+        duplicate purchase events, purchases with no checkout, orders with zero revenue.</li>
+      <li><strong>Where is it?</strong> Segments that moved differently from the rest of the site, more than they
+        usually do, in a way that fits a failure and made the asked metric worse.</li>
+      <li><strong>What does it mean?</strong> A model (gemini-3.5-flash-lite) reads that evidence and writes the
+        diagnosis, citing every number by reference. Code fills in the figures and checks each claim; anything
+        unsupported becomes "can't tell".</li>
+    </ol>
+  </section>
+
+  <section class="controls" aria-label="Filters">
+    <label>Set
+      <select id="split"><option value="all">All 70</option><option value="dev">Development (30)</option>
+        <option value="holdout" selected>Held-out release run (40)</option></select></label>
+    <label>Outcome
+      <select id="outcome"><option value="all">Any</option><option value="right">Right</option>
+        <option value="wrong">Wrong cause</option><option value="false_alarm">False alarm</option>
+        <option value="missed">Missed</option><option value="abstained">Can't tell</option></select></label>
+    <label>Case
+      <select id="kind"><option value="all">Any</option><option value="planted">Planted incident</option>
+        <option value="natural">Real tracking failure</option><option value="broad">Holiday week</option>
+        <option value="quiet">Quiet week</option></select></label>
+  </section>
+  <p class="count" id="count" aria-live="polite"></p>
+  <div id="list"></div>
+
+  <section class="panel about">
+    <h2>What the results mean</h2>
+    <p>The release gate was strict: at most 5% wrong causes, at least 75% of incidents right, at most 10% false
+      alarms on quiet weeks. <strong>The held-out run failed it.</strong> Most misses came from the data's own
+      real campaign shifts (new visitors in early December, Home-page traffic over New Year), named instead of the
+      planted incident. The model also added no decision value over the deterministic rules; its job is the
+      explanation.
+      <a href="https://github.com/AKSHAYKUMARDHAR/Why-Did-It-Drop/blob/main/eval/RUNS.md">Every run, with its errors</a> ·
+      <a href="https://github.com/AKSHAYKUMARDHAR/Why-Did-It-Drop/blob/main/data/BENCHMARK_GUIDE.md">How the benchmark was built</a></p>
+    <p class="small">Data: Google's public GA4 demo-store export (Google Merchandise Store, Nov 2020 to Jan 2021,
+      obfuscated by Google). Built by <a href="https://akshaykumardhar.github.io/">Akshay Kumar Dhar</a> ·
+      <a href="https://github.com/AKSHAYKUMARDHAR/Why-Did-It-Drop">Code and data</a></p>
+  </section>
+</main>
+
+<template id="card">
+  <article class="card">
+    <div class="card-top"><span class="cid"></span><span class="badge kind"></span><span class="badge outcome"></span></div>
+    <h3 class="q"></h3>
+    <p class="headline-change"></p>
+    <div class="cols">
+      <div class="col answer">
+        <p class="col-title">The agent's diagnosis</p>
+        <p class="verdict"></p>
+        <p class="ahead"></p>
+        <ul class="expl"></ul>
+        <p class="next"></p>
+        <p class="notes"></p>
+      </div>
+      <div class="col truth">
+        <p class="col-title">What was really there</p>
+        <p class="planted"></p>
+        <p class="expect"></p>
+        <p class="base"></p>
+      </div>
+    </div>
+    <details class="evidence"><summary>Evidence the model saw</summary><pre></pre></details>
+  </article>
+</template>
+<script src="app.js"></script>
+</body>
+</html>

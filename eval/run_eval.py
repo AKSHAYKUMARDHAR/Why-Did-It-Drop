@@ -105,9 +105,10 @@ def main(argv=None) -> int:
                   f"incidents right {(s['right_rate_incidents'] or 0):.0%}, wrong rate {s['wrong_rate']:.0%}, "
                   f"false-alarm rate {(s['false_alarm_rate'] or 0):.0%}  {'PASS' if passes(s) else 'fail'}")
     if llm:
-        traced = [r["answers"]["model"].get("untraced_numbers") or 0 for r in detail if "model" in r["answers"]]
-        print(f"\n model answers with numbers typed outside a fact: {sum(1 for t in traced if t)} of {len(traced)} "
-              f"(removed by the checks)")
+        traced = [r["answers"]["checked"].get("untraced_numbers") or 0 for r in detail if "checked" in r["answers"]]
+        unknown = [r["answers"]["checked"].get("unknown_facts") or 0 for r in detail if "checked" in r["answers"]]
+        print(f"\n answers with numbers typed outside a fact: {sum(1 for x in traced if x)} of {len(traced)} "
+              f"({sum(traced)} numbers, all removed by the checks); unknown fact ids: {sum(unknown)}")
     for v in versions:
         bad = [r for r in detail if r["answers"][v]["outcome"] not in ("right",)]
         if bad and (args.show or v == versions[-1]):
