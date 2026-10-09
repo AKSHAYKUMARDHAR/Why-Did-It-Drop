@@ -5,6 +5,7 @@ db-dtypes                   # BigQuery -> pandas types
 duckdb                      # local analytics engine: every number is computed here
 pandas
 pyarrow
+httpx                       # downloads the raw events
 numpy
 python-dotenv
 pytest

@@ -1,0 +1,2046 @@
+[
+ {
+  "week": "2020-11-09",
+  "health": [],
+  "metrics": {
+   "conversion_rate": {
+    "rel_change": 0.5205536915745441,
+    "band": 0.07600161408886165,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "revenue": {
+    "rel_change": 0.08588450962419798,
+    "band": 0.0,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "sessions": {
+    "rel_change": -0.09935576807650755,
+    "band": 0.009426414757686753,
+    "z": null,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Home"
+      },
+      "z": -15.1,
+      "seg_rel": -0.20499539987051407,
+      "rest_rel": 0.05087948829771882,
+      "relative_to_rest": -0.24348642353150807
+     },
+     {
+      "segment": {
+       "landing": "Shop by Brand"
+      },
+      "z": 11.2,
+      "seg_rel": 0.3173043173043173,
+      "rest_rel": -0.12453590749973553,
+      "relative_to_rest": 0.5046925723043512
+     },
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": 7.5,
+      "seg_rel": 0.10650099844685967,
+      "rest_rel": -0.11975284209600578,
+      "relative_to_rest": 0.25703444596357605
+     }
+    ]
+   },
+   "orders": {
+    "rel_change": 0.46887966804979253,
+    "band": 0.07516460280028288,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "aov": {
+    "rel_change": -0.26073964175301784,
+    "band": 0.0,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_completion_rate": {
+    "rel_change": 0.16182195191514612,
+    "band": 0.06281494123814081,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_start_rate": {
+    "rel_change": null,
+    "band": 0.0,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "cart_rate": {
+    "rel_change": null,
+    "band": 599.4367936964516,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "view_item_rate": {
+    "rel_change": 0.11815102293283478,
+    "band": 0.01644588625804253,
+    "z": null,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Home"
+      },
+      "z": 5.5,
+      "seg_rel": 0.2108464348522452,
+      "rest_rel": 0.005520419519245978,
+      "relative_to_rest": 0.26827036844792973
+     },
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": -3.4,
+      "seg_rel": -0.036991493327461766,
+      "rest_rel": 0.1316579117829939,
+      "relative_to_rest": -0.19654532517320578
+     },
+     {
+      "segment": {
+       "landing": "Shop by Brand"
+      },
+      "z": -3.3,
+      "seg_rel": -0.09505983345256042,
+      "rest_rel": 0.13787829492259163,
+      "relative_to_rest": -0.25547026081140367
+     }
+    ]
+   },
+   "add_to_cart_rate": {
+    "rel_change": null,
+    "band": 298.0894078880988,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   }
+  }
+ },
+ {
+  "week": "2020-11-16",
+  "health": [
+   {
+    "check": "duplicate_purchase_events",
+    "base": 1.0338983050847457,
+    "cur": 1.4039900249376558,
+    "unit": "ratio",
+    "segment": {},
+    "detail": "purchase events per order went from 1.03 to 1.40"
+   },
+   {
+    "check": "event_started",
+    "event": "add_to_cart",
+    "base": 0.0,
+    "cur": 0.05568418615420236,
+    "unit": "ratio",
+    "segment": {},
+    "detail": "add_to_cart events per session rose from 0.000 to 0.056: the event was barely recorded the week before"
+   }
+  ],
+  "metrics": {
+   "conversion_rate": {
+    "rel_change": -0.04738004366801356,
+    "band": 0.5205536915745441,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "revenue": {
+    "rel_change": 0.6074111589431924,
+    "band": 0.08588450962419798,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "sessions": {
+    "rel_change": 0.15132397369824063,
+    "band": 0.09935576807650755,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "orders": {
+    "rel_change": 0.1327683615819209,
+    "band": 0.46887966804979253,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "aov": {
+    "rel_change": 0.41901134729648404,
+    "band": 0.26073964175301784,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_completion_rate": {
+    "rel_change": 0.09258002837229387,
+    "band": 0.16182195191514612,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_start_rate": {
+    "rel_change": null,
+    "band": 1.940741672658349e-06,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "cart_rate": {
+    "rel_change": null,
+    "band": 0.05885961930655022,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "view_item_rate": {
+    "rel_change": 0.033352338122967305,
+    "band": 0.11815102293283478,
+    "z": null,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": -3.5,
+      "seg_rel": -0.087069056097134,
+      "rest_rel": 0.059053298208279426,
+      "relative_to_rest": -0.1947250681796222
+     },
+     {
+      "segment": {
+       "landing": "Shop by Brand"
+      },
+      "z": 3.0,
+      "seg_rel": 0.2318063428834074,
+      "rest_rel": 0.0196266791475308,
+      "relative_to_rest": 0.2710515218200431
+     }
+    ]
+   },
+   "add_to_cart_rate": {
+    "rel_change": null,
+    "band": 0.06073960802936948,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   }
+  }
+ },
+ {
+  "week": "2020-11-23",
+  "health": [],
+  "metrics": {
+   "conversion_rate": {
+    "rel_change": 0.2845110359085711,
+    "band": 0.5205536915745441,
+    "z": 0.5465546407864224,
+    "real": false,
+    "distinct_segments": []
+   },
+   "revenue": {
+    "rel_change": 0.2595967022002836,
+    "band": 0.6074111589431924,
+    "z": 0.42738217495369085,
+    "real": false,
+    "distinct_segments": []
+   },
+   "sessions": {
+    "rel_change": 0.07200740912248206,
+    "band": 0.15132397369824063,
+    "z": 0.4758493143067605,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": 17.6,
+      "seg_rel": 0.5941271842911198,
+      "rest_rel": 0.009377903584779856,
+      "relative_to_rest": 0.5793165063645813
+     },
+     {
+      "segment": {
+       "user_type": "new"
+      },
+      "z": 8.6,
+      "seg_rel": 0.128453240564796,
+      "rest_rel": -0.03756454633149986,
+      "relative_to_rest": 0.17249758024134332
+     },
+     {
+      "segment": {
+       "landing": "(none)"
+      },
+      "z": -5.4,
+      "seg_rel": -0.07731642462671373,
+      "rest_rel": 0.08755672013804494,
+      "relative_to_rest": -0.151599582542997
+     }
+    ]
+   },
+   "orders": {
+    "rel_change": 0.39900249376558605,
+    "band": 0.46887966804979253,
+    "z": 0.8509699203319137,
+    "real": false,
+    "distinct_segments": []
+   },
+   "aov": {
+    "rel_change": -0.09964656402439619,
+    "band": 0.41901134729648404,
+    "z": -0.23781352144119447,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_completion_rate": {
+    "rel_change": 0.12703254583950524,
+    "band": 0.16182195191514612,
+    "z": 0.7850142971091879,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_start_rate": {
+    "rel_change": -0.47805761980282696,
+    "band": 1.2684677428579208e-06,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "cart_rate": {
+    "rel_change": 1.3837023792872074,
+    "band": 0.036075754977495704,
+    "z": null,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "medium": "referral"
+      },
+      "z": -3.2,
+      "seg_rel": 0.9592984816674981,
+      "rest_rel": 1.6776017188960926,
+      "relative_to_rest": -0.30203405591972554
+     },
+     {
+      "segment": {
+       "source": "google"
+      },
+      "z": 3.2,
+      "seg_rel": 1.9635605864037369,
+      "rest_rel": 1.1283765620097919,
+      "relative_to_rest": 0.45663939119135155
+     }
+    ]
+   },
+   "view_item_rate": {
+    "rel_change": -0.08393394490385793,
+    "band": 0.11815102293283478,
+    "z": -0.7103954144482676,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": -6.7,
+      "seg_rel": -0.27875053086920343,
+      "rest_rel": -0.054632348647518425,
+      "relative_to_rest": -0.32063371419975384
+     },
+     {
+      "segment": {
+       "source": "shop.googlemerchandisestore.com"
+      },
+      "z": 4.0,
+      "seg_rel": 0.028183404265229584,
+      "rest_rel": -0.11179920824408773,
+      "relative_to_rest": 0.21427062653377016
+     }
+    ]
+   },
+   "add_to_cart_rate": {
+    "rel_change": 1.1836288351169195,
+    "band": 0.03920479840666469,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   }
+  }
+ },
+ {
+  "week": "2020-11-30",
+  "health": [],
+  "metrics": {
+   "conversion_rate": {
+    "rel_change": 0.023727195958606753,
+    "band": 0.2845110359085711,
+    "z": 0.08339639930955647,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "os": "Macintosh"
+      },
+      "z": 3.3,
+      "seg_rel": 1.1796439426834562,
+      "rest_rel": -0.03423743233614429,
+      "relative_to_rest": 1.2648815920381349
+     }
+    ]
+   },
+   "revenue": {
+    "rel_change": -0.10278698434536093,
+    "band": 0.2595967022002836,
+    "z": -0.3959487292179039,
+    "real": false,
+    "distinct_segments": []
+   },
+   "sessions": {
+    "rel_change": 0.11907847372210223,
+    "band": 0.09935576807650755,
+    "z": 1.1985058948002645,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": 11.4,
+      "seg_rel": 0.372019437224544,
+      "rest_rel": 0.07115792177766411,
+      "relative_to_rest": 0.2808750318977975
+     }
+    ]
+   },
+   "orders": {
+    "rel_change": 0.1354723707664884,
+    "band": 0.39900249376558605,
+    "z": 0.33952762923351154,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "os": "Macintosh"
+      },
+      "z": 3.4,
+      "seg_rel": 1.4509803921568638,
+      "rest_rel": 0.07269338303821082,
+      "relative_to_rest": 1.2848844142348517
+     }
+    ]
+   },
+   "aov": {
+    "rel_change": -0.20983280724921113,
+    "band": 0.26073964175301784,
+    "z": -0.8047598970315856,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_completion_rate": {
+    "rel_change": 0.03179457706438976,
+    "band": 0.12703254583950524,
+    "z": 0.2502868603811144,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_start_rate": {
+    "rel_change": -0.4730284468680481,
+    "band": 0.47805761980282696,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   },
+   "cart_rate": {
+    "rel_change": 0.7607062154076707,
+    "band": 1.3837023792872074,
+    "z": null,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "medium": "referral"
+      },
+      "z": 4.6,
+      "seg_rel": 1.1079375025175335,
+      "rest_rel": 0.5939357983440556,
+      "relative_to_rest": 0.4702348607536868
+     },
+     {
+      "segment": {
+       "source": "shop.googlemerchandisestore.com"
+      },
+      "z": 3.5,
+      "seg_rel": 1.1721926592986764,
+      "rest_rel": 0.6570980801705995,
+      "relative_to_rest": 0.3979316779656801
+     },
+     {
+      "segment": {
+       "medium": "organic"
+      },
+      "z": -3.1,
+      "seg_rel": 0.5576297845216969,
+      "rest_rel": 0.8860657587919303,
+      "relative_to_rest": -0.22315102469030856
+     }
+    ]
+   },
+   "view_item_rate": {
+    "rel_change": 0.06934275316455944,
+    "band": 0.08393394490385793,
+    "z": 0.8261586327675655,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": -8.5,
+      "seg_rel": -0.19437980188009873,
+      "rest_rel": 0.1341962250562736,
+      "relative_to_rest": -0.35884702856165085
+     },
+     {
+      "segment": {
+       "source": "shop.googlemerchandisestore.com"
+      },
+      "z": -4.4,
+      "seg_rel": -0.051208504449007486,
+      "rest_rel": 0.10700717028721973,
+      "relative_to_rest": -0.18729627964329498
+     }
+    ]
+   },
+   "add_to_cart_rate": {
+    "rel_change": 0.8827984318979906,
+    "band": 1.1836288351169195,
+    "z": null,
+    "real": false,
+    "distinct_segments": []
+   }
+  }
+ },
+ {
+  "week": "2020-12-07",
+  "health": [],
+  "metrics": {
+   "conversion_rate": {
+    "rel_change": 0.05032037044898251,
+    "band": 0.2845110359085711,
+    "z": 0.17686614611727466,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "user_type": "new"
+      },
+      "z": -3.1,
+      "seg_rel": -0.10795828495788551,
+      "rest_rel": 0.2577200821646317,
+      "relative_to_rest": -0.29855422441668933
+     },
+     {
+      "segment": {
+       "user_type": "returning"
+      },
+      "z": 3.1,
+      "seg_rel": 0.2577200821646317,
+      "rest_rel": -0.10795828495788551,
+      "relative_to_rest": 0.42562694766878684
+     }
+    ]
+   },
+   "revenue": {
+    "rel_change": 0.38750522745225596,
+    "band": 0.2595967022002836,
+    "z": 1.4927201469350277,
+    "real": false,
+    "distinct_segments": []
+   },
+   "sessions": {
+    "rel_change": 0.2457861554297478,
+    "band": 0.11907847372210223,
+    "z": 2.0640687417891153,
+    "real": true,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": 16.6,
+      "seg_rel": 0.5819948933366292,
+      "rest_rel": 0.1641984931150946,
+      "relative_to_rest": 0.35887041831124455
+     },
+     {
+      "segment": {
+       "user_type": "new"
+      },
+      "z": 9.4,
+      "seg_rel": 0.304632673521251,
+      "rest_rel": 0.11489604396743869,
+      "relative_to_rest": 0.17018324764936898
+     },
+     {
+      "segment": {
+       "landing": "(none)"
+      },
+      "z": -6.0,
+      "seg_rel": 0.06595863610955832,
+      "rest_rel": 0.26276601362412255,
+      "relative_to_rest": -0.15585419261461553
+     }
+    ]
+   },
+   "orders": {
+    "rel_change": 0.3453689167974882,
+    "band": 0.39900249376558605,
+    "z": 0.8655808477237048,
+    "real": false,
+    "distinct_segments": []
+   },
+   "aov": {
+    "rel_change": 0.03131952145517742,
+    "band": 0.26073964175301784,
+    "z": 0.12011798913509446,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_completion_rate": {
+    "rel_change": 0.17365703143414243,
+    "band": 0.12703254583950524,
+    "z": 1.367027876883954,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_start_rate": {
+    "rel_change": 0.0750528541226217,
+    "band": 0.47805761980282696,
+    "z": 0.1569954143887027,
+    "real": false,
+    "distinct_segments": []
+   },
+   "cart_rate": {
+    "rel_change": -0.018340564137912407,
+    "band": 1.3837023792872074,
+    "z": -0.013254703043410435,
+    "real": false,
+    "distinct_segments": []
+   },
+   "view_item_rate": {
+    "rel_change": -0.1520115801940242,
+    "band": 0.08393394490385793,
+    "z": -1.8110858529066605,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "user_type": "new"
+      },
+      "z": -9.3,
+      "seg_rel": -0.224045643597938,
+      "rest_rel": 0.026505471451467866,
+      "relative_to_rest": -0.3013692339803804
+     },
+     {
+      "segment": {
+       "user_type": "returning"
+      },
+      "z": 9.3,
+      "seg_rel": 0.026505471451467866,
+      "rest_rel": -0.224045643597938,
+      "relative_to_rest": 0.43137126024008676
+     },
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": -6.8,
+      "seg_rel": -0.32086875722016917,
+      "rest_rel": -0.09539475584254309,
+      "relative_to_rest": -0.2803164388931504
+     },
+     {
+      "segment": {
+       "landing": "(none)"
+      },
+      "z": 3.6,
+      "seg_rel": 0.6830830933772112,
+      "rest_rel": -0.1659807565973197,
+      "relative_to_rest": 1.1487766144366498
+     }
+    ]
+   },
+   "add_to_cart_rate": {
+    "rel_change": -0.16756416619568273,
+    "band": 1.1836288351169195,
+    "z": -0.14156816835163588,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "user_type": "new"
+      },
+      "z": -5.8,
+      "seg_rel": -0.2540443513604609,
+      "rest_rel": 0.02638558675411118,
+      "relative_to_rest": -0.29027953170531495
+     },
+     {
+      "segment": {
+       "user_type": "returning"
+      },
+      "z": 5.8,
+      "seg_rel": 0.02638558675411118,
+      "rest_rel": -0.2540443513604609,
+      "relative_to_rest": 0.40900543900445485
+     },
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": -3.2,
+      "seg_rel": -0.3231918080262297,
+      "rest_rel": -0.11312996624598015,
+      "relative_to_rest": -0.2413775644227245
+     }
+    ]
+   }
+  }
+ },
+ {
+  "week": "2020-12-14",
+  "health": [],
+  "metrics": {
+   "conversion_rate": {
+    "rel_change": -0.17566858080775422,
+    "band": 0.05985922422290337,
+    "z": -2.9346952468612146,
+    "real": true,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Home"
+      },
+      "z": 3.4,
+      "seg_rel": 0.0061363719134519545,
+      "rest_rel": -0.314172029997983,
+      "relative_to_rest": 0.47440894999916927
+     }
+    ]
+   },
+   "revenue": {
+    "rel_change": -0.2083856599855997,
+    "band": 0.38750522745225596,
+    "z": -0.5377621906049632,
+    "real": false,
+    "distinct_segments": []
+   },
+   "sessions": {
+    "rel_change": -0.13731312453200445,
+    "band": 0.15132397369824063,
+    "z": -0.9074115698668104,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Home"
+      },
+      "z": -16.5,
+      "seg_rel": -0.2516711884317394,
+      "rest_rel": -0.03927398278466443,
+      "relative_to_rest": -0.2210798935816356
+     },
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": 15.6,
+      "seg_rel": 0.04269276826157187,
+      "rest_rel": -0.19665939951590472,
+      "relative_to_rest": 0.29794606127617884
+     }
+    ]
+   },
+   "orders": {
+    "rel_change": -0.2100350058343057,
+    "band": 0.3453689167974882,
+    "z": -0.6081468123475124,
+    "real": false,
+    "distinct_segments": []
+   },
+   "aov": {
+    "rel_change": 0.002087872071404854,
+    "band": 0.20983280724921113,
+    "z": 0.009950169846058251,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_completion_rate": {
+    "rel_change": 0.1083973557262821,
+    "band": 0.12703254583950524,
+    "z": 0.8533038128924291,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Home"
+      },
+      "z": 4.4,
+      "seg_rel": 0.2759775977597758,
+      "rest_rel": -0.1059043247057817,
+      "relative_to_rest": 1.0823699002044647
+     },
+     {
+      "segment": {
+       "user_type": "new"
+      },
+      "z": 3.4,
+      "seg_rel": 0.3022017409114184,
+      "rest_rel": -0.049269359738327356,
+      "relative_to_rest": 0.7607020465277505
+     },
+     {
+      "segment": {
+       "user_type": "returning"
+      },
+      "z": -3.4,
+      "seg_rel": -0.049269359738327356,
+      "rest_rel": 0.3022017409114184,
+      "relative_to_rest": -0.4320447335356472
+     },
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": -3.2,
+      "seg_rel": -0.18110236220472453,
+      "rest_rel": 0.15398113696146987,
+      "relative_to_rest": -0.5729795576417422
+     }
+    ]
+   },
+   "checkout_start_rate": {
+    "rel_change": -0.16743126054399626,
+    "band": 0.4730284468680481,
+    "z": -0.3539560076197731,
+    "real": false,
+    "distinct_segments": []
+   },
+   "cart_rate": {
+    "rel_change": -0.10506354645583049,
+    "band": 0.7607062154076707,
+    "z": -0.13811316948360386,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "user_type": "new"
+      },
+      "z": -4.6,
+      "seg_rel": -0.19220831625632762,
+      "rest_rel": 0.023297145376391493,
+      "relative_to_rest": -0.2819958657530587
+     },
+     {
+      "segment": {
+       "user_type": "returning"
+      },
+      "z": 4.6,
+      "seg_rel": 0.023297145376391493,
+      "rest_rel": -0.19220831625632762,
+      "relative_to_rest": 0.3927496407089943
+     },
+     {
+      "segment": {
+       "landing": "Home"
+      },
+      "z": -3.5,
+      "seg_rel": -0.14171724427242938,
+      "rest_rel": -0.010071927314972862,
+      "relative_to_rest": -0.225370199574903
+     }
+    ]
+   },
+   "view_item_rate": {
+    "rel_change": -0.0018539942670713733,
+    "band": 0.08393394490385793,
+    "z": -0.02208873024132286,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Home"
+      },
+      "z": 6.6,
+      "seg_rel": 0.1133714320527508,
+      "rest_rel": -0.07813167421009704,
+      "relative_to_rest": 0.2723390014390925
+     },
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": -4.4,
+      "seg_rel": -0.1133422270892197,
+      "rest_rel": 0.05726059700288855,
+      "relative_to_rest": -0.19052328154080211
+     }
+    ]
+   },
+   "add_to_cart_rate": {
+    "rel_change": -0.10672275351009458,
+    "band": 0.8827984318979906,
+    "z": -0.12089141717282371,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "user_type": "new"
+      },
+      "z": -4.8,
+      "seg_rel": -0.2006005423957109,
+      "rest_rel": 0.05051788157123327,
+      "relative_to_rest": -0.25252858484747953
+     },
+     {
+      "segment": {
+       "user_type": "returning"
+      },
+      "z": 4.8,
+      "seg_rel": 0.05051788157123327,
+      "rest_rel": -0.2006005423957109,
+      "relative_to_rest": 0.3378438020883401
+     }
+    ]
+   }
+  }
+ },
+ {
+  "week": "2020-12-21",
+  "health": [],
+  "metrics": {
+   "conversion_rate": {
+    "rel_change": -0.3578818016182861,
+    "band": 0.17566858080775422,
+    "z": -2.0372556092426106,
+    "real": true,
+    "distinct_segments": []
+   },
+   "revenue": {
+    "rel_change": -0.6887215500465352,
+    "band": 0.2595967022002836,
+    "z": -2.6530442960526286,
+    "real": true,
+    "distinct_segments": []
+   },
+   "sessions": {
+    "rel_change": -0.3390500134686181,
+    "band": 0.13731312453200445,
+    "z": -2.4691741202756883,
+    "real": true,
+    "distinct_segments": [
+     {
+      "segment": {
+       "user_type": "new"
+      },
+      "z": 12.5,
+      "seg_rel": -0.2968166132358643,
+      "rest_rel": -0.45487647750826254,
+      "relative_to_rest": 0.28995238281025393
+     },
+     {
+      "segment": {
+       "user_type": "returning"
+      },
+      "z": -12.5,
+      "seg_rel": -0.45487647750826254,
+      "rest_rel": -0.2968166132358643,
+      "relative_to_rest": -0.22477758611412613
+     },
+     {
+      "segment": {
+       "landing": "(none)"
+      },
+      "z": -7.3,
+      "seg_rel": -0.4826871241965581,
+      "rest_rel": -0.32786567958581303,
+      "relative_to_rest": -0.23034301315745942
+     },
+     {
+      "segment": {
+       "landing": "Shop by Brand"
+      },
+      "z": 4.9,
+      "seg_rel": -0.24138573291115673,
+      "rest_rel": -0.3475713937027093,
+      "relative_to_rest": 0.16275445277328493
+     }
+    ]
+   },
+   "orders": {
+    "rel_change": -0.6248153618906942,
+    "band": 0.3453689167974882,
+    "z": -1.8091244796562373,
+    "real": false,
+    "distinct_segments": []
+   },
+   "aov": {
+    "rel_change": -0.17033263536025345,
+    "band": 0.09964656402439619,
+    "z": -1.7093678746268801,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "browser": "Chrome"
+      },
+      "z": 3.1,
+      "seg_rel": -0.03095030312115732,
+      "rest_rel": -0.4434409460605757,
+      "relative_to_rest": 0.7411444302625858
+     }
+    ]
+   },
+   "checkout_completion_rate": {
+    "rel_change": 0.035514747092615866,
+    "band": 0.12703254583950524,
+    "z": 0.2795720329614248,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_start_rate": {
+    "rel_change": -0.1291160511115001,
+    "band": 0.4730284468680481,
+    "z": -0.27295620795405817,
+    "real": false,
+    "distinct_segments": []
+   },
+   "cart_rate": {
+    "rel_change": -0.19040265561476408,
+    "band": 0.7607062154076707,
+    "z": -0.2502972261278623,
+    "real": false,
+    "distinct_segments": []
+   },
+   "view_item_rate": {
+    "rel_change": -0.12051319286199634,
+    "band": 0.08393394490385793,
+    "z": -1.4358099455475146,
+    "real": false,
+    "distinct_segments": []
+   },
+   "add_to_cart_rate": {
+    "rel_change": -0.2879698165192221,
+    "band": 0.8827984318979906,
+    "z": -0.3262010965516732,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "medium": "referral"
+      },
+      "z": 3.2,
+      "seg_rel": -0.16035712740410624,
+      "rest_rel": -0.34889517688578553,
+      "relative_to_rest": 0.2931653896056412
+     }
+    ]
+   }
+  }
+ },
+ {
+  "week": "2020-12-28",
+  "health": [
+   {
+    "check": "duplicate_purchase_events",
+    "base": 1.0144927536231885,
+    "cur": 1.4375,
+    "unit": "ratio",
+    "segment": {
+     "browser": "Safari"
+    },
+    "detail": "purchase events per order went from 1.01 to 1.44"
+   }
+  ],
+  "metrics": {
+   "conversion_rate": {
+    "rel_change": -0.36024252999715334,
+    "band": 0.17566858080775422,
+    "z": -2.0506941442840634,
+    "real": true,
+    "distinct_segments": []
+   },
+   "revenue": {
+    "rel_change": -0.2954607230225605,
+    "band": 0.38750522745225596,
+    "z": -0.7624689993606959,
+    "real": false,
+    "distinct_segments": []
+   },
+   "sessions": {
+    "rel_change": -0.07421998822623738,
+    "band": 0.2457861554297478,
+    "z": -0.3019697675667148,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "user_type": "new"
+      },
+      "z": 6.6,
+      "seg_rel": -0.04332549292911725,
+      "rest_rel": -0.18353714931661702,
+      "relative_to_rest": 0.17173060142312901
+     },
+     {
+      "segment": {
+       "os": "Macintosh"
+      },
+      "z": 4.3,
+      "seg_rel": 0.07377866400797672,
+      "rest_rel": -0.0850360795937708,
+      "relative_to_rest": 0.1735748700683588
+     }
+    ]
+   },
+   "orders": {
+    "rel_change": -0.41732283464566927,
+    "band": 0.3453689167974882,
+    "z": -1.208339298496779,
+    "real": false,
+    "distinct_segments": []
+   },
+   "aov": {
+    "rel_change": 0.2091417321099299,
+    "band": 0.17033263536025345,
+    "z": 1.227842988911639,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_completion_rate": {
+    "rel_change": -0.055991317645898056,
+    "band": 0.1083973557262821,
+    "z": -0.5165376707830739,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_start_rate": {
+    "rel_change": -0.05649955960070462,
+    "band": 0.16743126054399626,
+    "z": -0.3374492876487549,
+    "real": false,
+    "distinct_segments": []
+   },
+   "cart_rate": {
+    "rel_change": -0.12042090698308115,
+    "band": 0.19040265561476408,
+    "z": -0.632453925572998,
+    "real": false,
+    "distinct_segments": []
+   },
+   "view_item_rate": {
+    "rel_change": -0.18337556310656758,
+    "band": 0.12051319286199634,
+    "z": -1.5216223116464687,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Home"
+      },
+      "z": -8.6,
+      "seg_rel": -0.35586293815417536,
+      "rest_rel": -0.05497195731703086,
+      "relative_to_rest": -0.37108266192156913
+     },
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": 3.5,
+      "seg_rel": -0.07115394323889968,
+      "rest_rel": -0.21913620064389938,
+      "relative_to_rest": 0.255308119066624
+     }
+    ]
+   },
+   "add_to_cart_rate": {
+    "rel_change": -0.2817142184618226,
+    "band": 0.2879698165192221,
+    "z": -0.9782768967490663,
+    "real": false,
+    "distinct_segments": []
+   }
+  }
+ },
+ {
+  "week": "2021-01-04",
+  "health": [],
+  "metrics": {
+   "conversion_rate": {
+    "rel_change": -0.17325852558236357,
+    "band": 0.3578818016182861,
+    "z": -0.4841222012377141,
+    "real": false,
+    "distinct_segments": []
+   },
+   "revenue": {
+    "rel_change": -0.0931712962962963,
+    "band": 0.38750522745225596,
+    "z": -0.240438811390682,
+    "real": false,
+    "distinct_segments": []
+   },
+   "sessions": {
+    "rel_change": 0.419927607121894,
+    "band": 0.2457861554297478,
+    "z": 1.7085079767315063,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Home"
+      },
+      "z": 21.8,
+      "seg_rel": 0.7859729369163326,
+      "rest_rel": 0.19078293371505817,
+      "relative_to_rest": 0.49983081412191055
+     },
+     {
+      "segment": {
+       "landing": "Shop by Brand"
+      },
+      "z": -12.1,
+      "seg_rel": -0.026390685640362954,
+      "rest_rel": 0.46649561107359716,
+      "relative_to_rest": -0.3360980373839143
+     },
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": -10.5,
+      "seg_rel": 0.22052384364302124,
+      "rest_rel": 0.5083130361114048,
+      "relative_to_rest": -0.19080203218977365
+     },
+     {
+      "segment": {
+       "user_type": "returning"
+      },
+      "z": 6.5,
+      "seg_rel": 0.5958464443045939,
+      "rest_rel": 0.37747761420549386,
+      "relative_to_rest": 0.15852804274068122
+     },
+     {
+      "segment": {
+       "source": "shop.googlemerchandisestore.com"
+      },
+      "z": 5.6,
+      "seg_rel": 0.6215518952173034,
+      "rest_rel": 0.39156508883992047,
+      "relative_to_rest": 0.16527204384604932
+     },
+     {
+      "segment": {
+       "landing": "(none)"
+      },
+      "z": 4.6,
+      "seg_rel": 0.7061333333333328,
+      "rest_rel": 0.406151480199924,
+      "relative_to_rest": 0.21333537485645437
+     }
+    ]
+   },
+   "orders": {
+    "rel_change": 0.14189189189189189,
+    "band": 0.41732283464566927,
+    "z": 0.3400050994390617,
+    "real": false,
+    "distinct_segments": []
+   },
+   "aov": {
+    "rel_change": -0.20585415296953755,
+    "band": 0.17033263536025345,
+    "z": -1.2085420538122722,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "device": "mobile"
+      },
+      "z": 4.5,
+      "seg_rel": 0.5412486494829452,
+      "rest_rel": -0.39541019660263776,
+      "relative_to_rest": 1.5492468460801527
+     },
+     {
+      "segment": {
+       "device": "desktop"
+      },
+      "z": -4.3,
+      "seg_rel": -0.40636251016220815,
+      "rest_rel": 0.4421487603305785,
+      "relative_to_rest": -0.5883659812586085
+     }
+    ]
+   },
+   "checkout_completion_rate": {
+    "rel_change": -0.1119092627599244,
+    "band": 0.1083973557262821,
+    "z": -1.0323984566792417,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_start_rate": {
+    "rel_change": -0.09812021072796936,
+    "band": 0.1291160511115001,
+    "z": -0.7599381322716894,
+    "real": false,
+    "distinct_segments": []
+   },
+   "cart_rate": {
+    "rel_change": 0.02787051122323256,
+    "band": 0.12042090698308115,
+    "z": 0.23144246228894705,
+    "real": false,
+    "distinct_segments": []
+   },
+   "view_item_rate": {
+    "rel_change": 0.004211806991709301,
+    "band": 0.1520115801940242,
+    "z": 0.02770714564201914,
+    "real": false,
+    "distinct_segments": []
+   },
+   "add_to_cart_rate": {
+    "rel_change": 0.032199703428974207,
+    "band": 0.2817142184618226,
+    "z": 0.1142991773890101,
+    "real": false,
+    "distinct_segments": []
+   }
+  }
+ },
+ {
+  "week": "2021-01-11",
+  "health": [],
+  "metrics": {
+   "conversion_rate": {
+    "rel_change": 0.46809247741021903,
+    "band": 0.3578818016182861,
+    "z": 1.307952724317295,
+    "real": false,
+    "distinct_segments": []
+   },
+   "revenue": {
+    "rel_change": 0.3986385875345671,
+    "band": 0.2954607230225605,
+    "z": 1.3492100860530565,
+    "real": false,
+    "distinct_segments": []
+   },
+   "sessions": {
+    "rel_change": -0.0455406662303214,
+    "band": 0.3390500134686181,
+    "z": -0.13431843215230121,
+    "real": false,
+    "distinct_segments": []
+   },
+   "orders": {
+    "rel_change": 0.47337278106508873,
+    "band": 0.41732283464566927,
+    "z": 1.1343083621748353,
+    "real": false,
+    "distinct_segments": []
+   },
+   "aov": {
+    "rel_change": -0.05072320765726166,
+    "band": 0.20585415296953755,
+    "z": -0.24640361598518598,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_completion_rate": {
+    "rel_change": 0.053215524893084745,
+    "band": 0.1083973557262821,
+    "z": 0.4909301019063703,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_start_rate": {
+    "rel_change": 0.17283507006827162,
+    "band": 0.1291160511115001,
+    "z": 1.3386025097609073,
+    "real": false,
+    "distinct_segments": []
+   },
+   "cart_rate": {
+    "rel_change": 0.037543814432989674,
+    "band": 0.12042090698308115,
+    "z": 0.3117715633736631,
+    "real": false,
+    "distinct_segments": []
+   },
+   "view_item_rate": {
+    "rel_change": 0.14549387619636786,
+    "band": 0.12051319286199634,
+    "z": 1.207285880832796,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Home"
+      },
+      "z": 4.2,
+      "seg_rel": 0.2559056108829323,
+      "rest_rel": 0.06171294598748989,
+      "relative_to_rest": 0.2145969227269393
+     }
+    ]
+   },
+   "add_to_cart_rate": {
+    "rel_change": 0.1885000857184106,
+    "band": 0.2817142184618226,
+    "z": 0.6691181110688447,
+    "real": false,
+    "distinct_segments": []
+   }
+  }
+ },
+ {
+  "week": "2021-01-18",
+  "health": [],
+  "metrics": {
+   "conversion_rate": {
+    "rel_change": 0.6657499006814581,
+    "band": 0.36024252999715334,
+    "z": 1.8480602517607205,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "source": "shop.googlemerchandisestore.com"
+      },
+      "z": 4.3,
+      "seg_rel": 1.912621359223301,
+      "rest_rel": 0.2801955942376493,
+      "relative_to_rest": 1.3077566682940298
+     },
+     {
+      "segment": {
+       "source": "google"
+      },
+      "z": -3.6,
+      "seg_rel": 0.09508990949226015,
+      "rest_rel": 1.0808098571903613,
+      "relative_to_rest": -0.47797111386939284
+     },
+     {
+      "segment": {
+       "medium": "organic"
+      },
+      "z": -3.5,
+      "seg_rel": 0.1140237823116017,
+      "rest_rel": 1.0738715281654598,
+      "relative_to_rest": -0.4671038185822417
+     }
+    ]
+   },
+   "revenue": {
+    "rel_change": 1.0506463878326997,
+    "band": 0.3986385875345671,
+    "z": 2.6355862695845897,
+    "real": true,
+    "distinct_segments": [
+     {
+      "segment": {
+       "source": "shop.googlemerchandisestore.com"
+      },
+      "z": 3.7,
+      "seg_rel": 3.13463626492942,
+      "rest_rel": 0.4962934437277364,
+      "relative_to_rest": 1.7632522766582093
+     }
+    ]
+   },
+   "sessions": {
+    "rel_change": -0.008265059371278017,
+    "band": 0.3390500134686181,
+    "z": -0.02437710969754324,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "source": "(direct)"
+      },
+      "z": -16.4,
+      "seg_rel": -0.2811206315586783,
+      "rest_rel": 0.0546758755468697,
+      "relative_to_rest": -0.31838834554875073
+     },
+     {
+      "segment": {
+       "medium": "(none)"
+      },
+      "z": -16.3,
+      "seg_rel": -0.28008118295157947,
+      "rest_rel": 0.054139208768777314,
+      "relative_to_rest": -0.31705527025289415
+     },
+     {
+      "segment": {
+       "medium": "organic"
+      },
+      "z": 13.5,
+      "seg_rel": 0.13847245211633896,
+      "rest_rel": -0.09880073531557254,
+      "relative_to_rest": 0.26328604197762795
+     },
+     {
+      "segment": {
+       "source": "google"
+      },
+      "z": 12.3,
+      "seg_rel": 0.1247486791041279,
+      "rest_rel": -0.0918628228863615,
+      "relative_to_rest": 0.23852288778546948
+     },
+     {
+      "segment": {
+       "medium": "referral"
+      },
+      "z": 9.0,
+      "seg_rel": 0.13043806077056397,
+      "rest_rel": -0.05190615140085075,
+      "relative_to_rest": 0.19232717567025293
+     },
+     {
+      "segment": {
+       "source": "shop.googlemerchandisestore.com"
+      },
+      "z": 5.9,
+      "seg_rel": 0.11954974770345439,
+      "rest_rel": -0.02898064462012806,
+      "relative_to_rest": 0.15296336937122756
+     }
+    ]
+   },
+   "orders": {
+    "rel_change": 0.5823293172690763,
+    "band": 0.47337278106508873,
+    "z": 1.2301706827309238,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "source": "shop.googlemerchandisestore.com"
+      },
+      "z": 5.4,
+      "seg_rel": 2.152380952380952,
+      "rest_rel": 0.16202531645569618,
+      "relative_to_rest": 1.7128332814607319
+     },
+     {
+      "segment": {
+       "medium": "referral"
+      },
+      "z": 3.7,
+      "seg_rel": 1.0909090909090926,
+      "rest_rel": 0.14126394052044589,
+      "relative_to_rest": 0.8320994965946125
+     }
+    ]
+   },
+   "aov": {
+    "rel_change": 0.2959668796201578,
+    "band": 0.20585415296953755,
+    "z": 1.4377503458186496,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_completion_rate": {
+    "rel_change": 0.10856712265244621,
+    "band": 0.055991317645898056,
+    "z": 1.9389992451874345,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_start_rate": {
+    "rel_change": 0.3433969614335801,
+    "band": 0.1291160511115001,
+    "z": 2.6595993176482335,
+    "real": true,
+    "distinct_segments": [
+     {
+      "segment": {
+       "source": "shop.googlemerchandisestore.com"
+      },
+      "z": 4.8,
+      "seg_rel": 1.0267396907216493,
+      "rest_rel": 0.18956324446965422,
+      "relative_to_rest": 1.6447685682339088
+     },
+     {
+      "segment": {
+       "medium": "organic"
+      },
+      "z": -3.8,
+      "seg_rel": 0.08796296296296302,
+      "rest_rel": 0.5498435198821798,
+      "relative_to_rest": -0.4820195273902308
+     },
+     {
+      "segment": {
+       "source": "google"
+      },
+      "z": -3.5,
+      "seg_rel": 0.09757420194497679,
+      "rest_rel": 0.5298162014976173,
+      "relative_to_rest": -0.4569343007615536
+     }
+    ]
+   },
+   "cart_rate": {
+    "rel_change": -0.17026810078237362,
+    "band": 0.12042090698308115,
+    "z": -1.4139413582584615,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "source": "google"
+      },
+      "z": -5.9,
+      "seg_rel": -0.3742092643607796,
+      "rest_rel": 0.002066768999039903,
+      "relative_to_rest": -0.4367380142325905
+     },
+     {
+      "segment": {
+       "medium": "organic"
+      },
+      "z": -5.8,
+      "seg_rel": -0.3678249070851277,
+      "rest_rel": -0.00382771912183677,
+      "relative_to_rest": -0.4280716756410776
+     },
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": -5.2,
+      "seg_rel": -0.46367258357087326,
+      "rest_rel": -0.056860872021953,
+      "relative_to_rest": -0.4781837818146075
+     },
+     {
+      "segment": {
+       "source": "shop.googlemerchandisestore.com"
+      },
+      "z": 5.0,
+      "seg_rel": 0.13466831498413878,
+      "rest_rel": -0.26472260966204475,
+      "relative_to_rest": 0.7293387418442592
+     },
+     {
+      "segment": {
+       "medium": "referral"
+      },
+      "z": 4.9,
+      "seg_rel": 0.025165164772690263,
+      "rest_rel": -0.3030851986812424,
+      "relative_to_rest": 0.6015193717257861
+     },
+     {
+      "segment": {
+       "landing": "Home"
+      },
+      "z": 3.4,
+      "seg_rel": 0.009716112996243753,
+      "rest_rel": -0.2349870709731302,
+      "relative_to_rest": 0.38438110765114075
+     }
+    ]
+   },
+   "view_item_rate": {
+    "rel_change": 0.3480489208611501,
+    "band": 0.14549387619636786,
+    "z": 2.39218948563444,
+    "real": true,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": 13.8,
+      "seg_rel": 1.1087036610816243,
+      "rest_rel": 0.17713367096247,
+      "relative_to_rest": 1.0171352238347646
+     },
+     {
+      "segment": {
+       "landing": "Home"
+      },
+      "z": -9.4,
+      "seg_rel": 0.1087704522385482,
+      "rest_rel": 0.508162856397893,
+      "relative_to_rest": -0.3345337751904336
+     },
+     {
+      "segment": {
+       "source": "google"
+      },
+      "z": 5.1,
+      "seg_rel": 0.4960771691456263,
+      "rest_rel": 0.2542855665324384,
+      "relative_to_rest": 0.24787721520449502
+     },
+     {
+      "segment": {
+       "medium": "(none)"
+      },
+      "z": -4.5,
+      "seg_rel": 0.091842259970915,
+      "rest_rel": 0.3606921605683362,
+      "relative_to_rest": -0.2509427111011364
+     },
+     {
+      "segment": {
+       "source": "(direct)"
+      },
+      "z": -4.5,
+      "seg_rel": 0.09233248180625853,
+      "rest_rel": 0.36042992606102353,
+      "relative_to_rest": -0.2504000487085948
+     },
+     {
+      "segment": {
+       "user_type": "new"
+      },
+      "z": 4.2,
+      "seg_rel": 0.4096648512879344,
+      "rest_rel": 0.1853101404093478,
+      "relative_to_rest": 0.221864574102546
+     },
+     {
+      "segment": {
+       "user_type": "returning"
+      },
+      "z": -4.2,
+      "seg_rel": 0.1853101404093478,
+      "rest_rel": 0.4096648512879344,
+      "relative_to_rest": -0.18157869440277752
+     },
+     {
+      "segment": {
+       "medium": "organic"
+      },
+      "z": 3.6,
+      "seg_rel": 0.4498430799427027,
+      "rest_rel": 0.2805721603588329,
+      "relative_to_rest": 0.16990742674420156
+     },
+     {
+      "segment": {
+       "landing": "Shop by Brand"
+      },
+      "z": -3.5,
+      "seg_rel": 0.08475311991318502,
+      "rest_rel": 0.3708442506304901,
+      "relative_to_rest": -0.2533095323701463
+     }
+    ]
+   },
+   "add_to_cart_rate": {
+    "rel_change": 0.11851919134439368,
+    "band": 0.2817142184618226,
+    "z": 0.4207071691003597,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "source": "shop.googlemerchandisestore.com"
+      },
+      "z": 4.5,
+      "seg_rel": 0.48739530813783905,
+      "rest_rel": -0.01346505661084163,
+      "relative_to_rest": 0.5557998284084993
+     },
+     {
+      "segment": {
+       "medium": "organic"
+      },
+      "z": -3.9,
+      "seg_rel": -0.08344531622523721,
+      "rest_rel": 0.27567048981373543,
+      "relative_to_rest": -0.29200191051986646
+     },
+     {
+      "segment": {
+       "medium": "referral"
+      },
+      "z": 3.5,
+      "seg_rel": 0.27417574855819304,
+      "rest_rel": -0.0417027241921859,
+      "relative_to_rest": 0.35544298426180587
+     },
+     {
+      "segment": {
+       "source": "google"
+      },
+      "z": -3.5,
+      "seg_rel": -0.06376876774731588,
+      "rest_rel": 0.2568778850572908,
+      "relative_to_rest": -0.2650150858271383
+     }
+    ]
+   }
+  }
+ },
+ {
+  "week": "2021-01-25",
+  "health": [
+   {
+    "check": "zero_revenue_orders",
+    "base": 0.07466666666666667,
+    "cur": 0.6870967741935484,
+    "unit": "pct",
+    "segment": {},
+    "detail": "purchases recorded with zero revenue went from 7% to 69%"
+   }
+  ],
+  "metrics": {
+   "conversion_rate": {
+    "rel_change": -0.13768329410573743,
+    "band": 0.46809247741021903,
+    "z": -0.2941369510304624,
+    "real": false,
+    "distinct_segments": []
+   },
+   "revenue": {
+    "rel_change": -0.807980419787881,
+    "band": 0.3986385875345671,
+    "z": -2.0268494948894498,
+    "real": true,
+    "distinct_segments": []
+   },
+   "sessions": {
+    "rel_change": -0.04134216464080355,
+    "band": 0.07421998822623738,
+    "z": -0.5570219778907046,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "source": "(direct)"
+      },
+      "z": -23.3,
+      "seg_rel": -0.482121333869024,
+      "rest_rel": 0.027963193026045552,
+      "relative_to_rest": -0.4962089405103297
+     },
+     {
+      "segment": {
+       "medium": "(none)"
+      },
+      "z": -23.2,
+      "seg_rel": -0.48086991542488966,
+      "rest_rel": 0.027573722873560413,
+      "relative_to_rest": -0.49480015592128224
+     },
+     {
+      "segment": {
+       "medium": "organic"
+      },
+      "z": 18.5,
+      "seg_rel": 0.1332613301208827,
+      "rest_rel": -0.17743241055528525,
+      "relative_to_rest": 0.3777121110326094
+     },
+     {
+      "segment": {
+       "source": "google"
+      },
+      "z": 15.3,
+      "seg_rel": 0.1033464976096441,
+      "rest_rel": -0.1539656344044268,
+      "relative_to_rest": 0.3041391017644228
+     },
+     {
+      "segment": {
+       "medium": "referral"
+      },
+      "z": 9.2,
+      "seg_rel": 0.08470619622490516,
+      "rest_rel": -0.088627549105466,
+      "relative_to_rest": 0.19018980128293328
+     }
+    ]
+   },
+   "orders": {
+    "rel_change": -0.19796954314720813,
+    "band": 0.47337278106508873,
+    "z": -0.4182106598984772,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "os": "Android"
+      },
+      "z": 3.2,
+      "seg_rel": 0.6792452830188682,
+      "rest_rel": -0.2605156037991858,
+      "relative_to_rest": 1.2708326120823958
+     }
+    ]
+   },
+   "aov": {
+    "rel_change": -0.7605831816342566,
+    "band": 0.2091417321099299,
+    "z": -3.636687780870419,
+    "real": true,
+    "distinct_segments": []
+   },
+   "checkout_completion_rate": {
+    "rel_change": -0.025103448275862215,
+    "band": 0.10856712265244621,
+    "z": -0.23122514130014654,
+    "real": false,
+    "distinct_segments": []
+   },
+   "checkout_start_rate": {
+    "rel_change": -0.05852253181974546,
+    "band": 0.17283507006827162,
+    "z": -0.33860333899033607,
+    "real": false,
+    "distinct_segments": []
+   },
+   "cart_rate": {
+    "rel_change": -0.05610246650475195,
+    "band": 0.12042090698308115,
+    "z": -0.4658864304404734,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "medium": "organic"
+      },
+      "z": -4.7,
+      "seg_rel": -0.20500026568893137,
+      "rest_rel": 0.1501369737575069,
+      "relative_to_rest": -0.3604108730745488
+     },
+     {
+      "segment": {
+       "medium": "referral"
+      },
+      "z": 4.0,
+      "seg_rel": 0.08136798242384069,
+      "rest_rel": -0.20878212126643747,
+      "relative_to_rest": 0.45734851978943825
+     },
+     {
+      "segment": {
+       "source": "google"
+      },
+      "z": -3.9,
+      "seg_rel": -0.17488026869570616,
+      "rest_rel": 0.12165617335622003,
+      "relative_to_rest": -0.31004786299529064
+     }
+    ]
+   },
+   "view_item_rate": {
+    "rel_change": -0.004655356479012257,
+    "band": 0.18337556310656758,
+    "z": -0.025387005771902255,
+    "real": false,
+    "distinct_segments": [
+     {
+      "segment": {
+       "landing": "Apparel"
+      },
+      "z": 6.9,
+      "seg_rel": 0.18038953459503038,
+      "rest_rel": -0.06541482086008665,
+      "relative_to_rest": 0.37095740564221424
+     },
+     {
+      "segment": {
+       "medium": "(none)"
+      },
+      "z": -6.2,
+      "seg_rel": -0.4082532734927218,
+      "rest_rel": -0.010370726484671078,
+      "relative_to_rest": -0.44043508053005387
+     },
+     {
+      "segment": {
+       "source": "(direct)"
+      },
+      "z": -6.2,
+      "seg_rel": -0.40785657505529305,
+      "rest_rel": -0.010578294225750517,
+      "relative_to_rest": -0.4398347016812951
+     },
+     {
+      "segment": {
+       "source": "google"
+      },
+      "z": 4.7,
+      "seg_rel": 0.05891088732083438,
+      "rest_rel": -0.08609209342033852,
+      "relative_to_rest": 0.21136294598591965
+     },
+     {
+      "segment": {
+       "medium": "referral"
+      },
+      "z": -3.9,
+      "seg_rel": -0.09130160145081745,
+      "rest_rel": 0.028832218407103483,
+      "relative_to_rest": -0.15634064155911065
+     },
+     {
+      "segment": {
+       "medium": "organic"
+      },
+      "z": 3.7,
+      "seg_rel": 0.043141231989877404,
+      "rest_rel": -0.07102392753911269,
+      "relative_to_rest": 0.16278765860610167
+     }
+    ]
+   },
+   "add_to_cart_rate": {
+    "rel_change": -0.06049664600283296,
+    "band": 0.1885000857184106,
+    "z": -0.3209369681306427,
+    "real": false,
+    "distinct_segments": []
+   }
+  }
+ }
+]

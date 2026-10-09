@@ -1,0 +1,31 @@
+{
+  "source": "bigquery-public-data.ga4_obfuscated_sample_ecommerce (Google Merchandise Store, obfuscated)",
+  "window": "2020-11-01 to 2021-01-31",
+  "raw": {
+    "file": "data/raw/full_flatten_data.csv",
+    "from": "https://huggingface.co/datasets/gizdevans/ga4-bq-flattened-data (MIT)",
+    "rows": 4295584,
+    "columns": 60,
+    "days": 92,
+    "repeated_header_lines_dropped": 31,
+    "sha256": "f09b13d6d59f8fd72ef07095eb95085388fa873129961eb116fc0d20dc1e9012",
+    "events_without_session_id": 0
+  },
+  "tables": {
+    "sessions": {
+      "rows": 360129,
+      "bytes": 8578846,
+      "sha256": "57ce2c5458550a0e3041c47ed27c74f49006d178fd212c08db6afb73121ecafd"
+    },
+    "daily_events": {
+      "rows": 500174,
+      "bytes": 1004789,
+      "sha256": "cc66165f854874f13e30e0fe2704368e0b8550d0f72e4f21500d5ee9ca9fde1a"
+    }
+  },
+  "benchmark": {
+    "file": "data/benchmark.json",
+    "cases": 70,
+    "sha256": "68a72ec734af688095cc43c050db342c8e4893bfbdc0b5d42a8092f1d5be19a2"
+  }
+}
