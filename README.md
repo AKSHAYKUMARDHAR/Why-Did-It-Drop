@@ -46,8 +46,8 @@ The gate: at most 5% wrong causes, at least 75% of incidents right, at most 10% 
 **Failed the gate.** On development the same system got 26/30 right, with wrong causes 6.7% and false alarms
 2/9, so it failed there too.
 
-**Is the gap between rules and model real? No.** A reader asked whether a gap of two or three answers on 40 cases
-is more than noise, from a few hard cases or a biased judge. Scoring is code ([eval/score.py](eval/score.py))
+**Is the gap between rules and model real? No.** [Matt Barney](https://www.linkedin.com/in/drmattbarney/) asked
+whether a gap of two or three answers on 40 cases is more than noise, from a few hard cases or a biased judge. Scoring is code ([eval/score.py](eval/score.py))
 against each case's known answer; no model judges a model. Every version answers the same cases from the same
 evidence pack, so the fair comparison is paired ([eval/compare.py](eval/compare.py),
 [held-out report](eval/results/holdout_gemini-3.5-flash-lite_comparison.md)):

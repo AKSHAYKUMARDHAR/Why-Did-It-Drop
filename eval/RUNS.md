@@ -131,8 +131,8 @@ held-out set.
   development case (D01) rebuilt slightly different evidence text, and its cached answer no longer matched. Fixing
   the ordering would invalidate the cached held-out answers, so the logged runs stay the record. Next: break ties by
   name before the next run.
-- **"The baseline beat the model (30 vs 28)" was too strong.** A reader asked whether a gap of two or three answers
-  on 40 cases is more than noise, given that cases differ in difficulty and judges can be biased. It isn't. Scoring
+- **"The baseline beat the model (30 vs 28)" was too strong.** [Matt Barney](https://www.linkedin.com/in/drmattbarney/)
+  asked whether a gap of two or three answers on 40 cases is more than noise, given that cases differ in difficulty and judges can be biased. It isn't. Scoring
   is code against each case's known answer, so there is no judge to bias. Every version answers the same cases from
   the same evidence pack, so the right test is paired: the baseline and the model with checks agreed on 38 of 40
   cases, and the exact McNemar test on the 2 they split gives p = 0.5. Every case the baseline got wrong, the model
