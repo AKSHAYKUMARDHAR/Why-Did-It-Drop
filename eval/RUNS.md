@@ -110,8 +110,10 @@ What went wrong:
   allows.
 - **One planted traffic loss got "can't tell", and one planted bot burst was missed.**
 
-The deterministic baseline beat the model with checks (30 vs 28 right). As in development, the model added no
-decision value.
+The deterministic baseline and the model with checks tied: the same outcome on 38 of 40 cases, and the 2 they split
+(H23, H37) are too few to call either one better (exact McNemar p = 0.5;
+[paired report](results/holdout_gemini-3.5-flash-lite_comparison.md)). As in development, the model added no
+measurable decision value. This line first said the baseline "beat" the model; see the corrections below.
 
 The held-out cases are unchanged. A release claim would need the fixes above tested on development and a fresh
 held-out set.
@@ -129,3 +131,18 @@ held-out set.
   development case (D01) rebuilt slightly different evidence text, and its cached answer no longer matched. Fixing
   the ordering would invalidate the cached held-out answers, so the logged runs stay the record. Next: break ties by
   name before the next run.
+- **"The baseline beat the model (30 vs 28)" was too strong.** A reader asked whether a gap of two or three answers
+  on 40 cases is more than noise, given that cases differ in difficulty and judges can be biased. It isn't. Scoring
+  is code against each case's known answer, so there is no judge to bias. Every version answers the same cases from
+  the same evidence pack, so the right test is paired: the baseline and the model with checks agreed on 38 of 40
+  cases, and the exact McNemar test on the 2 they split gives p = 0.5. Every case the baseline got wrong, the model
+  got wrong too, so the hard cases were hard for both. At this size a version would have to win at least 6
+  disagreements and lose none to show it is better. `eval/compare.py` (tests in `tests/test_stats.py`) now writes
+  this paired comparison, with 95% Wilson intervals on each gate rate, after every run
+  ([held-out](results/holdout_gemini-3.5-flash-lite_comparison.md),
+  [development](results/dev_gemini-3.5-flash-lite_comparison.md)). It reads the logged results, so no run was
+  repeated and no score changed.
+- **Not every gate miss is certain.** The intervals change what "failed the gate" says. On held-out, wrong causes
+  (8/40 = 20%, interval 10-35%) is above its 5% limit for sure. Incidents right (64%, 46-79%) and false alarms (17%,
+  5-45%) miss their targets, but 40 cases can't tell those from a pass, and none of the three development misses is
+  certain at 30 cases. The gate was set on point values before the run, so its verdict stands: failed.

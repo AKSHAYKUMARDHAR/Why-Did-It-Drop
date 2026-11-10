@@ -46,15 +46,31 @@ The gate: at most 5% wrong causes, at least 75% of incidents right, at most 10% 
 **Failed the gate.** On development the same system got 26/30 right, with wrong causes 6.7% and false alarms
 2/9, so it failed there too.
 
+**Is the gap between rules and model real? No.** A reader asked whether a gap of two or three answers on 40 cases
+is more than noise, from a few hard cases or a biased judge. Scoring is code ([eval/score.py](eval/score.py))
+against each case's known answer; no model judges a model. Every version answers the same cases from the same
+evidence pack, so the fair comparison is paired ([eval/compare.py](eval/compare.py),
+[held-out report](eval/results/holdout_gemini-3.5-flash-lite_comparison.md)):
+- the rules and the shipped model gave the same outcome on 38 of 40 held-out cases, and on all 30 development
+  cases;
+- both cases they split went to the rules (an unseen units bug, and a traffic loss the model called "can't
+  tell"), and an exact McNemar test gives p = 0.5: a tie, not a win;
+- every case the rules got wrong, the model got wrong too, so the hard cases were hard for both;
+- at this size a version must win at least 6 disagreements and lose none to show it is better.
+
+**Which gate misses are certain?** With 95% intervals, only wrong causes is clearly above its limit: 8/40 = 20%
+(10-35%). Incidents right, 18/28 = 64% (46-79%), and false alarms, 2/12 = 17% (5-45%), miss their targets, but 40
+cases can't tell those from a pass.
+
 What the failures show:
 - **Real campaign shifts compete with the planted incidents.** The data's own surge of new visitors in early
   December, and its drop in Home-page product views over New Year, are genuine changes. The agent named them
   instead of the planted incident in 7 of the 12 held-out misses.
 - **An unseen incident type broke one of my rules.** For a currency-units bug, "name the broadest segment the
   finding appears in" picked the browser carrying the orders, not the country.
-- **The model added no decision value.** The first prompt was worse than fixed rules (18 vs 26 of 30), because
-  it trusted "within normal variation" over the listed causes. With an explicit decision order it matched the
-  rules exactly. Its value is the explanation.
+- **The model added no measurable decision value.** The first prompt was worse than fixed rules (18 vs 26 of 30),
+  because it trusted "within normal variation" over the listed causes. With an explicit decision order it matched
+  the rules exactly on development, and tied with them on held-out (above). Its value is the explanation.
 - **The checks did their job on numbers.** The model typed dates itself in 24 of 69 answers; code removed every
   one, so every figure a reader sees comes from a query.
 
@@ -86,6 +102,7 @@ python -m venv .venv && .venv/bin/pip install -r requirements.txt
 python -m scripts.fetch_ga4 && python -m scripts.build_tables      # download and verify the data (1.8 GB)
 python -m eval.run_eval --split dev --no-model                      # the rules alone, no API key needed
 python -m eval.run_eval --split holdout --replay                    # re-score the cached model answers
+python -m eval.compare --split holdout                              # paired comparison and 95% intervals
 python -m pytest -q tests
 ```
 

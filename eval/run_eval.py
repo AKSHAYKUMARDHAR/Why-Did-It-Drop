@@ -21,6 +21,7 @@ import duckdb
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+from eval.compare import write as write_comparison  # noqa: E402
 from eval.score import overlap, passes, score, summarise  # noqa: E402
 from wdid import evidence, incidents, investigate  # noqa: E402
 from wdid.engine import Engine, week_of  # noqa: E402
@@ -126,6 +127,7 @@ def main(argv=None) -> int:
     out.write_text(json.dumps({"split": args.split, "model": model_name, "summary": summary, "cases": detail,
                                "unread": unread, "stopped": stopped}, indent=1, default=str) + "\n",
                    encoding="utf-8", newline="\n")
+    print("\n" + write_comparison(out))         # paired comparison and 95% intervals: is a gap or a gate miss real?
     return 0
 
 
